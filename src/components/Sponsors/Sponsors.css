@@ -1,0 +1,125 @@
+.box-container {
+    background-color: #fff;
+    color: #35373a;
+    min-height: 100vh;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.ftco-section {
+    padding: 7em 0;
+    position: relative;
+}
+
+@media (max-width: 767.98px) {
+    .ftco-section {
+        padding: 6em 0;
+    }
+}
+
+#sponsors {
+    background-image: url("./bg_football.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    display: block;
+}
+
+.ftco-gradient .heading-section .subheading {
+    color: #fff;
+}
+
+.ftco-gradient .heading-section h2 {
+    color: #fff;
+}
+
+.img-sponsor {
+    opacity: 1;
+    display: block;
+    width: 80%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.img-sponsor:hover {
+    opacity: 0.5;
+}
+
+.div-sponsor {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-sponsor {
+        width: 90%;
+    }
+
+    .div-sponsor {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .img-sponsor {
+        width: 100%;
+    }
+
+    .div-sponsor {
+        margin-left: 0px;
+    }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

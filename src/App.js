@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/About/About";
 import Events from "./components/Events/Events";
 import Header from "./components/Header/Header";
+import Sponsors from "./components/Sponsors/Sponsors";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/sponsors" element={<Sponsors />} />
         </Routes>
       </Router>
       <div>Contact Us</div>
