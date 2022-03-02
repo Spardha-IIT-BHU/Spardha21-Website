@@ -21,12 +21,7 @@ function Header() {
 
   return (
     <>
-      <Navbar
-        color="dark"
-        dark
-        expand="lg"
-        className={styles["wrap-container"]}
-      >
+      <Navbar dark expand="lg" className={styles["wrap-container"]}>
         <NavbarBrand>
           <NavLink exact to="/">
             <img
