@@ -73,7 +73,7 @@ function Header() {
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+              <NavLink exact to="/team" className={styles["nav-links"]}>
                 Our Team
               </NavLink>
             </NavItem>
