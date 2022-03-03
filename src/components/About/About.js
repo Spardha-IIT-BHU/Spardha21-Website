@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import React, {useState,useEffect} from "react";
-import Preloader from "../Preloader/Preloader";
-=======
-import React from "react";
+import React,{useState,useEffect} from "react";
 import styles from "./About.module.css";
 import trophy from "./trophy.png";
 import newspaper from "./newspaper.png";
 import accessory from "./accessory.png";
->>>>>>> 57903cd03aa95c142418c269c2878a6b32489d49
+import Preloader from "../Preloader/Preloader";
 
 const About = () => {
   const [checkabout,setCheckabout] = useState(true);
