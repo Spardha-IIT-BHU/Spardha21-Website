@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
 }
 
-.container.gallery-container {
+.container_gallery.gallery-container {
     background-color: #fff;
     color: #35373a;
     min-height: 100vh;
@@ -30,7 +30,7 @@ body {
     padding: 40px;
 }
 
-.tz-gallery .lightbox img {
+.tz-gallery .lightbox_gallery img {
     width: 100%;
     margin-bottom: 30px;
     transition: 0.2s ease-in-out;
@@ -38,7 +38,7 @@ body {
 }
 
 
-.tz-gallery .lightbox img:hover {
+.tz-gallery .lightbox_gallery img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
 }
@@ -57,7 +57,7 @@ body {
         padding: 0;
     }
 
-    .container.gallery-container {
+    .container_galllery.gallery-container {
         border-radius: 0;
     }
 }

@@ -5,7 +5,7 @@
     background-size: cover;
 }
 
-.container {
+.container_gallery {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -14,31 +14,31 @@
 }
 
 @media (min-width: 576px) {
-    .container {
+    .container_gallery {
         max-width: 540px;
     }
 }
 
 @media (min-width: 768px) {
-    .container {
+    .container_gallery {
         max-width: 720px;
     }
 }
 
 @media (min-width: 992px) {
-    .container {
+    .container_gallery {
         max-width: 960px;
     }
 }
 
 @media (min-width: 1200px) {
-    .container {
+    .container_gallery {
         max-width: 1140px;
     }
 }
 
 
-.row {
+.row_gallery {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -48,11 +48,11 @@
     margin-left: -15px;
 }
 
-.heading-section {
+.heading-section_gallery {
     z-index: 0;
 }
 
-.heading-section .subheading {
+.heading-section_gallery .subheading_gallery {
     font-size: 20px;
     display: block;
     margin-bottom: 15px;
@@ -66,7 +66,7 @@
     ;
 }
 
-.heading-section h2 {
+.heading-section_gallery h2 {
     z-index: -1;
     font-size: 50px;
     position: relative;
@@ -80,11 +80,11 @@
 }
 
 @media (max-width: 767.98px) {
-    .heading-section h2 {
+    .heading-section_gallery h2 {
         font-size: 30px;
     }
 
-    .heading-section .subheading {
+    .heading-section_gallery .subheading_gallery {
         font-size: 15px;
     }
 
@@ -94,7 +94,7 @@
     }
 }
 
-.ftco-animate {
+.ftco-animate_gallery {
     opacity: 0;
     visibility: hidden;
 }
@@ -103,7 +103,7 @@
     padding: 40px;
 }
 
-.tz-gallery .lightbox img {
+.tz-gallery .lightbox_gallery img {
     width: 100%;
     margin-bottom: 30px;
     transition: 0.2s ease-in-out;
@@ -111,7 +111,7 @@
 }
 
 
-.tz-gallery .lightbox img:hover {
+.tz-gallery .lightbox_gallery img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
 }
@@ -120,7 +120,7 @@
     border-radius: 4px;
 }
 
-.image-popup {
+.image-popup_gallery {
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in;
     cursor: zoom-in;
