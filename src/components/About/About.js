@@ -1,11 +1,23 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import styles from "./About.module.css";
 import trophy from "./trophy.png";
 import newspaper from "./newspaper.png";
 import accessory from "./accessory.png";
+import Preloader from "../Preloader/Preloader";
 
 const About = () => {
+  const [checkabout,setCheckabout] = useState(true);
+
+    useEffect(()=>{
+        // console.log("Sponsors");
+        setTimeout(()=>{
+            setCheckabout(false)
+        },2000)
+    },[])
+
   return (
+    <>
+    {checkabout ? <Preloader/> :
     <div>
       <section id={styles["about"]} className="ftco-section">
         <div className={styles["container"]}>
@@ -191,6 +203,8 @@ const About = () => {
         </div>
       </section>
     </div>
+  }
+    </>
   );
 };
 

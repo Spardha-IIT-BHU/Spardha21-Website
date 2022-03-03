@@ -1,9 +1,20 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "./Sponsors.css"
+import Preloader from "../Preloader/Preloader"
 
 const Sponsors = () => {
+    const [checksponsors,setChecksponsors] = useState(true);
+
+    useEffect(()=>{
+        // console.log("Sponsors");
+        setTimeout(()=>{
+            setChecksponsors(false)
+        },2000)
+    },[])
+
   return (
     <>
+    {checksponsors===true ? <Preloader/> :
       <section id="sponsors" className="ftco-section_sponsors">
           <div className="container_sponsors box-container_sponsors">
               <div className="row_sponsors justify-content-center pt-5">
@@ -474,6 +485,7 @@ const Sponsors = () => {
               </div>
           </div>
       </section>
+    }
     </>
   )
 }
