@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import styles from "./About.module.css";
 import trophy from "./trophy.png";
 import newspaper from "./newspaper.png";
 import accessory from "./accessory.png";
@@ -7,27 +7,50 @@ import accessory from "./accessory.png";
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
-      <section id="about" className="ftco-section">
-        <div className="container">
-          <div className="row justify-content-center align-items-center mb-5 pb-3">
-            <div className="col-md-7 heading-section text-center">
+      <section id={styles["about"]} className="ftco-section">
+        <div className={styles["container"]}>
+          <div
+            className={
+              styles[
+                ("row",
+                "justify-content-center",
+                "align-items-center",
+                "mb-5",
+                "pb-3")
+              ]
+            }
+          >
+            <div
+              className={styles[("col-md-7", "heading-section", "text-center")]}
+            >
               <h3
-                className="subheading-mt-5 pt-5"
-                style={{ color: "#6db549", fontSize: "2em" }}
+                className={styles[("subheading-mt-5", "pt-5")]}
+                style={{
+                  color: "#6db549",
+                  fontSize: "2.5em",
+                  fontFamily: "League Spartan",
+                }}
               >
                 WHAT ARE WE
               </h3>
-              <h2 className="mb-1" style={{ color: "white", fontSize: "3em" }}>
-                About Us
+              <h2
+                className={styles["mb-1"]}
+                style={{
+                  color: "white",
+                  fontSize: "3.5em",
+                  fontfamily: "League partan",
+                  fontWeight: "bold",
+                }}
+              >
+                ABOUT US
               </h2>
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-md-12">
-              <div className="block-7">
-                <div className="text-justify">
+          <div className={styles["row"]}>
+            <div className={styles["col-md-12"]}>
+              <div className={styles["block-7"]}>
+                <div className={styles["text-justify"]}>
                   <p
                     styel={{
                       fontFamily: "Open Sans",
@@ -60,8 +83,8 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-md-4">
-              <div className="block-7">
+            <div className={styles["col-md-4"]}>
+              <div className={styles["block-7"]}>
                 <div style={{ textAlign: "center" }}>
                   <img
                     src={trophy}
@@ -73,7 +96,7 @@ const About = () => {
                     }}
                   />
                   <h3
-                    className="text-wrap"
+                    className={styles["text-wrap"]}
                     style={{
                       fontSize: "22px",
                       color: "#000",
@@ -90,14 +113,13 @@ const About = () => {
                     Spardha, today stands as the largest inter-collegiate
                     sporting event of India.
                     <br />
-                    <br />
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="col-md-4">
-              <div className="block-7">
+            <div className={styles["col-md-4"]}>
+              <div className={styles["block-7"]}>
                 <div style={{ textAlign: "center" }}>
                   <img
                     src={newspaper}
@@ -109,7 +131,7 @@ const About = () => {
                     }}
                   />
                   <h3
-                    className="text-wrap"
+                    className={styles["text-wrap"]}
                     style={{
                       fontSize: "22px",
                       color: "#000",
@@ -131,8 +153,8 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-md-4">
-              <div className="block-7">
+            <div className={styles["col-md-4"]}>
+              <div className={styles["block-7"]}>
                 <div style={{ textAlign: "center" }}>
                   <img
                     src={accessory}
@@ -144,7 +166,7 @@ const About = () => {
                     }}
                   />
                   <h3
-                    className="text-wrap"
+                    className={styles["text-wrap"]}
                     style={{
                       fontSize: "22px",
                       color: "#000",
