@@ -20,19 +20,19 @@
   }
 }
 
-@media (min-width: 992px) {
-  .container {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container_aboutus {
     max-width: 960px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .container {
     max-width: 720px;
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .container {
     max-width: 540px;
   }
@@ -40,6 +40,10 @@
 
 .pb-3 {
   padding-bottom: 1rem !important;
+}
+
+.mb-1 {
+  font-family: 'League Spartan';
 }
 
 .mb-5 {

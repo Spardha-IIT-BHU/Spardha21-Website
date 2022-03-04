@@ -134,3 +134,7 @@
 .boldClass {
   font-weight: 900;
 }
+.imageMarginGallery {
+  padding-left: 15px;
+  padding-right: 15px;
+}

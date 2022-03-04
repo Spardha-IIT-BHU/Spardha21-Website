@@ -5,6 +5,7 @@ import Events from './components/Events/Events';
 import Header from './components/Header/Header';
 import Sponsors from './components/Sponsors/Sponsors';
 import Gallery from './components/Gallery/Gallery';
+import Preloader from './components/Preloader/Preloader';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/preloader" element={<Preloader />} />
         </Routes>
       </Router>
       <div>Contact Us</div>
