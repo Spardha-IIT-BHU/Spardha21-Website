@@ -1,19 +1,20 @@
-import React from 'react'
-import styles from "./Team.module.css"
+import React from "react";
+import { Col, Container, Row } from "reactstrap";
+import styles from "./Team.module.css";
 
 function Team() {
   return (
-      <div className={styles["wrap-container"]}>
-          <div className='container'>
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center">
-                    <h3 class="subheading" style={{color: "#6db549"}}>Backbone Of The Event</h3>
-                    <h2 class="mb-1 text-white">Our Team</h2>
-                </div>
-            </div>
-          </div>
-      </div>
-  )
+    <section id="team" className={styles["ftco-section"]}>
+      <Container>
+        <Row className="justify-content-center mb-5">
+          <Col className="text-center col-md-7">
+            <h3 className={styles.heading}>Backbone of the event</h3>
+            <h2 className={styles.subheading}>Our Team</h2>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
 }
 
-export default Team
+export default Team;

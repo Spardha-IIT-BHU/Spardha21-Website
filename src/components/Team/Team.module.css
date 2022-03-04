@@ -1,14 +1,37 @@
-.wrap-container {
-  padding: 3em 0;
-  position: relative;
-  background-image: url("./../../assets/bg/bg_football.jpg");
-  background-attachment: fixed;
-  background-position: center; 
-  background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
+
+.heading {
+  font-size: 25px !important;
+  display: block;
+  margin-bottom: 3px !important;
+  margin-left: 15px;
+  line-height: 1;
+  z-index: 1;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-family: 'League Spartan', sans-serif;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #6db549;
 }
 
-@media only screen and (min-width: 776px) {
-  .wrap-container {
-    padding: 4em 0;
-  }
+.ftco-section
+{
+  background: url(../../assets/bg/bg_football.jpg) center center/cover; 
+  padding: 4em 0;
+  position: relative;
+}
+
+.subheading {
+  font-size: 60px !important;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 1.2; 
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  margin-left: 15px;
+  font-weight: 900;
 }
