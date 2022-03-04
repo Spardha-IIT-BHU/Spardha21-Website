@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import styles from "./About.module.css";
+import Greencounter from "../GreenCounter/Greencounter"
 import trophy from "./trophy.png";
 import newspaper from "./newspaper.png";
 import accessory from "./accessory.png";
@@ -19,28 +20,21 @@ const About = () => {
     <>
     {checkabout ? <Preloader/> :
     <div>
-      <section id={styles["about"]} className="ftco-section">
+      <section id={styles["about"]} className={styles["ftco-section"]}>
         <div className={styles["container"]}>
           <div
-            className={
-              styles[
-                ("row",
-                "justify-content-center",
-                "align-items-center",
-                "mb-5",
-                "pb-3")
-              ]
-            }
+            className={ `${styles.row} ${styles.justify_content_center} ${styles.align_items_center} ${styles.mb-5} ${styles.pb-3}`}
           >
             <div
-              className={styles[("col-md-7", "heading-section", "text-center")]}
+              className={`${styles.col_md_7} ${styles.heading_section} ${styles.text_center}`}
             >
               <h3
-                className={styles[("subheading-mt-5", "pt-5")]}
+                className={`${styles.subheading_mt-5} ${styles.pt-5}`}
                 style={{
                   color: "#6db549",
-                  fontSize: "2.5em",
+                  fontSize: "2em",
                   fontFamily: "League Spartan",
+                  marginTop: "2rem",
                 }}
               >
                 WHAT ARE WE
@@ -64,9 +58,9 @@ const About = () => {
               <div className={styles["block-7"]}>
                 <div className={styles["text-justify"]}>
                   <p
-                    styel={{
+                    style={{
                       fontFamily: "Open Sans",
-                      fontSize: "16px",
+                      fontSize: "16.5px",
                       lineHeight: "1.8",
                       fontWeight: "400",
                       color: "#808080",
@@ -202,6 +196,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <Greencounter />
     </div>
   }
     </>

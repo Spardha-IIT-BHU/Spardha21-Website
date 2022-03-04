@@ -16,8 +16,8 @@ function App() {
           <Header />
         </div>
         <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<About timer = "1"/>} />
+          <Route path="/about" element={<About timer = "0"/>} />
           <Route path="/events" element={<Events />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/gallery" element={<Gallery />} />
