@@ -1,8 +1,8 @@
-import React from "react";
-import "./About.css";
-import trophy from "./trophy.png";
-import newspaper from "./newspaper.png";
-import accessory from "./accessory.png";
+import React from 'react';
+import './About.css';
+import trophy from './trophy.png';
+import newspaper from './newspaper.png';
+import accessory from './accessory.png';
 
 const About = () => {
   return (
@@ -14,11 +14,11 @@ const About = () => {
             <div className="col-md-7 heading-section text-center">
               <h3
                 className="subheading-mt-5 pt-5"
-                style={{ color: "#6db549", fontSize: "2em" }}
+                style={{ color: '#6db549', fontSize: '2em' }}
               >
                 WHAT ARE WE
               </h3>
-              <h2 className="mb-1" style={{ color: "white", fontSize: "3em" }}>
+              <h2 className="mb-1" style={{ color: 'white', fontSize: '3em' }}>
                 About Us
               </h2>
             </div>
@@ -30,11 +30,11 @@ const About = () => {
                 <div className="text-justify">
                   <p
                     styel={{
-                      fontFamily: "Open Sans",
-                      fontSize: "16px",
-                      lineHeight: "1.8",
-                      fontWeight: "400",
-                      color: "#808080",
+                      fontFamily: 'Open Sans',
+                      fontSize: '16px',
+                      lineHeight: '1.8',
+                      fontWeight: '400',
+                      color: '#808080',
                     }}
                   >
                     Spardha is the annual sports festival of IIT (BHU),
@@ -62,23 +62,23 @@ const About = () => {
 
             <div className="col-md-4">
               <div className="block-7">
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: 'center' }}>
                   <img
                     src={trophy}
                     alt="/"
                     style={{
-                      width: "20%",
-                      marginLeft: "auto",
-                      marginRight: "auto",
+                      width: '20%',
+                      marginLeft: 'auto',
+                      marginRight: 'auto',
                     }}
                   />
                   <h3
                     className="text-wrap"
                     style={{
-                      fontSize: "22px",
-                      color: "#000",
-                      lineHeight: "1.4",
-                      fontWeight: "bold",
+                      fontSize: '22px',
+                      color: '#000',
+                      lineHeight: '1.4',
+                      fontWeight: 'bold',
                     }}
                   >
                     Hype&nbsp;Around Spardha
@@ -98,23 +98,23 @@ const About = () => {
 
             <div className="col-md-4">
               <div className="block-7">
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: 'center' }}>
                   <img
                     src={newspaper}
                     alt="/"
                     style={{
-                      width: "20%",
-                      marginLeft: "auto",
-                      marginRight: "auto",
+                      width: '20%',
+                      marginLeft: 'auto',
+                      marginRight: 'auto',
                     }}
                   />
                   <h3
                     className="text-wrap"
                     style={{
-                      fontSize: "22px",
-                      color: "#000",
-                      lineHeight: "1.4",
-                      fontWeight: "bold",
+                      fontSize: '22px',
+                      color: '#000',
+                      lineHeight: '1.4',
+                      fontWeight: 'bold',
                     }}
                   >
                     The&nbsp;Talk&nbsp;Of The&nbsp;Town
@@ -133,23 +133,23 @@ const About = () => {
 
             <div className="col-md-4">
               <div className="block-7">
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: 'center' }}>
                   <img
                     src={accessory}
                     alt="/"
                     style={{
-                      width: "20%",
-                      marginLeft: "auto",
-                      marginRight: "auto",
+                      width: '20%',
+                      marginLeft: 'auto',
+                      marginRight: 'auto',
                     }}
                   />
                   <h3
                     className="text-wrap"
                     style={{
-                      fontSize: "22px",
-                      color: "#000",
-                      lineHeight: "1.4",
-                      fontWeight: "bold",
+                      fontSize: '22px',
+                      color: '#000',
+                      lineHeight: '1.4',
+                      fontWeight: 'bold',
                     }}
                   >
                     What&nbsp;You Take Back
