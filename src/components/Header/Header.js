@@ -23,9 +23,9 @@ function Header() {
     <>
       <Navbar dark expand="lg" className={styles["wrap-container"]}>
         <NavbarBrand>
-          <NavLink exact to="/">
+          <NavLink to="/">
             <img
-              src="/images/spardha-logo-white.png"
+              src="/images/logo/spardha-logo-white.png"
               alt="Sparhda Logo"
               height="60px"
             />
@@ -38,47 +38,47 @@ function Header() {
         <Collapse navbar isOpen={open}>
           <Nav navbar className={`ms-auto ${styles["navbar-nav"]}`}>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+              <NavLink to="/" className={styles["nav-links"]}>
                 Home
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/about" className={styles["nav-links"]}>
+              <NavLink to="/about" className={styles["nav-links"]}>
                 About us
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/events" className={styles["nav-links"]}>
+              <NavLink to="/events" className={styles["nav-links"]}>
                 Events
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+              <NavLink to="/" className={styles["nav-links"]}>
                 RuleBook
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+              <NavLink to="/" className={styles["nav-links"]}>
                 Guests
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/sponsors" className={styles["nav-links"]}>
+              <NavLink to="/sponsors" className={styles["nav-links"]}>
                 Sponsors
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/gallery" className={styles["nav-links"]}>
+              <NavLink to="/gallery" className={styles["nav-links"]}>
                 Gallery
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/team" className={styles["nav-links"]}>
+              <NavLink to="/team" className={styles["nav-links"]}>
                 Our Team
               </NavLink>
             </NavItem>
             <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+              <NavLink to="/" className={styles["nav-links"]}>
                 Contact Us
               </NavLink>
             </NavItem>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 .heading {
   font-size: 25px !important;
@@ -7,7 +7,7 @@
   margin-left: 15px;
   line-height: 1;
   z-index: 1;
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   text-transform: uppercase;
   font-family: 'League Spartan', sans-serif;
   margin-block-start: 1em;
@@ -15,11 +15,12 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   color: #6db549;
+  text-align: center !important;
 }
 
 .ftco-section
 {
-  background: url(../../assets/bg/bg_football.jpg) center center/cover; 
+  background: url(../../assets/bg/bg_football.jpg) fixed center center/cover; 
   padding: 4em 0;
   position: relative;
 }
@@ -30,8 +31,30 @@
   position: relative;
   text-transform: uppercase;
   line-height: 1.2; 
-  letter-spacing: 1px;
   word-spacing: 5px;
-  margin-left: 15px;
   font-weight: 900;
+  text-align: center !important;
+}
+
+
+.team-heading {
+  font-family: "League Spartan";
+  font-weight: bolder;
+  color: #6db549;
+  font-size: 30px;
+  padding-top: 55px;
+}
+
+
+@media only screen and (max-width:767.98px)
+{
+  .heading
+  {
+    font-size: 20px !important;
+  }
+
+  .subheading
+  {
+    font-size: 40px !important;
+  }
 }
