@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   Collapse,
   Nav,
@@ -7,8 +7,8 @@ import {
   NavbarBrand,
   NavbarToggler,
   NavItem,
-} from "reactstrap";
-import styles from "./Header.module.css";
+} from 'reactstrap';
+import styles from './Header.module.css';
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <Navbar dark expand="lg" className={styles["wrap-container"]}>
+      <Navbar dark expand="lg" className={styles['wrap-container']}>
         <NavbarBrand>
           <NavLink exact to="/">
             <img
@@ -32,53 +32,53 @@ function Header() {
           </NavLink>
         </NavbarBrand>
         <NavbarToggler
-          className={styles["navbar-toggler"]}
+          className={styles['navbar-toggler']}
           onClick={toggle}
         ></NavbarToggler>
         <Collapse navbar isOpen={open}>
-          <Nav navbar className={`ms-auto ${styles["navbar-nav"]}`}>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+          <Nav navbar className={`ms-auto ${styles['navbar-nav']}`}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/" className={styles['nav-links']}>
                 Home
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/about" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/about" className={styles['nav-links']}>
                 About us
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/events" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/events" className={styles['nav-links']}>
                 Events
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/" className={styles['nav-links']}>
                 RuleBook
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/" className={styles['nav-links']}>
                 Guests
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/sponsors" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/sponsors" className={styles['nav-links']}>
                 Sponsors
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/gallery" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/gallery" className={styles['nav-links']}>
                 Gallery
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/" className={styles['nav-links']}>
                 Our Team
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink exact to="/" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink exact to="/" className={styles['nav-links']}>
                 Contact Us
               </NavLink>
             </NavItem>
