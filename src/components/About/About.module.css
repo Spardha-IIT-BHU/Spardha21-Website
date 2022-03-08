@@ -117,7 +117,7 @@
 .subheading_mt-5 {
   font-size: 20px;
   display: block;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   margin-left: 15px;
   line-height: 1;
   z-index: 1;
@@ -140,11 +140,11 @@
   font-size: 100px;
   position: relative;
   text-transform: uppercase;
-  line-height: 1.8;
+  /* line-height: 1.8; */
   letter-spacing: 2px;
   word-spacing: 5px;
   margin-left: 15px;
-  /* font-family: 'League Spartan'; */
+  font-family: 'League Spartan';
   font-weight: bold;
 }
 

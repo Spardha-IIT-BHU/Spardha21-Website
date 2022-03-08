@@ -216,7 +216,7 @@ const Footer = () => {
                   <span>
                     <a
                       href="https://www.facebook.com/Spardha.IIT.BHU/"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <FaFacebookF className={`${styles.icons_lower}`} />
                     </a>
@@ -224,7 +224,7 @@ const Footer = () => {
                   <span>
                     <a
                       href="https://www.linkedin.com/company/spardha/about/"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <FaLinkedin className={`${styles.icons_lower}`} />
                     </a>
@@ -232,7 +232,7 @@ const Footer = () => {
                   <span>
                     <a
                       href="https://www.instagram.com/spardha_iitbhu/"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                     >
                       <FaInstagram className={`${styles.icons_lower}`} />
                     </a>
