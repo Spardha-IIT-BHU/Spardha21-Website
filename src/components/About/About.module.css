@@ -14,6 +14,8 @@
   box-sizing: border-box;
 }
 
+
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -50,12 +52,12 @@
   margin-bottom: 3rem !important;
 }
 
-.align-items-center {
+.align_items_center {
   -webkit-box-align: center !important;
   align-items: center !important;
 }
 
-.justify-content-center {
+.justify_content_center {
   -webkit-box-pack: center !important;
   justify-content: center !important;
 }
@@ -67,7 +69,7 @@
   margin-left: -15px;
 }
 
-.heading-section {
+.heading_section {
   z-index: 0;
 }
 
@@ -76,11 +78,11 @@
   visibility: hidden;
 }
 
-.text-center {
+.text_center {
   text-align: center !important;
 }
 
-.col-md-7 {
+.col_md_7 {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -89,17 +91,17 @@
 }
 
 @media (min-width: 768px) {
-  .col-md-7 {
+  .col_md_7 {
     -webkit-box-flex: 0;
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
 }
 
-.heading-section.subheading {
+.heading_section.subheading {
   font-size: 20px;
   display: block;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   margin-left: 15px;
   line-height: 1;
   z-index: 1;
@@ -110,10 +112,20 @@
 
 .pt-5 {
   padding-top: 3rem !important;
+  margin-top: 5 rem !important;
 }
 
-.mt-5 {
-  margin-top: 3rem !important;
+.subheading_mt-5 {
+  font-size: 20px;
+  display: block;
+  /* margin-bottom: 5px; */
+  margin-left: 15px;
+  line-height: 1;
+  z-index: 1;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-family: "League Spartan";
+  margin-top: 5rem !important;
 }
 
 .h3 {
@@ -124,16 +136,16 @@
   margin-inline-end: 0px;
 }
 
-.heading-section h2 {
+.heading_section h2 {
   z-index: -1;
-  font-size: 100px;
+  /* font-size: 100px; */
   position: relative;
   text-transform: uppercase;
-  line-height: 1.8;
+  /* line-height: 1.8; */
   letter-spacing: 2px;
   word-spacing: 5px;
   margin-left: 15px;
-  /* font-family: 'League Spartan'; */
+  font-family: 'League Spartan';
   font-weight: bold;
 }
 
@@ -190,5 +202,15 @@
     -webkit-box-flex: 0;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+  }
+
+  .mb-1{
+    font-size: 3.5em;
+  }  
+}
+
+@media(max-width: 768px){
+  .mb-1{
+  font-size: 2em;
   }
 }

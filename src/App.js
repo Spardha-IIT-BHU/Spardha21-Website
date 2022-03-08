@@ -1,11 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './components/About/About';
-import Events from './components/Events/Events';
-import Header from './components/Header/Header';
-import Sponsors from './components/Sponsors/Sponsors';
-import Gallery from './components/Gallery/Gallery';
-import Preloader from './components/Preloader/Preloader';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About/About";
+import Events from "./components/Events/Events";
+import Header from "./components/Header/Header";
+import Sponsors from "./components/Sponsors/Sponsors";
+import Gallery from "./components/Gallery/Gallery";
+import Preloader from "./components/Preloader/Preloader";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/preloader" element={<Preloader />} />
         </Routes>
       </Router>
-      <div>Contact Us</div>
+      <Footer />
     </>
   );
 }

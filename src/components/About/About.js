@@ -25,26 +25,23 @@ const About = () => {
             <div className={styles['container']}>
               <div
                 className={
-                  styles[
-                    ('row',
-                    'justify-content-center',
-                    'align-items-center',
-                    'mb-5',
-                    'pb-3')
-                  ]
-                }
+                  `${styles.row}
+                    ${styles.justify_content_center}
+                    ${styles.align_items_center}
+                    ${styles.mb-5}
+                    ${styles.pb-3}`}
+                  
               >
                 <div
                   className={
-                    styles[('col-md-7', 'heading-section', 'text-center')]
-                  }
+                    `${styles.col_md_7} ${styles.heading_section} ${styles.text_center}`}
                 >
                   <h3
-                    className={styles[('subheading-mt-5', 'pt-5')]}
+                    className={`${styles.subheading_mt-5} ${styles.pt-5}`}
                     style={{
                       color: '#6db549',
-                      fontSize: '2.5em',
                       fontFamily: 'League Spartan',
+                      marginTop: "20px", 
                     }}
                   >
                     WHAT ARE WE
@@ -53,9 +50,10 @@ const About = () => {
                     className={styles['mb-1']}
                     style={{
                       color: 'white',
-                      fontSize: '3.5em',
-                      fontfamily: 'League partan',
-                      fontWeight: 'bold',
+                      // fontSize: '3.5em',
+                      fontfamily: 'League spartan',
+                      fontWeight: '700',
+                      marginBottom: "1em"
                     }}
                   >
                     ABOUT US
