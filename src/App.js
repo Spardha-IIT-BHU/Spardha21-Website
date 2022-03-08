@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import Sponsors from "./components/Sponsors/Sponsors";
 import Gallery from "./components/Gallery/Gallery";
 import Preloader from "./components/Preloader/Preloader";
-
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,15 +16,15 @@ function App() {
           <Header />
         </div>
         <Routes>
-          <Route path="/" element={<About timer = "1"/>} />
-          <Route path="/about" element={<About timer = "0"/>} />
+          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/preloader" element={<Preloader />} />
         </Routes>
       </Router>
-      <div>Contact Us</div>
+      <Footer />
     </>
   );
 }
