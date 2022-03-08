@@ -138,3 +138,8 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.padSect {
+  padding: 7em 0;
+  position: relative;
+}

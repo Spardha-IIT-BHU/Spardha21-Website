@@ -25,7 +25,7 @@ const Gallery = () => {
       {checkgallery ? (
         <Preloader />
       ) : (
-        <section id="gallery" className="ftco-section">
+        <section id="gallery" className="ftco-section padSect">
           <div className="container_gallery gallery-container mb-5 pt-1">
             <div className="row_gallery justify-content-center pt-5">
               <div className="col-md-7 heading-section_gallery text-center">
