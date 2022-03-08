@@ -112,6 +112,7 @@
 
 .pt-5 {
   padding-top: 3rem !important;
+  margin-top: 5 rem !important;
 }
 
 .subheading_mt-5 {
@@ -124,7 +125,7 @@
   letter-spacing: 7px;
   text-transform: uppercase;
   font-family: "League Spartan";
-  margin-top: 3rem !important;
+  margin-top: 5rem !important;
 }
 
 .h3 {
@@ -137,7 +138,7 @@
 
 .heading_section h2 {
   z-index: -1;
-  font-size: 100px;
+  /* font-size: 100px; */
   position: relative;
   text-transform: uppercase;
   /* line-height: 1.8; */
@@ -201,5 +202,15 @@
     -webkit-box-flex: 0;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+  }
+
+  .mb-1{
+    font-size: 3.5em;
+  }  
+}
+
+@media(max-width: 768px){
+  .mb-1{
+  font-size: 2em;
   }
 }

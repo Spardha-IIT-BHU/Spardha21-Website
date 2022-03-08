@@ -40,10 +40,8 @@ const About = () => {
                     className={`${styles.subheading_mt-5} ${styles.pt-5}`}
                     style={{
                       color: '#6db549',
-                      fontSize: '2em',
                       fontFamily: 'League Spartan',
-                      marginTop: "10px", 
-                      fontFamily:"sans-serif"
+                      marginTop: "20px", 
                     }}
                   >
                     WHAT ARE WE
@@ -52,10 +50,9 @@ const About = () => {
                     className={styles['mb-1']}
                     style={{
                       color: 'white',
-                      fontSize: '3.5em',
-                      fontfamily: 'League partan',
+                      // fontSize: '3.5em',
+                      fontfamily: 'League spartan',
                       fontWeight: '700',
-                      fontFamily:"sans-serif",
                       marginBottom: "1em"
                     }}
                   >
