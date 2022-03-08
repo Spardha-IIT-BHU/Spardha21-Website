@@ -14,8 +14,6 @@
   box-sizing: border-box;
 }
 
-
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -124,7 +122,7 @@
   z-index: 1;
   letter-spacing: 7px;
   text-transform: uppercase;
-  font-family: "League Spartan";
+  font-family: 'League Spartan';
   margin-top: 5rem !important;
 }
 
@@ -204,13 +202,13 @@
     max-width: 33.33333%;
   }
 
-  .mb-1{
+  .mb-1 {
     font-size: 3.5em;
-  }  
+  }
 }
 
-@media(max-width: 768px){
-  .mb-1{
-  font-size: 2em;
+@media (max-width: 768px) {
+  .mb-1 {
+    font-size: 2em;
   }
 }

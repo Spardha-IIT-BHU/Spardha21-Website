@@ -7,8 +7,7 @@
   transition: all 0.3s ease;
 }
 
-.staff .info
-{
+.staff .info {
   width: 100%;
 }
 
@@ -20,9 +19,7 @@
   border-color: #fff;
 }
 
-
-.head
-{
+.head {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 400;
@@ -32,8 +29,7 @@
   color: #6db549;
 }
 
-.img
-{
+.img {
   border-radius: 0;
   width: 100%;
   height: auto;
@@ -41,9 +37,8 @@
   border-style: none;
 }
 
-.img:hover
-{
-  transform: scale(1.01,1.01);
+.img:hover {
+  transform: scale(1.01, 1.01);
 }
 
 .links {
@@ -59,10 +54,8 @@
   color: #6db549;
 }
 
-@media only screen and (min-width: 992px)
-{
-  .links
-  {
+@media only screen and (min-width: 992px) {
+  .links {
     font-size: 20px;
   }
 }

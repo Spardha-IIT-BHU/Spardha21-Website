@@ -36,49 +36,49 @@ function Header() {
           onClick={toggle}
         ></NavbarToggler>
         <Collapse navbar isOpen={open}>
-          <Nav navbar className={`ms-auto ${styles["navbar-nav"]}`}>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/" className={styles["nav-links"]}>
+          <Nav navbar className={`ms-auto ${styles['navbar-nav']}`}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/" className={styles['nav-links']}>
                 Home
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/about" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/about" className={styles['nav-links']}>
                 About us
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/events" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/events" className={styles['nav-links']}>
                 Events
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/" className={styles['nav-links']}>
                 RuleBook
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/" className={styles['nav-links']}>
                 Guests
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/sponsors" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/sponsors" className={styles['nav-links']}>
                 Sponsors
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/gallery" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/gallery" className={styles['nav-links']}>
                 Gallery
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/team" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/team" className={styles['nav-links']}>
                 Our Team
               </NavLink>
             </NavItem>
-            <NavItem className={styles["nav-items"]}>
-              <NavLink to="/" className={styles["nav-links"]}>
+            <NavItem className={styles['nav-items']}>
+              <NavLink to="/" className={styles['nav-links']}>
                 Contact Us
               </NavLink>
             </NavItem>

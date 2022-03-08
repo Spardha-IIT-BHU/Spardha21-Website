@@ -1,13 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./components/About/About";
-import Events from "./components/Events/Events";
-import Header from "./components/Header/Header";
-import Team from "./components/Team/Team";
-import Sponsors from "./components/Sponsors/Sponsors";
-import Gallery from "./components/Gallery/Gallery";
-import Preloader from "./components/Preloader/Preloader";
-import Footer from "./components/Footer/Footer";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './components/About/About';
+import Events from './components/Events/Events';
+import Header from './components/Header/Header';
+import Team from './components/Team/Team';
+import Sponsors from './components/Sponsors/Sponsors';
+import Gallery from './components/Gallery/Gallery';
+import Preloader from './components/Preloader/Preloader';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

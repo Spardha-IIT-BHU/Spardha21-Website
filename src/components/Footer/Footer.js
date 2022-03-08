@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Footer.module.css";
+import React from 'react';
+import styles from './Footer.module.css';
 import {
   FaMapMarker,
   FaPhoneAlt,
@@ -7,7 +7,7 @@ import {
   FaFacebookF,
   FaLinkedin,
   FaInstagram,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -30,14 +30,14 @@ const Footer = () => {
                     <FaMapMarker className={`${styles.icons}`}></FaMapMarker>
                     <div
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       Spardha Office, IIT(BHU) Gymkhana
                     </div>
                   </span>
                   <span
                     className={`${styles.text}`}
-                    style={{ wordSpacing: "0.4em" }}
+                    style={{ wordSpacing: '0.4em' }}
                   >
                     &emsp; IIT(BHU) Varanasi - 221005
                   </span>
@@ -50,7 +50,7 @@ const Footer = () => {
                       <FaPhoneAlt className={`${styles.icons}`}></FaPhoneAlt>
                       <span
                         className={`${styles.text}`}
-                        style={{ wordSpacing: "0.4em" }}
+                        style={{ wordSpacing: '0.4em' }}
                       >
                         Registrations&nbsp;&amp;&nbsp;Enquiry:
                       </span>
@@ -61,13 +61,13 @@ const Footer = () => {
                     {/* <div> */}
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       <a
                         className={`${styles.text}`}
                         style={{
-                          wordSpacing: "0.4em",
-                          textDecoration: "none",
+                          wordSpacing: '0.4em',
+                          textDecoration: 'none',
                         }}
                         href="tel:+917238856930"
                       >
@@ -75,17 +75,17 @@ const Footer = () => {
                       </a>
                     </span>
 
-                    <div>{"\n"}</div>
+                    <div>{'\n'}</div>
 
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       <a
                         className={`${styles.text}`}
                         style={{
-                          wordSpacing: "0.4em",
-                          textDecoration: "none",
+                          wordSpacing: '0.4em',
+                          textDecoration: 'none',
                         }}
                         href="tel:+917238856930"
                       >
@@ -93,17 +93,17 @@ const Footer = () => {
                       </a>
                     </span>
 
-                    <div>{"\n"}</div>
+                    <div>{'\n'}</div>
 
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       <a
                         className={`${styles.text}`}
                         style={{
-                          wordSpacing: "0.4em",
-                          textDecoration: "none",
+                          wordSpacing: '0.4em',
+                          textDecoration: 'none',
                         }}
                         href="tel:+917238856930"
                       >
@@ -111,17 +111,17 @@ const Footer = () => {
                       </a>
                     </span>
 
-                    <div>{"\n"}</div>
+                    <div>{'\n'}</div>
 
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       <a
                         className={`${styles.text}`}
                         style={{
-                          wordSpacing: "0.4em",
-                          textDecoration: "none",
+                          wordSpacing: '0.4em',
+                          textDecoration: 'none',
                         }}
                         href="tel:+917238856930"
                       >
@@ -132,7 +132,7 @@ const Footer = () => {
 
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       &emsp;&nbsp;Branding&nbsp;&amp;&nbsp;Communications:
                     </span>
@@ -142,13 +142,13 @@ const Footer = () => {
                     {/* <div> */}
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       <a
                         className={`${styles.text}`}
                         style={{
-                          wordSpacing: "0.4em",
-                          textDecoration: "none",
+                          wordSpacing: '0.4em',
+                          textDecoration: 'none',
                         }}
                         href="tel:+919782524351"
                       >
@@ -158,7 +158,7 @@ const Footer = () => {
                     <br />
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       &emsp;&nbsp;Events:
                     </span>
@@ -168,13 +168,13 @@ const Footer = () => {
                     {/* <div> */}
                     <span
                       className={`${styles.text}`}
-                      style={{ wordSpacing: "0.4em" }}
+                      style={{ wordSpacing: '0.4em' }}
                     >
                       <a
                         className={`${styles.text}`}
                         style={{
-                          wordSpacing: "0.4em",
-                          textDecoration: "none",
+                          wordSpacing: '0.4em',
+                          textDecoration: 'none',
                         }}
                         href="tel:+916376854841"
                       >
@@ -192,8 +192,8 @@ const Footer = () => {
                       <a
                         className={`${styles.text}`}
                         style={{
-                          wordSpacing: "0.4em",
-                          textDecoration: "none",
+                          wordSpacing: '0.4em',
+                          textDecoration: 'none',
                         }}
                         href="mailto: convener.spardha@iitbhu.ac.in"
                       >
@@ -216,7 +216,8 @@ const Footer = () => {
                   <span>
                     <a
                       href="https://www.facebook.com/Spardha.IIT.BHU/"
-                      target="_blank" rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaFacebookF className={`${styles.icons_lower}`} />
                     </a>
@@ -224,7 +225,8 @@ const Footer = () => {
                   <span>
                     <a
                       href="https://www.linkedin.com/company/spardha/about/"
-                      target="_blank" rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaLinkedin className={`${styles.icons_lower}`} />
                     </a>
@@ -232,7 +234,8 @@ const Footer = () => {
                   <span>
                     <a
                       href="https://www.instagram.com/spardha_iitbhu/"
-                      target="_blank" rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaInstagram className={`${styles.icons_lower}`} />
                     </a>

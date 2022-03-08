@@ -24,24 +24,21 @@ const About = () => {
           <section id={styles['about']} className="ftco-section">
             <div className={styles['container']}>
               <div
-                className={
-                  `${styles.row}
+                className={`${styles.row}
                     ${styles.justify_content_center}
                     ${styles.align_items_center}
-                    ${styles.mb-5}
-                    ${styles.pb-3}`}
-                  
+                    ${styles.mb - 5}
+                    ${styles.pb - 3}`}
               >
                 <div
-                  className={
-                    `${styles.col_md_7} ${styles.heading_section} ${styles.text_center}`}
+                  className={`${styles.col_md_7} ${styles.heading_section} ${styles.text_center}`}
                 >
                   <h3
-                    className={`${styles.subheading_mt-5} ${styles.pt-5}`}
+                    className={`${styles.subheading_mt - 5} ${styles.pt - 5}`}
                     style={{
                       color: '#6db549',
                       fontFamily: 'League Spartan',
-                      marginTop: "20px", 
+                      marginTop: '20px',
                     }}
                   >
                     WHAT ARE WE
@@ -53,7 +50,7 @@ const About = () => {
                       // fontSize: '3.5em',
                       fontfamily: 'League spartan',
                       fontWeight: '700',
-                      marginBottom: "1em"
+                      marginBottom: '1em',
                     }}
                   >
                     ABOUT US
