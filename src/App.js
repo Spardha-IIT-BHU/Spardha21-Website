@@ -22,7 +22,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Suspense fallback={Preloader}>
+              <Suspense fallback={<Preloader/>}>
                 <About />
               </Suspense>
             }
@@ -30,7 +30,7 @@ function App() {
           <Route
             path="/about"
             element={
-              <Suspense fallback={Preloader}>
+              <Suspense fallback={<Preloader/>}>
                 <About />
               </Suspense>
             }
@@ -38,7 +38,7 @@ function App() {
           <Route
             path="/events"
             element={
-              <Suspense fallback={Preloader}>
+              <Suspense fallback={<Preloader/>}>
                 <Events />
               </Suspense>
             }
@@ -46,7 +46,7 @@ function App() {
           <Route
             path="/team"
             element={
-              <Suspense fallback={Preloader}>
+              <Suspense fallback={<Preloader/>}>
                 <Team />
               </Suspense>
             }
@@ -54,7 +54,7 @@ function App() {
           <Route
             path="/sponsors"
             element={
-              <Suspense fallback={Preloader}>
+              <Suspense fallback={<Preloader/>}>
                 <Sponsors />
               </Suspense>
             }
@@ -62,7 +62,7 @@ function App() {
           <Route
             path="/gallery"
             element={
-              <Suspense fallback={Preloader}>
+              <Suspense fallback={<Preloader/>}>
                 <Gallery />
               </Suspense>
             }
