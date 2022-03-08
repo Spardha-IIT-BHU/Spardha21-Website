@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   Collapse,
   Nav,
@@ -7,8 +7,8 @@ import {
   NavbarBrand,
   NavbarToggler,
   NavItem,
-} from "reactstrap";
-import styles from "./Header.module.css";
+} from 'reactstrap';
+import styles from './Header.module.css';
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <Navbar dark expand="lg" className={styles["wrap-container"]}>
+      <Navbar dark expand="lg" className={styles['wrap-container']}>
         <NavbarBrand>
           <NavLink to="/">
             <img
@@ -32,7 +32,7 @@ function Header() {
           </NavLink>
         </NavbarBrand>
         <NavbarToggler
-          className={styles["navbar-toggler"]}
+          className={styles['navbar-toggler']}
           onClick={toggle}
         ></NavbarToggler>
         <Collapse navbar isOpen={open}>
