@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
+import HomeSlider from './components/HomeSlider/HomeSlider';
 import Footer from './components/Footer/Footer';
 import Preloader from './components/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
@@ -17,12 +18,13 @@ function App() {
       <Router>
         <>
           <Header />
+          <HomeSlider />
         </>
         <Routes>
           <Route
             path="/"
             element={
-              <Suspense fallback={<Preloader/>}>
+              <Suspense fallback={<Preloader />}>
                 <About />
               </Suspense>
             }
@@ -30,7 +32,7 @@ function App() {
           <Route
             path="/about"
             element={
-              <Suspense fallback={<Preloader/>}>
+              <Suspense fallback={<Preloader />}>
                 <About />
               </Suspense>
             }
@@ -38,7 +40,7 @@ function App() {
           <Route
             path="/events"
             element={
-              <Suspense fallback={<Preloader/>}>
+              <Suspense fallback={<Preloader />}>
                 <Events />
               </Suspense>
             }
@@ -46,7 +48,7 @@ function App() {
           <Route
             path="/team"
             element={
-              <Suspense fallback={<Preloader/>}>
+              <Suspense fallback={<Preloader />}>
                 <Team />
               </Suspense>
             }
@@ -54,7 +56,7 @@ function App() {
           <Route
             path="/sponsors"
             element={
-              <Suspense fallback={<Preloader/>}>
+              <Suspense fallback={<Preloader />}>
                 <Sponsors />
               </Suspense>
             }
@@ -62,7 +64,7 @@ function App() {
           <Route
             path="/gallery"
             element={
-              <Suspense fallback={<Preloader/>}>
+              <Suspense fallback={<Preloader />}>
                 <Gallery />
               </Suspense>
             }
