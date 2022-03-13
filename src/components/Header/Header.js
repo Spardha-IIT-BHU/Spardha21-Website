@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <Navbar dark expand="lg" className={styles['wrap-container']}>
+      <Navbar expand="lg" className={styles['wrap-container']} sticky="top">
         <NavbarBrand>
           <NavLink to="/">
             <img
@@ -38,47 +38,101 @@ function Header() {
         <Collapse navbar isOpen={open}>
           <Nav navbar className={`ms-auto ${styles['navbar-nav']}`}>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/" className={styles['nav-links']}>
+              <NavLink
+                to="/"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 Home
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/about" className={styles['nav-links']}>
+              <NavLink
+                to="/about"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 About us
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/events" className={styles['nav-links']}>
+              <NavLink
+                to="/events"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 Events
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/" className={styles['nav-links']}>
+              <NavLink
+                to="/"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 RuleBook
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/" className={styles['nav-links']}>
+              <NavLink
+                to="/"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 Guests
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/sponsors" className={styles['nav-links']}>
+              <NavLink
+                to="/sponsors"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 Sponsors
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/gallery" className={styles['nav-links']}>
+              <NavLink
+                to="/gallery"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 Gallery
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/team" className={styles['nav-links']}>
+              <NavLink
+                to="/team"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 Our Team
               </NavLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink to="/" className={styles['nav-links']}>
+              <NavLink
+                to="/"
+                className={styles['nav-links']}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
                 Contact Us
               </NavLink>
             </NavItem>
