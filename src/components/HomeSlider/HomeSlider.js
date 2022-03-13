@@ -42,15 +42,13 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca">
-                        <a className="home-button1">CAMPUS AMBASSADOR</a>
+                      <Link to="/ca" className="home-button1">
+                        CAMPUS AMBASSADOR
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register">
-                        <a className="home-button">
-                          REGISTER&nbsp;/&nbsp;LOGIN
-                        </a>
+                      <Link to="/register" className="home-button">
+                        REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
                   </div>
@@ -60,13 +58,13 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register">
-                      <a className="home-button">REGISTER&nbsp;/&nbsp;LOGIN</a>
+                    <Link to="/register" className="home-button">
+                      REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
                   <div className="ca">
-                    <Link to="/ca">
-                      <a className="home-button1">CAMPUS AMBASSADOR</a>
+                    <Link to="/ca" className="home-button1">
+                      CAMPUS AMBASSADOR
                     </Link>
                   </div>
                   <div className="container mt-5">&nbsp;</div>
@@ -101,15 +99,13 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca">
-                        <a className="home-button1">CAMPUS AMBASSADOR</a>
+                      <Link to="/ca" className="home-button1">
+                        CAMPUS AMBASSADOR
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register">
-                        <a className="home-button">
-                          REGISTER&nbsp;/&nbsp;LOGIN
-                        </a>
+                      <Link to="/register" className="home-button">
+                        REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
                   </div>
@@ -119,13 +115,13 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register">
-                      <a className="home-button">REGISTER&nbsp;/&nbsp;LOGIN</a>
+                    <Link to="/register" className="home-button">
+                      REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
                   <div className="ca">
-                    <Link to="/ca">
-                      <a className="home-button1">CAMPUS AMBASSADOR</a>
+                    <Link to="/ca" className="home-button1">
+                      CAMPUS AMBASSADOR
                     </Link>
                   </div>
                   <div className="container mt-5">&nbsp;</div>
@@ -160,15 +156,13 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca">
-                        <a className="home-button1">CAMPUS AMBASSADOR</a>
+                      <Link to="/ca" className="home-button1">
+                        CAMPUS AMBASSADOR
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register">
-                        <a className="home-button">
-                          REGISTER&nbsp;/&nbsp;LOGIN
-                        </a>
+                      <Link to="/register" className="home-button">
+                        REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
                   </div>
@@ -178,13 +172,13 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register">
-                      <a className="home-button">REGISTER&nbsp;/&nbsp;LOGIN</a>
+                    <Link to="/register" className="home-button">
+                      REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
                   <div className="ca">
-                    <Link to="/ca">
-                      <a className="home-button1">CAMPUS AMBASSADOR</a>
+                    <Link to="/ca" className="home-button1">
+                      CAMPUS AMBASSADOR
                     </Link>
                   </div>
                   <div className="container mt-5">&nbsp;</div>
@@ -219,15 +213,13 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca">
-                        <a className="home-button1">CAMPUS AMBASSADOR</a>
+                      <Link to="/ca" className="home-button1">
+                        CAMPUS AMBASSADOR
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register">
-                        <a className="home-button">
-                          REGISTER&nbsp;/&nbsp;LOGIN
-                        </a>
+                      <Link to="/register" className="home-button">
+                        REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
                   </div>
@@ -237,13 +229,13 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register">
-                      <a className="home-button">REGISTER&nbsp;/&nbsp;LOGIN</a>
+                    <Link to="/register" className="home-button">
+                      REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
                   <div className="ca">
-                    <Link to="/ca">
-                      <a className="home-button1">CAMPUS AMBASSADOR</a>
+                    <Link to="/ca" className="home-button1">
+                      CAMPUS AMBASSADOR
                     </Link>
                   </div>
                   <div className="container mt-5">&nbsp;</div>

@@ -88,7 +88,7 @@
   position: relative;
   height: 91.5vh; /*change me to 100 once done */
   z-index: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .owl-carousel.home-slider .home-slider-item {
