@@ -147,3 +147,10 @@
 .height_gallery {
   width: 100%;
 }
+.carousel_gallery .control-dots {
+  display: none;
+}
+
+.carousel_gallery .carousel-status {
+  display: none;
+}

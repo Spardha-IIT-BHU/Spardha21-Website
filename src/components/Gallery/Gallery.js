@@ -1035,7 +1035,7 @@ const Gallery = () => {
                     toggle={toggle}>
                     </ModalHeader>
                 <ModalBody>
-                <Carousel showArrows={true} infiniteLoop={true} selectedItem={item}>
+                <Carousel showArrows={true} infiniteLoop={true} selectedItem={item} className="carousel_gallery">
                           <div>
                               <img src="/gallery/images/opening/43.jpg" alt="gallery_modal_image"/>
                           </div>
