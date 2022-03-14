@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Header from './Header/Header';
 import HomeSlider from './HomeSlider/HomeSlider';
 import Footer from './Footer/Footer';
@@ -12,7 +12,7 @@ function LandingPages() {
       <Outlet />
       <Footer />
     </>
-  )
+  );
 }
 
-export default LandingPages
+export default LandingPages;

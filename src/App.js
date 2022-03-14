@@ -5,10 +5,19 @@ import Preloader from './components/LandingPages/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
 
 const About = React.lazy(() => import('./components/LandingPages/About/About'));
-const Events = React.lazy(() => import('./components/LandingPages/Events/Events'));
+const Events = React.lazy(() =>
+  import('./components/LandingPages/Events/Events')
+);
 const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
-const Sponsors = React.lazy(() => import('./components/LandingPages/Sponsors/Sponsors'));
-const Gallery = React.lazy(() => import('./components/LandingPages/Gallery/Gallery'));
+const Sponsors = React.lazy(() =>
+  import('./components/LandingPages/Sponsors/Sponsors')
+);
+const Gallery = React.lazy(() =>
+  import('./components/LandingPages/Gallery/Gallery')
+);
+const Guests = React.lazy(() =>
+  import('./components/LandingPages/Guests/Guests')
+);
 
 function App() {
   return (
@@ -45,6 +54,14 @@ function App() {
               element={
                 <Suspense fallback={<Preloader />}>
                   <Team />
+                </Suspense>
+              }
+            />
+            <Route
+              path="guests"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Guests />
                 </Suspense>
               }
             />
