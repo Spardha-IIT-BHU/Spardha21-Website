@@ -40,17 +40,17 @@ const Gallery = () => {
         <div className="container_gallery gallery-container mb-5 pt-1">
           <div className="row_gallery justify-content-center pt-5">
             <div className="col-md-7 heading-section_gallery text-center">
-              <h3 className="subheading_gallery" style={{ color: '#6db549' }}>
+              <h3 className="subheading_gallery" style={{ color: '#6db549', fontWeight: '900' }}>
                 Some Past Memories
               </h3>
-              <h2 className="mb-1">Gallery</h2>
+              <h2 className="mb-1" style={{fontWeight: '900'}}>Gallery</h2>
             </div>
           </div>
           {/* <hr style="margin-left: 30px; margin-right: 30px;"> */}
           <div className="tz-gallery">
             <div
               className="row_gallery mb-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Opening Ceremony:
             </div>
@@ -109,11 +109,11 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Pre-Events:
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{fontSize: '19px'}}>
               &emsp;I. Mashaal Handover Ceremony
             </div>
             <div className="row_gallery">
@@ -148,7 +148,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{fontSize: '19px'}}>
               &emsp;II. Run for a Cause
             </div>
             <div className="row_gallery">
@@ -183,7 +183,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{fontSize: '19px'}}>
               &emsp;III. Saturnalia
             </div>
             <div className="row_gallery">
@@ -218,7 +218,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{fontSize: '19px'}}>
               &emsp;IV. Udbhav
             </div>
             <div className="row_gallery">
@@ -265,7 +265,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Closing Ceremony:
             </div>
@@ -323,7 +323,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Aquatics:
             </div>
@@ -351,7 +351,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Athletics:
             </div>
@@ -379,7 +379,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Badminton:
             </div>
@@ -417,7 +417,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Basketball:
             </div>
@@ -475,7 +475,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Boxing:
             </div>
@@ -513,7 +513,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Carrom:
             </div>
@@ -551,7 +551,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Chess:
             </div>
@@ -590,7 +590,7 @@ const Gallery = () => {
 
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Cricket:
             </div>
@@ -628,7 +628,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Football:
             </div>
@@ -666,7 +666,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Handball:
             </div>
@@ -704,7 +704,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Hockey:
             </div>
@@ -742,7 +742,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Kabaddi:
             </div>
@@ -780,7 +780,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Kho-kho:
             </div>
@@ -828,7 +828,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Powerlifting & Weightlifting:
             </div>
@@ -866,7 +866,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Table Tennis:
             </div>
@@ -904,7 +904,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Taekwondo:
             </div>
@@ -942,7 +942,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Tennis:
             </div>
@@ -980,7 +980,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '22px' }}
+              
             >
               Volleyball:
             </div>

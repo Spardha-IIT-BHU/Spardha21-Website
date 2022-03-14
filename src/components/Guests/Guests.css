@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+@media only screen and (max-width: 600px) {
+    #overlay-text {
+        font-size: 12px;
+    }
+}
+
+#guests-video {
+    background-image: url('./../../assets/bg/bg_football.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#testimonials {
+    background-image: url('./../../assets/bg/bg_basketball.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.bg_class_guest1 {
+    background-image: url('./../../assets/testimonials/testi-1.jpg');
+}
+
+.bg_class_guest2 {
+    background-image: url('./../../assets/testimonials/testi-2.jpg');
+}
+
+.bg_class_guest3 {
+    background-image: url('./../../assets/testimonials/testi-3.jpg');
+}
+
+.bg_class_guest4 {
+    background-image: url('./../../assets/testimonials/testi-4.jpg');
+}
+
+.bg_class_guest5 {
+    background-image: url('./../../assets/testimonials/testi-5.jpg');
+}
+
+.bg_class_guest6 {
+    background-image: url('./../../assets/testimonials/testi-6.jpg');
+}
+
+.bg_class_guest7 {
+    background-image: url('./../../assets/testimonials/testi-7.jpg');
+}
+
+.bg_class_guest8 {
+    background-image: url('./../../assets/testimonials/testi-8.jpg');
+}
+
+.bg_class_guest9 {
+    background-image: url('./../../assets/testimonials/testi-9.jpg');
+}
+
+#guests .col-md-3,
+.col-lg-3 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#guests {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.img-guests {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .guest-text {
+        font-size: 15px;
+    }
+
+    #guests {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .col-6 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+.ftco-section_guests {
+    padding: 7em 0;
+    position: relative;
+}
+
+@media (max-width: 767.98px) {
+    .ftco-section_guests {
+        padding: 6em 0;
+    }
+}
+
+.container-fluid_guests {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row_guests {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.justify-content-center_guests {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+
+.mb-5,
+.my-5 {
+    margin-bottom: 3rem !important;
+}
+
+.heading-section_guests {
+    z-index: 0;
+}
+
+.heading-section_guests .subheading_guests {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    color: #000;
+    line-height: 1;
+    z-index: 1;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-family: 'League Spartan';
+    ;
+}
+
+.heading-section_guests h2 {
+    z-index: -1;
+    font-size: 50px;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    margin-left: 15px;
+    font-family: 'League Spartan';
+    ;
+}
+
+@media (max-width: 767.98px) {
+    .heading-section_guests h2 {
+        font-size: 30px;
+    }
+
+    .heading-section_guests .subheading_guests {
+        font-size: 18px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.img-fluid_guests {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-guests {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle_guests {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.guest-text {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Fjalla One";
+    color: white;
+}

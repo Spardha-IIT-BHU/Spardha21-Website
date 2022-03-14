@@ -9,6 +9,7 @@ import { Suspense } from 'react/cjs/react.production.min';
 const About = React.lazy(() => import('./components/About/About'));
 const Events = React.lazy(() => import('./components/Events/Events'));
 const Team = React.lazy(() => import('./components/Team/Team'));
+const Guests = React.lazy(() => import('./components/Guests/Guests'));
 const Sponsors = React.lazy(() => import('./components/Sponsors/Sponsors'));
 const Gallery = React.lazy(() => import('./components/Gallery/Gallery'));
 
@@ -50,6 +51,14 @@ function App() {
             element={
               <Suspense fallback={<Preloader />}>
                 <Team />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/guests"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Guests />
               </Suspense>
             }
           />

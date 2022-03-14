@@ -83,7 +83,7 @@ function Header() {
             </NavItem>
             <NavItem className={styles['nav-items']}>
               <NavLink
-                to="/"
+                to="/guests"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
