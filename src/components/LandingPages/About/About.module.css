@@ -21,7 +21,7 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .container_aboutus {
+  .container {
     max-width: 960px;
   }
 }
@@ -156,7 +156,7 @@
 }
 
 .text-wrap {
-  font-family: 'League-Spartan';
+  font-family: 'League Spartan';
   margin-bottom: 0.5rem;
   margin-top: 0;
   display: block;
@@ -210,5 +210,41 @@
 @media (max-width: 768px) {
   .mb-1 {
     font-size: 2em;
+  }
+}
+
+.para1 {
+  font-family: 'Open Sans';
+  color: #808080;
+  padding-bottom: auto;
+  font-size: 17px;
+}
+
+.para2 {
+  font-family: 'Open Sans';
+  color: #808080;
+  padding-bottom: auto;
+  font-size: 17px;
+}
+
+.para3 {
+  font-family: 'Open Sans';
+  color: #808080;
+  padding-bottom: auto;
+  font-size: 17px;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .para1 {
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .para1 {
+    padding-bottom: 25px;
+  }
+  .para3 {
+    padding-bottom: 25px;
   }
 }
