@@ -4,6 +4,7 @@ import trophy from './trophy.png';
 import newspaper from './newspaper.png';
 import accessory from './accessory.png';
 import Preloader from '../Preloader/Preloader';
+import Greencounter from '../GreenCounter/Greencounter';
 
 const About = () => {
   const [checkabout, setCheckabout] = useState(true);
@@ -38,10 +39,12 @@ const About = () => {
                     style={{
                       color: '#6db549',
                       fontFamily: 'League Spartan',
-                      marginTop: '20px',
+                      marginTop: '75px',
+                      fontWeight: '800',
+                      letterSpacing: '2px',
                     }}
                   >
-                    WHAT ARE WE
+                    &nbsp;WHAT ARE WE
                   </h3>
                   <h2
                     className={styles['mb-1']}
@@ -49,8 +52,9 @@ const About = () => {
                       color: 'white',
                       // fontSize: '3.5em',
                       fontfamily: 'League spartan',
-                      fontWeight: '700',
+                      fontWeight: '900',
                       marginBottom: '1em',
+                      letterSpacing: '2px',
                     }}
                   >
                     ABOUT US
@@ -63,9 +67,9 @@ const About = () => {
                   <div className={styles['block-7']}>
                     <div className={styles['text-justify']}>
                       <p
-                        styel={{
+                        style={{
                           fontFamily: 'Open Sans',
-                          fontSize: '16px',
+                          fontSize: '18px',
                           lineHeight: '1.8',
                           fontWeight: '400',
                           color: '#808080',
@@ -118,7 +122,7 @@ const About = () => {
                       >
                         Hype&nbsp;Around Spardha
                       </h3>
-                      <p>
+                      <p className={`${styles.para1}`}>
                         For starters, 2021 will witness the 36th edition of
                         Spardha, a festival which has grown from strength to
                         strength ever since its inception. After all these
@@ -153,7 +157,7 @@ const About = () => {
                       >
                         The&nbsp;Talk&nbsp;Of The&nbsp;Town
                       </h3>
-                      <p>
+                      <p className={`${styles.para2}`}>
                         Each&nbsp;year&nbsp;thousands of participants at Spardha
                         put their hard work to test in a vast array of sports.
                         If this doesn't catch your attention, the bustle of
@@ -189,7 +193,7 @@ const About = () => {
                       >
                         What&nbsp;You Take Back
                       </h3>
-                      <p>
+                      <p className={`${styles.para3}`}>
                         It's about making memories, and living them. Every time
                         you win a race, or lose your voice cheering for your
                         team, it adds up to your moments. We at Spardha make
@@ -205,6 +209,7 @@ const About = () => {
           </section>
         </div>
       )}
+      <Greencounter />
     </>
   );
 };
