@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPages from './components/LandingPages/LandingPages';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
+import DashBoard from './components/DashBoard/DashBoard';
+import Home from './components/DashBoard/Home/Home';
 
 const About = React.lazy(() => import('./components/LandingPages/About/About'));
 const Events = React.lazy(() =>
@@ -81,6 +83,9 @@ function App() {
                 </Suspense>
               }
             />
+          </Route>
+          <Route path="dashboard" element={<DashBoard />}>
+            <Route path="" element={<Home />} />
           </Route>
         </Routes>
       </Router>
