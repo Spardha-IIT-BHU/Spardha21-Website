@@ -22,6 +22,39 @@
   background-position: center;
 }
 
+#video1 {
+  outline: none;
+}
+
+#video1:hover {
+  cursor: pointer;
+}
+
+.container_guests video {
+  display: block;
+  z-index: 0;
+}
+
+#overlay-text {
+  position: absolute;
+  top: 5%;
+  left: 10px;
+  z-index: 1;
+  font-size: 18px;
+  text-shadow: 1px 1px black;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  #overlay-text {
+    font-size: 12px;
+  }
+}
+
+#video {
+  padding: 0;
+}
+
 .bg_class_guest1 {
   background-image: url('./../../../assets/testimonials/testi-1.jpg');
 }
@@ -201,4 +234,190 @@
   text-transform: uppercase;
   font-family: 'Fjalla One';
   color: white;
+}
+
+.ftco-section_guests {
+  padding: 7em 0;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .ftco-section_guests {
+    padding: 6em 0;
+  }
+}
+
+
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive::before {
+  display: block;
+  content: "";
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-responsive-21by9::before {
+  padding-top: 42.85714%;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
+}
+
+
+.btn_guests {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn_guests {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+
+.btn_guests:hover,
+.btn_guests:focus {
+  text-decoration: none;
+}
+
+.btn_guests:focus,
+.btn_guests.focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(120, 213, 239, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(120, 213, 239, 0.25);
+}
+
+.btn_guests.disabled,
+.btn_guests:disabled {
+  opacity: 0.65;
+}
+
+.btn_guests:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn_guests:not(:disabled):not(.disabled):active,
+.btn_guests:not(:disabled):not(.disabled).active {
+  background-image: none;
+}
+
+a.btn_guests.disabled,
+fieldset:disabled a.btn_guests {
+  pointer-events: none;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-success:focus,
+.btn-success.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.btn-success.disabled,
+.btn-success:disabled {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show>.btn-success.dropdown-toggle {
+  color: #fff;
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus,
+.btn-success:not(:disabled):not(.disabled).active:focus,
+.show>.btn-success.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+@media screen and (min-width: 576px) {
+  #video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #video {
+    padding: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .para_guests {
+    font-size: 17px;
+    margin: -11px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .para_guests {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
