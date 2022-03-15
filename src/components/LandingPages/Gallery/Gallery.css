@@ -1,5 +1,5 @@
 #gallery {
-  background-image: url('./../../assets/bg/bg_football.jpg');
+  background-image: url('./../../../assets/bg/bg_football.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -133,7 +133,7 @@
 
 .boldClass {
   font-weight: 700;
-  font-family: "League Spartan";
+  font-family: 'League Spartan';
   font-size: 26px;
 }
 .imageMarginGallery {
