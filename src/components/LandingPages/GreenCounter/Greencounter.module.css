@@ -1,0 +1,179 @@
+.ftco_counter {
+  background-image: url('./../../../assets/bg/bg_basketball.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.ftco-counter {
+  padding: 7em 0;
+}
+
+#section-counter {
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 1199.98px) {
+  .ftco-counter {
+    background-position: center center !important;
+  }
+}
+
+.overlay {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 150%;
+  background: #7ed321;
+  opacity: 0.8;
+}
+
+.container_gc {
+  margin-left: auto;
+  margin-right: auto;
+  height: 150%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 576px) {
+  .container_gc {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container_gc {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container_gc {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container_gc {
+    max-width: 1140px;
+  }
+}
+
+.row_gc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* margin-right: 25px;
+    margin-left: 25px; */
+  justify-content: center;
+  -webkit-box-pack: center !important;
+}
+
+.col_md_12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  /* padding-right: 15px;
+    padding-left: 15px; */
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col_md_6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col_md_6 {
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .counter_wrap {
+    margin-bottom: 40px !important;
+  }
+}
+
+.col_lg_3 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  /* padding-right: 15px;
+    padding-left: 15px; */
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  justify-content: center;
+  align-items: center;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 768px) {
+  .col_lg_3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .col_lg_3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.block_18 {
+  font-size: 40px;
+  display: block;
+  text-align: center !important;
+}
+
+.circle {
+  width: 230px;
+  height: 230px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 115px;
+  border-width: 4px;
+  border-color: white;
+  border-style: solid;
+  color: white;
+  padding: 65px 5px;
+  text-align: center;
+  font-family: 'League Spartan';
+}
+
+.numbergc {
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 50px;
+  color: #fff;
+}
