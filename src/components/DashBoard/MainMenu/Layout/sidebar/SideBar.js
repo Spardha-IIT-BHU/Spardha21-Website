@@ -20,9 +20,9 @@ const SideBar = ({ isOpen, toggle }) => (
         &times;
       </span>
       {/* <h3>Bootstrap Sidebar</h3> */}
-        <div className="logo">
+        <div className="logo_db">
               <a href="/">
-                <img src="/images/logo/spardha-small-white.png" alt="spardha-logo" className="hidden-xs hidden-sm spardha-logo"/>
+                <img src="/images/logo/spardha-small-white.png" alt="spardha-logo" className="hidden-sm spardha-logo"/>
                   {/* <img src="/images/logo/spardha-small-white.png" alt="spardha-logo" className="visible-xs visible-sm circle-logo"/> */}
               </a>
         </div>

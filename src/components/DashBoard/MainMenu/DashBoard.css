@@ -2,22 +2,26 @@
     display: flex;
     width: 100%;
     align-items: stretch;
-}
-
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins",
+    sans-serif;
     background: #fafafa;
 }
 
-a,
+/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
+
+/* body {
+}
+
+*/
+/* a,
 a:hover,
 a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
 }
+
+*/
 
 /* ---------------------------------------------------
       SIDEBAR STYLE
@@ -54,22 +58,27 @@ a:focus {
     background: darkgreen;
 }
 
-.nav-item:hover {
+/* .nav-item:hover {
     color: darkgreen;
     background: #fff;
 }
+
+*/
 
 .items-menu {
     color: #fff;
     background: darkgreen;
 }
 
-li a.dropdown-toggle::after {
+/* ADD IF REQUIRED */
+/* li a.dropdown-toggle::after {
     display: inline-flex;
     position: relative;
-    left: 60%;
+    left: 30%;
     top: 10%;
 }
+
+*/
 
 .sidebar-header>span {
     position: relative;
@@ -112,7 +121,7 @@ li a.dropdown-toggle::after {
         overflow: hidden;
     }
 
-    .content.is-open {
+    .content_db.is-open {
         margin-left: 100%;
     }
 
@@ -130,6 +139,6 @@ li a.dropdown-toggle::after {
     li a.dropdown-toggle::after {
         display: inline-block;
         position: relative;
-        left: 68%;
+        left: 30%;
     }
 }

@@ -11,7 +11,7 @@ import Topbar from "./Topbar";
 const Content = ({ sidebarIsOpen, toggleSidebar }) => (
   <Container
     fluid
-    className={classNames("content", { "is-open": sidebarIsOpen })}
+    className={classNames("content_db", { "is-open": sidebarIsOpen })}
   >
     <Topbar toggleSidebar={toggleSidebar} />
     <Outlet/>
