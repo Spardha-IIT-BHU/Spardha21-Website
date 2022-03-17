@@ -23,9 +23,7 @@ const Gallery = React.lazy(() =>
 const Guests = React.lazy(() =>
   import('./components/LandingPages/Guests/Guests')
 );
-const Home = React.lazy(() =>
-  import('./components/DashBoard/Home/Home')
-);
+const Home = React.lazy(() => import('./components/DashBoard/Home/Home'));
 const Registration = React.lazy(() =>
   import('./components/DashBoard/Registration/Registration')
 );
@@ -106,21 +104,38 @@ function App() {
           </Route>
 
           <Route path="/dashboard" element={<DashBoard />}>
-              <Route path="home" element={
+            <Route
+              path="home"
+              element={
                 <Suspense fallback={<Preloader />}>
                   <Home />
                 </Suspense>
-              } />
-              <Route path="registration" element={
+              }
+            />
+            <Route
+              path=""
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="registration"
+              element={
                 <Suspense fallback={<Preloader />}>
                   <Registration />
                 </Suspense>
-              } />
-              <Route path="Profile" element={
+              }
+            />
+            <Route
+              path="Profile"
+              element={
                 <Suspense fallback={<Preloader />}>
                   <Profile />
                 </Suspense>
-              } />
+              }
+            />
           </Route>
         </Routes>
       </Router>
