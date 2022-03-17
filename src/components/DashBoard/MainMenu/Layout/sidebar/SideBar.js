@@ -22,7 +22,7 @@ const SideBar = ({ isOpen, toggle }) => (
       {/* <h3>Bootstrap Sidebar</h3> */}
         <div className="logo">
               <a href="/">
-                <img src="/images/logo/spardha-small-white.png" alt="spardha-logo" className="hidden-xs hidden-sm spardha-logo"/>
+                <img src="/images/logo/spardha-small-white.png" alt="spardha-logo" className="hidden-sm spardha-logo"/>
                   {/* <img src="/images/logo/spardha-small-white.png" alt="spardha-logo" className="visible-xs visible-sm circle-logo"/> */}
               </a>
         </div>
