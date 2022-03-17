@@ -55,7 +55,7 @@
   padding: 0;
 }
 
-.bg_class_guest1 {
+/* .bg_class_guest1 {
   background-image: url('./../../../assets/testimonials/testi-1.jpg');
 }
 
@@ -90,6 +90,8 @@
 .bg_class_guest9 {
   background-image: url('./../../../assets/testimonials/testi-9.jpg');
 }
+
+*/
 
 #guests .col-md-3,
 .col-lg-3 {

@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import './Guests.css';
+import SliderGuests from './SliderGuests';
 
 const Guests = () => {
   
@@ -321,8 +322,9 @@ const Guests = () => {
               </div>
           </div>
       </section>
-
       </div>
+      
+      <SliderGuests/>
     </>
   );
 };
