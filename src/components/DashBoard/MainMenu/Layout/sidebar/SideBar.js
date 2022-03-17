@@ -13,7 +13,6 @@ import { FaUserAlt } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { FaSignOutAlt } from 'react-icons/fa';
 
-
 // import SubMenu from "./SubMenu";
 
 const SideBar = ({ isOpen, toggle }) => (
