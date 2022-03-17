@@ -5,6 +5,9 @@ import Preloader from './components/LandingPages/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
 import DashBoard from './components/DashBoard/DashBoard';
 import Home from './components/DashBoard/Home/Home';
+import Register from './components/LandingPages/Register/Register';
+import Signup from './components/LandingPages/Register/Signup/Signup';
+import Login from './components/LandingPages/Register/Login/Login';
 
 const About = React.lazy(() => import('./components/LandingPages/About/About'));
 const Events = React.lazy(() =>
@@ -35,6 +38,17 @@ function App() {
                 </Suspense>
               }
             />
+            <Route
+              path="register"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Register />
+                </Suspense>
+              }
+            >
+              <Route exact path='signup' element={<Signup />}/>
+              <Route exact path='login' element={<Login />}/>
+            </Route>
             <Route
               path="about"
               element={
