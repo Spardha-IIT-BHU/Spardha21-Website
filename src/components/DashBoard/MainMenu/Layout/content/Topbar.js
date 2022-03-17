@@ -57,7 +57,7 @@ const Topbar = ({ toggleSidebar }) => {
                                                     </p>
                                                     <div className="divider">
                                                     </div>
-                                                    <a href="/dashboard/profile" className="view btn-sm active profile_db">View Profile</a>
+                                                    <a href="/dashboard/profile" className="view_db btn-sm active profile_db">View Profile</a>
                                                 </div>
                                             </li>
                                         </ul>

@@ -70,12 +70,15 @@ a:focus {
     background: darkgreen;
 }
 
-li a.dropdown-toggle::after {
+/* ADD IF REQUIRED */
+/* li a.dropdown-toggle::after {
     display: inline-flex;
     position: relative;
     left: 30%;
     top: 10%;
 }
+
+*/
 
 .sidebar-header>span {
     position: relative;
@@ -118,7 +121,7 @@ li a.dropdown-toggle::after {
         overflow: hidden;
     }
 
-    .content.is-open {
+    .content_db.is-open {
         margin-left: 100%;
     }
 
