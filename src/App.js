@@ -10,6 +10,9 @@ import Signup from './components/LandingPages/Register/Signup/Signup';
 import Login from './components/LandingPages/Register/Login/Login';
 
 const About = React.lazy(() => import('./components/LandingPages/About/About'));
+const CamAmb = React.lazy(() =>
+  import('./components/LandingPages/Camp_Amb/CamAmb')
+);
 const Events = React.lazy(() =>
   import('./components/LandingPages/Events/Events')
 );
@@ -86,6 +89,14 @@ function App() {
               element={
                 <Suspense fallback={<Preloader />}>
                   <Sponsors />
+                </Suspense>
+              }
+            />
+            <Route
+              path="ca"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <CamAmb />
                 </Suspense>
               }
             />
