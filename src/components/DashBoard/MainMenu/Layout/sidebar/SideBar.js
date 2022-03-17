@@ -1,18 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHome,
-  faBriefcase,
-  // faPaperPlane,
-  // faQuestion,
-  faImage,
-  // faCopy,
+  faHome
 } from "@fortawesome/free-solid-svg-icons";
 import { NavItem, NavLink, Nav } from "reactstrap";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import "./SideBar.css"
 import "bootstrap/dist/css/bootstrap.min.css";
+import {FaTasks} from "react-icons/fa";
+import {FaUserAlt} from "react-icons/fa";
 
 // import SubMenu from "./SubMenu";
 
@@ -43,14 +40,16 @@ const SideBar = ({ isOpen, toggle }) => (
         </NavItem>
         <NavItem className="item_nav">
           <NavLink tag={Link} to={"/dashboard/registration"}>
-            <FontAwesomeIcon icon={faBriefcase} className="mr-2 icon_bar" />
+            {/* <FontAwesomeIcon icon={faBriefcase} className="mr-2 icon_bar" /> */}
+            <FaTasks className="mr-2 icon_bar"/>
             Registration
           </NavLink>
         </NavItem>
         {/* <SubMenu title="Pages" icon={faCopy} items={submenus[1]} /> */}
         <NavItem className="item_nav">
           <NavLink tag={Link} to={"/dashboard/profile"}>
-            <FontAwesomeIcon icon={faImage} className="mr-2 icon_bar" />
+            {/* <FontAwesomeIcon icon={faImage} className="mr-2 icon_bar" /> */}
+            <FaUserAlt className="mr-2 icon_bar"/>
             User Profile
           </NavLink>
         </NavItem>
