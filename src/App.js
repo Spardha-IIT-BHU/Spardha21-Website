@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
-import DashBoard from './components/DashBoard/DashBoard';
-import Home from './components/DashBoard/Home/Home';
+import DashBoard from './components/DashBoard/MainMenu/DashBoard';
+// import Home from './components/DashBoard/Home/Home';
 
 const LandingPages = React.lazy(() =>
   import('./components/LandingPages/LandingPages')
@@ -42,6 +42,13 @@ const Reset = React.lazy(() =>
 );
 const Verify = React.lazy(() =>
   import('./components/LandingPages/Register/Verify/Verify')
+);
+const Home = React.lazy(() => import('./components/DashBoard/Home/Home'));
+const Registration = React.lazy(() =>
+  import('./components/DashBoard/Registration/Registration')
+);
+const Profile = React.lazy(() =>
+  import('./components/DashBoard/Profile/Profile')
 );
 
 function App() {
@@ -176,8 +183,32 @@ function App() {
               }
             />
           </Route>
-          <Route path="dashboard" element={<DashBoard />}>
-            <Route path="" element={<Home />} />
+
+          <Route path="/dashboard" element={<DashBoard />}>
+            <Route
+              path="home"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="registration"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Registration />
+                </Suspense>
+              }
+            />
+            <Route
+              path="Profile"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Profile />
+                </Suspense>
+              }
+            />
           </Route>
         </Routes>
       </Router>
