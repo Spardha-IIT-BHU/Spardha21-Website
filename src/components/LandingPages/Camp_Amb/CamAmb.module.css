@@ -310,11 +310,11 @@
   }
 
   .block3 {
-    padding: 37.75px;
+    padding: 35px;
   }
 
   .block6 {
-    padding: 22.5px;
+    padding: 32px;
   }
 }
 
@@ -325,11 +325,16 @@
   }
 
   .block3 {
-    padding: 38px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   .block4 {
     padding: 1px;
+  }
+
+  .block5 {
+    padding-bottom: 45px;
   }
 
   .block6 {

@@ -64,7 +64,6 @@ const CamAmb = () => {
                 <p
                   style={{
                     color: '#808080',
-                    fontFamily: 'Open Sans',
                     fontSize: '18px',
                   }}
                 >
@@ -93,7 +92,6 @@ const CamAmb = () => {
                 <p
                   style={{
                     color: '#808080',
-                    fontFamily: 'Open Sans',
                     fontSize: '18.5px',
                   }}
                 >
@@ -133,7 +131,6 @@ const CamAmb = () => {
                 <p
                   style={{
                     color: '#808080',
-                    fontFamily: 'Open Sans',
                     fontSize: '18px',
                   }}
                 >
@@ -171,7 +168,6 @@ const CamAmb = () => {
                 <p
                   style={{
                     color: '#808080',
-                    fontFamily: 'Open Sans',
                     fontSize: '18px',
                   }}
                 >
@@ -199,7 +195,6 @@ const CamAmb = () => {
                 <p
                   style={{
                     color: '#808080',
-                    fontFamily: 'Open Sans',
                     fontSize: '18.5px',
                   }}
                 >
