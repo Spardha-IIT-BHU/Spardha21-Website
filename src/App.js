@@ -111,6 +111,11 @@ function App() {
                   <Home />
                 </Suspense>
               } />
+              <Route path="" element={
+                <Suspense fallback={<Preloader />}>
+                  <Home />
+                </Suspense>
+              } />
               <Route path="registration" element={
                 <Suspense fallback={<Preloader />}>
                   <Registration />
