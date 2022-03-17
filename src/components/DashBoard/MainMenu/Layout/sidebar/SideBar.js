@@ -1,8 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faHome
+// } from "@fortawesome/free-solid-svg-icons";
 import { NavItem, NavLink, Nav } from "reactstrap";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
@@ -10,6 +10,7 @@ import "./SideBar.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import {FaTasks} from "react-icons/fa";
 import {FaUserAlt} from "react-icons/fa";
+import {FaHome} from "react-icons/fa";
 
 // import SubMenu from "./SubMenu";
 
@@ -34,7 +35,8 @@ const SideBar = ({ isOpen, toggle }) => (
 
         <NavItem className="item_nav">
           <NavLink tag={Link} to={"/dashboard/home"}>
-            <FontAwesomeIcon icon={faHome} className="mr-2 icon_bar" />
+            {/* <FontAwesomeIcon icon={faHome} className="mr-2 icon_bar" /> */}
+            <FaHome className="mr-2 icon_bar"/>
             Home
           </NavLink>
         </NavItem>

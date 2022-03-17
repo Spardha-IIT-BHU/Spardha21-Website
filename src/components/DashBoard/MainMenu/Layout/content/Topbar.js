@@ -1,14 +1,10 @@
 import React,{ useState} from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
+import {FaAlignLeft} from "react-icons/fa"
 import {
   Navbar,
   Button,
-  // NavbarToggler,
-  // Collapse,
-  // Nav,
-  // NavItem,
-  // NavLink,
 } from "reactstrap";
 // import { Link } from "react-router-dom";
 import "./Topbar.css"
@@ -30,7 +26,7 @@ const Topbar = ({ toggleSidebar }) => {
     >
       <div className="left_content">
         <Button color="info" onClick={toggleSidebar}>
-          <FontAwesomeIcon icon={faAlignLeft} />
+        <FaAlignLeft className="mr-2"/>
         </Button>
         <div className="col-xs-7 mine_lefts">
             <span className="events-reg hidden-xs"><h4> &ensp;Events Registered: 32 </h4></span>
