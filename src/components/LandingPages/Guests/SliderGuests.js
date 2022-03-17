@@ -21,7 +21,7 @@ const SliderGuests = () => {
         </div>
 
         <div className="row_guest_slider ftco-animate_slider">
-            <div className="col-md-12">
+            <div className="col-12">
             <OwlCarousel
             loop
             items={1}
