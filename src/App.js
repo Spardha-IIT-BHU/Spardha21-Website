@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPages from './components/LandingPages/LandingPages';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
 import DashBoard from './components/DashBoard/DashBoard';
 import Home from './components/DashBoard/Home/Home';
-import Register from './components/LandingPages/Register/Register';
-import Signup from './components/LandingPages/Register/Signup/Signup';
-import Login from './components/LandingPages/Register/Login/Login';
 
+const LandingPages = React.lazy(() =>
+  import('./components/LandingPages/LandingPages')
+);
 const About = React.lazy(() => import('./components/LandingPages/About/About'));
 const CamAmb = React.lazy(() =>
   import('./components/LandingPages/Camp_Amb/CamAmb')
@@ -26,13 +25,38 @@ const Gallery = React.lazy(() =>
 const Guests = React.lazy(() =>
   import('./components/LandingPages/Guests/Guests')
 );
+const Register = React.lazy(() =>
+  import('./components/LandingPages/Register/Register')
+);
+const Signup = React.lazy(() =>
+  import('./components/LandingPages/Register/Signup/Signup')
+);
+const Login = React.lazy(() =>
+  import('./components/LandingPages/Register/Login/Login')
+);
+const Forgot = React.lazy(() =>
+  import('./components/LandingPages/Register/Forgot/Forgot')
+);
+const Reset = React.lazy(() =>
+  import('./components/LandingPages/Register/Reset/Reset')
+);
+const Verify = React.lazy(() =>
+  import('./components/LandingPages/Register/Verify/Verify')
+);
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPages />}>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <LandingPages />{' '}
+              </Suspense>
+            }
+          >
             <Route
               path=""
               element={
@@ -49,8 +73,51 @@ function App() {
                 </Suspense>
               }
             >
-              <Route exact path='signup' element={<Signup />}/>
-              <Route exact path='login' element={<Login />}/>
+              <Route
+                exact
+                path="signup"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Signup />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="login"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Login />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="forgot"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Forgot />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="reset"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Reset />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="verify"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Verify />
+                  </Suspense>
+                }
+              />
             </Route>
             <Route
               path="about"

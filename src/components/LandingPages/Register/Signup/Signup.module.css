@@ -35,8 +35,8 @@
   margin: 1em auto !important;
 }
 
-.btn-block:active, .btn-block:focus
-{
+.btn-block:active,
+.btn-block:focus {
   box-shadow: none !important;
 }
 

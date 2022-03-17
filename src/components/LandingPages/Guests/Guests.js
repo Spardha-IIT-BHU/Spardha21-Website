@@ -1,38 +1,48 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './Guests.css';
 import SliderGuests from './SliderGuests';
 
 const Guests = () => {
-  
   const [index, setIndex] = useState(0);
 
   const prevButton = () => {
-    if(index<=0){
+    if (index <= 0) {
       setIndex(5);
+    } else {
+      setIndex(index - 1);
     }
-    else{
-      setIndex(index-1);
-    }
-    console.log('prev',videoArray[index]);
-    console.log('prev',msgArray[index]);
-    console.log("prev",index);
-  }
+    console.log('prev', videoArray[index]);
+    console.log('prev', msgArray[index]);
+    console.log('prev', index);
+  };
 
   const nextButton = () => {
-    if(index>=5){
+    if (index >= 5) {
       setIndex(0);
+    } else {
+      setIndex(index + 1);
     }
-    else{
-      setIndex(index+1);
-    }
-    console.log("next",index);
-    console.log('next',videoArray[index]);
-    console.log('next',msgArray[index]);
-  }
+    console.log('next', index);
+    console.log('next', videoArray[index]);
+    console.log('next', msgArray[index]);
+  };
 
-  const videoArray = ['/videos/1.mp4','/videos/2.mp4','/videos/3.mp4','/videos/4.mp4','/videos/5.mp4','/videos/6.mp4']
-  const msgArray = ['Mr. Muttiah Muralitharan', 'Miss Alex Blackwell', 'Mr. Baichung Bhutia', 'Mr. Gary Kirsten', 'Miss P. V. Sindhu', 'Mr. Pullela Gopichand'];
-
+  const videoArray = [
+    '/videos/1.mp4',
+    '/videos/2.mp4',
+    '/videos/3.mp4',
+    '/videos/4.mp4',
+    '/videos/5.mp4',
+    '/videos/6.mp4',
+  ];
+  const msgArray = [
+    'Mr. Muttiah Muralitharan',
+    'Miss Alex Blackwell',
+    'Mr. Baichung Bhutia',
+    'Mr. Gary Kirsten',
+    'Miss P. V. Sindhu',
+    'Mr. Pullela Gopichand',
+  ];
 
   return (
     <>
@@ -308,23 +318,56 @@ const Guests = () => {
 
         <section id="video" className="ftco-section_guests">
           <div className="container_guests col-sm-7">
-              <div className="embed-responsive embed-responsive-4by3">
-                  <video id="video1" width="320" height="240" key={videoArray[index]} controls>
-                      <source src={videoArray[index]} type="video/mp4"/>
-                  </video>
-                  <div id="overlay-text">
-                      <p className="para_guests">Best wishes from {msgArray[index]}</p>
-                  </div>
+            <div className="embed-responsive embed-responsive-4by3">
+              <video
+                id="video1"
+                width="320"
+                height="240"
+                key={videoArray[index]}
+                controls
+              >
+                <source src={videoArray[index]} type="video/mp4" />
+              </video>
+              <div id="overlay-text">
+                <p className="para_guests">
+                  Best wishes from {msgArray[index]}
+                </p>
               </div>
-              <div id="controls" style={{paddingBottom: '20px',textAlign: 'center'}}>
-                  <button className="btn_guests btn-success control" onClick={prevButton} style={{fontSize:'18px', color: 'white',marginRight: '5px',marginTop: '10px'}}>Previous</button>
-                  <button className="btn_guests btn-success control" onClick={nextButton} style={{fontSize:'18px', color: 'white',marginRight: '5px',marginTop: '10px'}}>&nbsp; Next &nbsp;</button>
-              </div>
+            </div>
+            <div
+              id="controls"
+              style={{ paddingBottom: '20px', textAlign: 'center' }}
+            >
+              <button
+                className="btn_guests btn-success control"
+                onClick={prevButton}
+                style={{
+                  fontSize: '18px',
+                  color: 'white',
+                  marginRight: '5px',
+                  marginTop: '10px',
+                }}
+              >
+                Previous
+              </button>
+              <button
+                className="btn_guests btn-success control"
+                onClick={nextButton}
+                style={{
+                  fontSize: '18px',
+                  color: 'white',
+                  marginRight: '5px',
+                  marginTop: '10px',
+                }}
+              >
+                &nbsp; Next &nbsp;
+              </button>
+            </div>
           </div>
-      </section>
+        </section>
       </div>
-      
-      <SliderGuests/>
+
+      <SliderGuests />
     </>
   );
 };

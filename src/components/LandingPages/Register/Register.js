@@ -1,6 +1,6 @@
-import React from 'react'
-import { Outlet } from 'react-router'
-import styles from "./Register.module.css"
+import React from 'react';
+import { Outlet } from 'react-router';
+import styles from './Register.module.css';
 
 function Register() {
   return (
@@ -9,7 +9,7 @@ function Register() {
         <Outlet />
       </div>
     </div>
-  )
+  );
 }
 
-export default Register
+export default Register;

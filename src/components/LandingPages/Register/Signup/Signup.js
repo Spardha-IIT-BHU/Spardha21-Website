@@ -34,6 +34,21 @@ import isAlpha from 'validator/lib/isAlpha';
 
 function Signup() {
   const submitHandler = (e) => {
+    dispatchToast({
+      color: 'primary',
+      message: '',
+    });
+
+    if (password2.value !== password1.value) {
+      dispatchPassword1(password1.value);
+      dispatchPassword2(password2.value);
+      dispatchToast({
+        color: 'danger',
+        message: 'Please fill out all the fields correctly',
+      });
+      return;
+    }
+
     e.preventDefault();
     if (
       !email.valid ||
@@ -54,35 +69,25 @@ function Signup() {
 
     axios
       .post('https://api.spardha.co.in/auth/register/', {
-        username:username.value,
-        email:email.value,
+        username: username.value,
+        email: email.value,
         password: password1.value,
-        name:name.value,
+        name: name.value,
         institution_name: institute.value,
-        designation:designation.value,
+        designation: designation.value,
         phone_no: phone.value,
       })
       .then((res) => {
-        console.log(res);
         dispatchToast({
           color: 'success',
-          message: res.success,
+          message: res.data.success,
         });
-        dispatchEmail("");
-        dispatchUsername("");
-        dispatchPassword1("");
-        dispatchPassword2("");
-        dispatchName("");
-        dispatchDesignation("");
-        dispatchPhone("");
-        dispatchInstitute("");
         return;
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(({ response }) => {
         dispatchToast({
-          color: 'warning',
-          message: 'Username/Email already exists',
+          color: 'danger',
+          message: response.data[Object.keys(response.data)[0]].toString(),
         });
       });
   };
@@ -224,7 +229,12 @@ function Signup() {
           <Link to="/register/login" style={{ textDecoration: 'none' }}>
             here{' '}
           </Link>{' '}
-          to login
+          to login and
+          <Link to="/register/verify" style={{ textDecoration: 'none' }}>
+            {' '}
+            here{' '}
+          </Link>
+          to verify your account.
         </Alert>
         <Alert
           color="primary"
@@ -659,7 +669,7 @@ function Signup() {
             </FormGroup>
           </div>
 
-          {toast.message && (
+          {toast.message !== '' && (
             <Alert
               color={toast.color}
               style={{
