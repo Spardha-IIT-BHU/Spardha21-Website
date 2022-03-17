@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaTasks } from 'react-icons/fa';
 import { FaUserAlt } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
+import { FaSignOutAlt } from 'react-icons/fa';
+
 
 // import SubMenu from "./SubMenu";
 
@@ -57,6 +59,13 @@ const SideBar = ({ isOpen, toggle }) => (
             {/* <FontAwesomeIcon icon={faImage} className="mr-2 icon_bar" /> */}
             <FaUserAlt className="mr-2 icon_bar" />
             User Profile
+          </NavLink>
+        </NavItem>
+        <NavItem className="item_nav">
+          <NavLink tag={Link} to={'/logout'}>
+            {/* <FontAwesomeIcon icon={faImage} className="mr-2 icon_bar" /> */}
+            <FaSignOutAlt className="mr-2 icon_bar" />
+            Logout
           </NavLink>
         </NavItem>
         {/* <NavItem>
