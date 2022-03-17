@@ -17,7 +17,7 @@ import { FaKey, FaPaperPlane, FaUser } from 'react-icons/fa';
 import { useReducer } from 'react/cjs/react.development';
 
 function Reset() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams,] = useSearchParams();
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -38,7 +38,6 @@ function Reset() {
 
     const token = searchParams.get('token');
     const uidb64 = searchParams.get('id');
-    console.log(token, uidb64, password1.value);
 
     axios
       .patch('https://api.spardha.co.in/auth/password_reset/update_password/', {
