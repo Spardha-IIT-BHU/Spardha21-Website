@@ -11,21 +11,21 @@
 }
 
 /* .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle>span {
-    font-size: 11px;
-} */
+      font-size: 11px;
+  } */
 
 /* .user-dashboard .welcome-text button {
-    font-size: 11px;
-    padding-right: 23px;
-} */
+      font-size: 11px;
+      padding-right: 23px;
+  } */
 
 /* .user-dashboard .welcome-text h2 {
-    font-size: 14px;
-}
-
-.user-dashboard h1 {
-    font-size: 25px;
-} */
+      font-size: 14px;
+  }
+  
+  .user-dashboard h1 {
+      font-size: 25px;
+  } */
 
 @media only screen and (min-width: 767px) and (max-width: 998px) {
   .user-dashboard .header-top {
@@ -42,9 +42,9 @@
     max-width: 41px !important;
   }
 
-  .user-dashboard .welcome-text button {
-    font-size: 10px;
-  }
+  /* .user-dashboard .welcome-text button {
+        font-size: 10px;
+    } */
 
   .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
     font-size: 12px;
@@ -55,7 +55,7 @@
   }
 }
 
-.row_dbHome {
+.row_dbProfile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,23 +77,23 @@
   width: 100%;
 }
 
-.welcome-text button {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid #dadee7;
-  border-radius: 100px;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  padding-right: 32px;
-  color: rgb(0, 78, 0);
+/* .welcome-text button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #dadee7;
+    border-radius: 100px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-right: 32px;
+    color: rgb(0, 78, 0);
 }
 
 .welcome-text button::before {
-  content: '';
-  font-family: FontAwesome;
-  position: absolute;
-  right: 12px;
-  top: 11px;
-}
+    content: '';
+    font-family: FontAwesome;
+    position: absolute;
+    right: 12px;
+    top: 11px;
+} */
 
 .welcome-text .btn-group {
   float: right;
@@ -142,10 +142,10 @@
     font-size: 11px;
   }
 
-  .user-dashboard .welcome-text button {
-    font-size: 11px;
-    padding-right: 23px;
-  }
+  /* .user-dashboard .welcome-text button {
+        font-size: 11px;
+        padding-right: 23px;
+    } */
 
   .user-dashboard .welcome-text h2 {
     font-size: 14px;
@@ -170,8 +170,82 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .user-dashboard h1 {
-    font-size: 25px;
+.profile-table .left-column {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 1;
+}
+
+.profile-table .right-column {
+  padding-left: 0px;
+}
+
+td {
+  padding-bottom: 10px;
+}
+
+.profile-table td {
+  max-width: 30vw;
+  min-width: 10vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .profile-table td {
+    max-width: 50vw;
+    min-width: 50vw;
   }
+}
+
+.register-now {
+  background: limegreen none repeat scroll 0 0;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .register-now::before {
+    background: rgba(0, 0, 0, 0) no-repeat scroll 0 0;
+    content: '';
+    height: 12px;
+    left: 17px;
+    position: absolute;
+    top: 12px;
+    width: 12px;
+  }
+
+  .register-now:hover {
+    color: #ffffff;
+    background: forestgreen none repeat scroll 0 0;
+  }
+
+  .register-now:focus {
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .register-now {
+    font-size: 10px;
+  }
+  .overHandle {
+    overflow: scroll;
+  }
+}
+
+.register-now {
+  border: 1px solid limegreen;
+}
+
+.mine_proDb {
+  display: flex;
+  align-items: space-between;
+}
+
+.profile_Pad {
+  margin-top: 20px;
 }

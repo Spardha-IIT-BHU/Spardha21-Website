@@ -18,7 +18,7 @@ const Topbar = ({ toggleSidebar }) => {
     <Navbar
       color="light"
       light
-      className="navbar shadow-sm p-3 mb-5 bg-white rounded"
+      className="navbar shadow-sm bg-white rounded"
       expand="md"
     >
       <div className="left_content">
@@ -27,7 +27,7 @@ const Topbar = ({ toggleSidebar }) => {
         </Button>
         <div className="col-xs-7 mine_lefts">
           <span className="events-reg hidden-xs">
-            <h4> &ensp;Events Registered: 32 </h4>
+            <h4 className="size_Correct"> &ensp;Events Registered: 32 </h4>
           </span>
         </div>
       </div>

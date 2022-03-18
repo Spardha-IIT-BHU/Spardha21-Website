@@ -7,7 +7,7 @@ import Content from './Layout/content/Content';
 import './DashBoard.css';
 
 const App = () => {
-  const [sidebarIsOpen, setSidebarOpen] = useState(true);
+  const [sidebarIsOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(!sidebarIsOpen);
 
   return (
