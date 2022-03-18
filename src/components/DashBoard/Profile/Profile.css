@@ -228,13 +228,12 @@ td {
   }
 }
 
-.overHandle {
-  overflow: scroll;
-}
-
 @media screen and (max-width: 767px) {
   .register-now {
     font-size: 10px;
+  }
+  .overHandle {
+    overflow: scroll;
   }
 }
 
