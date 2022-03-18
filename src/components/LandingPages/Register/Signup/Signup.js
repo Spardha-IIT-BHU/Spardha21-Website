@@ -34,9 +34,11 @@ import isAlpha from 'validator/lib/isAlpha';
 
 function Signup() {
   const submitHandler = (e) => {
+    e.preventDefault();
+
     dispatchToast({
       color: 'primary',
-      message: '',
+      message: 'Please wait while your request is being processed.',
     });
 
     if (password2.value !== password1.value) {

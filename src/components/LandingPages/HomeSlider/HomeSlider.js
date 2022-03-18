@@ -37,7 +37,7 @@ function HomeSlider() {
                   className="text-overflow-center home-spardha-subheading"
                   style={{ color: '#6db549' }}
                 >
-                  April 15-17, 2021
+                  April 15-17, 2022
                 </h2>
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
@@ -94,7 +94,7 @@ function HomeSlider() {
                   className="text-overflow-center home-spardha-subheading"
                   style={{ color: '#6db549' }}
                 >
-                  April 15-17, 2021
+                  April 15-17, 2022
                 </h2>
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
@@ -151,7 +151,7 @@ function HomeSlider() {
                   className="text-overflow-center home-spardha-subheading"
                   style={{ color: '#6db549' }}
                 >
-                  April 15-17, 2021
+                  April 15-17, 2022
                 </h2>
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
@@ -208,7 +208,7 @@ function HomeSlider() {
                   className="text-overflow-center home-spardha-subheading"
                   style={{ color: '#6db549' }}
                 >
-                  April 15-17, 2021
+                  April 15-17, 2022
                 </h2>
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">

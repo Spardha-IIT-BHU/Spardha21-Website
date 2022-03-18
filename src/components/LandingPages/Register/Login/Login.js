@@ -15,6 +15,7 @@ import {
   Button,
 } from 'reactstrap';
 import isAlphanumeric from 'validator/lib/isAlphanumeric';
+import isEmail from 'validator/lib/isEmail';
 import styles from '../Signup/Signup.module.css';
 import { useNavigate } from 'react-router';
 
@@ -26,7 +27,7 @@ function Login() {
 
     dispatchToast({
       color: 'primary',
-      message: '',
+      message: 'Please wait while your request is being processed.',
     });
 
     if (!username.valid || !password.valid) {
@@ -63,10 +64,14 @@ function Login() {
   const usernameReducer = (state, value) => {
     let warning = '';
     if (value === '') warning = 'This field is required.';
-    else if (value.length < 6 || value.length > 30)
-      warning = 'Username must be of length 6 - 30.';
-    else if (!isAlphanumeric(value, undefined, { ignore: ' ._-' }))
-      warning = 'Please use only alphabets, numbers or _, - and .';
+    else if (value.includes('@')) {
+      if (!isEmail(value)) warning = 'Please enter a valid email address.';
+    } else {
+      if (value.length < 6 || value.length > 30)
+        warning = 'Username must be of length 6 - 30.';
+      else if (!isAlphanumeric(value, undefined, { ignore: ' ._-' }))
+        warning = 'Please use only alphabets, numbers or _, - and .';
+    }
     return { value, warning, valid: warning === '' && value !== '' };
   };
 

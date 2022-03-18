@@ -105,7 +105,7 @@
   padding-right: 0.1rem !important;
   background-color: white !important;
   border-right: none !important;
-  color: #aaa !important;
+  color: #aaa;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -114,4 +114,5 @@
   border-color: dodgerblue !important;
   box-shadow: 1px 1px 8px rgba(102, 175, 233, 0.6);
   background-color: white;
+  transition: none !important;
 }

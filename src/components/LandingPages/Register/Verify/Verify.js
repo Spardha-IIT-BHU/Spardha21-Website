@@ -23,7 +23,7 @@ function Verify() {
 
     dispatchToast({
       color: 'primary',
-      message: '',
+      message: 'Please wait while your request is being processed.',
     });
 
     if (!email.valid) {
