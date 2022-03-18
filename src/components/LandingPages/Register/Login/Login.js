@@ -169,7 +169,7 @@ function Login() {
               <div className="col-sm-12">
                 <FormGroup className={`${styles['form-group']}`}>
                   <Label for="username" className={`${styles.label}`}>
-                    Username:&nbsp;
+                    Username/Email:&nbsp;
                     <span style={{ color: 'red' }}>*</span>
                   </Label>
                   <InputGroup className={`${styles['input-group']}`}>
@@ -186,7 +186,7 @@ function Login() {
                       name="username"
                       id="username"
                       type="text"
-                      placeholder="Enter your username"
+                      placeholder="Enter your username or email"
                       value={username.value}
                       valid={username.warning === '' && username.value !== ''}
                       invalid={username.warning !== ''}
