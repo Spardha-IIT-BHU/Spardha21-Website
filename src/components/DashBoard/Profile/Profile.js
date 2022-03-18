@@ -3,7 +3,7 @@ import './Profile.css';
 
 const Profile = () => {
   return (
-    <div className="user-dashboard">
+    <div className="user-dashboard profile_Pad">
       <div className="row_dbProfile">
         <div className="col-xs-12 gutter widthAdjust">
           <div className="welcome-text" style={{ lineHeight: '1' }}>

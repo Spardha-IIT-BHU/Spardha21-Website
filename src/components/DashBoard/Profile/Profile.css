@@ -245,3 +245,7 @@ td {
   display: flex;
   align-items: space-between;
 }
+
+.profile_Pad {
+  margin-top: 20px;
+}
