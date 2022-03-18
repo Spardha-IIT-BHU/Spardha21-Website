@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 import { Link, useSearchParams } from 'react-router-dom';
 import { FaKey, FaPaperPlane, FaUser } from 'react-icons/fa';
-import { useReducer } from 'react/cjs/react.development';
+import { useReducer } from 'react';
 
 function Reset() {
   const [searchParams,] = useSearchParams();

@@ -25,7 +25,7 @@ import {
   FaPaperPlane,
 } from 'react-icons/fa';
 import instituteList from './institutelist.json';
-import { useReducer } from 'react/cjs/react.development';
+import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
 import isAlphanumeric from 'validator/lib/isAlphanumeric';
 import isInt from 'validator/lib/isInt';

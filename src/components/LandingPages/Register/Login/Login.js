@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { FaAt, FaKey, FaPaperPlane, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { useReducer } from 'react/cjs/react.development';
+import { useReducer } from 'react';
 import {
   Alert,
   Form,
