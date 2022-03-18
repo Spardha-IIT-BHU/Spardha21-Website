@@ -50,6 +50,9 @@ const Registration = React.lazy(() =>
 const Profile = React.lazy(() =>
   import('./components/DashBoard/Profile/Profile')
 );
+const ContingentEdit = React.lazy(() =>
+  import('./components/DashBoard/Registration/ContingentEdit/ContingentEdit')
+);
 
 function App() {
   return (
@@ -198,6 +201,14 @@ function App() {
               element={
                 <Suspense fallback={<Preloader />}>
                   <Registration />
+                </Suspense>
+              }
+            />
+            <Route
+              path="contingentEdit"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <ContingentEdit />
                 </Suspense>
               }
             />

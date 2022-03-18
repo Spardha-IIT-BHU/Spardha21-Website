@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { BrowserRouter as Router } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { isMobile } from 'react-device-detect';
 
 import SideBar from './Layout/sidebar/SideBar';
 import Content from './Layout/content/Content';
 import './DashBoard.css';
 
 const App = () => {
-  const [sidebarIsOpen, setSidebarOpen] = useState(false);
+  const [sidebarIsOpen, setSidebarOpen] = useState(true);
   const toggleSidebar = () => setSidebarOpen(!sidebarIsOpen);
+
+  useEffect(() => {
+    console.log('mobile=', isMobile);
+    if (isMobile) {
+      setSidebarOpen(false);
+    }
+  }, []);
 
   return (
     // <Router>
