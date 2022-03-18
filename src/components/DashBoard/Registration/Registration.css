@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 .user-dashboard {
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .user-dashboard h1 {
-    color: rgb(0, 78, 0);
-    font-size: 30px;
-    font-weight: 500;
-    margin: 0;
-    padding: 21px 0;
+  color: rgb(0, 78, 0);
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
+  padding: 21px 0;
 }
 
 /* .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle>span {
@@ -30,53 +30,53 @@
     } */
 
 @media only screen and (min-width: 767px) and (max-width: 998px) {
-    .user-dashboard .header-top {
-        padding-top: 5px;
-    }
+  .user-dashboard .header-top {
+    padding-top: 5px;
+  }
 
-    .user-dashboard .header-rightside {
-        display: inline-block;
-        float: left;
-        width: 100%;
-    }
+  .user-dashboard .header-rightside {
+    display: inline-block;
+    float: left;
+    width: 100%;
+  }
 
-    .user-dashboard .header-rightside .header-top img {
-        max-width: 41px !important;
-    }
+  .user-dashboard .header-rightside .header-top img {
+    max-width: 41px !important;
+  }
 
-    /* .user-dashboard .welcome-text button {
+  /* .user-dashboard .welcome-text button {
           font-size: 10px;
       } */
 
-    .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle>span {
-        font-size: 12px;
-    }
+  .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+    font-size: 12px;
+  }
 
-    .user-dashboard .welcome-text h2 {
-        font-size: 16px;
-    }
+  .user-dashboard .welcome-text h2 {
+    font-size: 16px;
+  }
 }
 
 .row_dbRegistration {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .gutter {
-    padding: 0;
+  padding: 0;
 }
 
 .welcome-text {
-    background: #ffffff none repeat scroll 0 0;
-    border: 1px solid #d4d9e3;
-    display: inline-block;
-    padding: 15px;
-    width: 100%;
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #d4d9e3;
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
 }
 
 /* .welcome-text button {
@@ -98,125 +98,124 @@
   } */
 
 .welcome-text .btn-group {
-    float: right;
+  float: right;
 }
 
 .welcome-text h2 {
-    color: #8492af;
-    /* float: left; */
-    font-size: 21px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0 0 0;
-    line-height: 1.5;
+  color: #8492af;
+  /* float: left; */
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0 0;
+  line-height: 1.5;
 }
 
 .welcome-text .btn-group.open .dropdown-toggle,
 .btn.active,
 .btn:active {
-    box-shadow: none;
+  box-shadow: none;
 }
 
-.welcome-text .dropdown-menu>a {
-    color: rgb(0, 78, 0);
-    display: inline-block;
-    font-weight: 800;
-    padding: 9px 0;
-    text-align: center;
-    width: 100%;
+.welcome-text .dropdown-menu > a {
+  color: rgb(0, 78, 0);
+  display: inline-block;
+  font-weight: 800;
+  padding: 9px 0;
+  text-align: center;
+  width: 100%;
 }
 
-.welcome-text .dropdown-menu>a:hover {
-    color: limegreen;
+.welcome-text .dropdown-menu > a:hover {
+  color: limegreen;
 }
 
 @media only screen and (max-width: 767px) {
-    .user-dashboard .welcome-text h2 {
-        color: #8492af;
-        /* float: left; */
-        font-size: 16px;
-        font-weight: 600;
-        margin: 0;
-        padding: 0 0 0;
-    }
+  .user-dashboard .welcome-text h2 {
+    color: #8492af;
+    /* float: left; */
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 0 0;
+  }
 
-    .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle>span {
-        font-size: 11px;
-    }
+  .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+    font-size: 11px;
+  }
 
-    /* .user-dashboard .welcome-text button {
+  /* .user-dashboard .welcome-text button {
           font-size: 11px;
           padding-right: 23px;
       } */
 
-    .user-dashboard .welcome-text h2 {
-        font-size: 14px;
-    }
+  .user-dashboard .welcome-text h2 {
+    font-size: 14px;
+  }
 
-    .user-dashboard h1 {
-        font-size: 25px;
-    }
+  .user-dashboard h1 {
+    font-size: 25px;
+  }
 
-    .gutter {
-        padding: 0;
-    }
+  .gutter {
+    padding: 0;
+  }
 }
 
 .text-justify {
-    text-align: justify !important;
+  text-align: justify !important;
 }
 
 @media screen and (min-width: 100px) {
-    .widthAdjust {
-        width: 100%;
-    }
+  .widthAdjust {
+    width: 100%;
+  }
 }
 
-
 .register-now {
-    background: limegreen none repeat scroll 0 0;
-    border-radius: 100px;
+  background: limegreen none repeat scroll 0 0;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .register-now::before {
+    background: rgba(0, 0, 0, 0) no-repeat scroll 0 0;
+    content: '';
+    height: 12px;
+    left: 17px;
+    position: absolute;
+    top: 12px;
+    width: 12px;
+  }
+
+  .register-now:hover {
     color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 20px 10px 20px;
-    position: relative;
-    margin-right: 20px;
+    background: forestgreen none repeat scroll 0 0;
+  }
+
+  .register-now:focus {
+    color: #ffffff;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .register-now::before {
-        background: rgba(0, 0, 0, 0) no-repeat scroll 0 0;
-        content: '';
-        height: 12px;
-        left: 17px;
-        position: absolute;
-        top: 12px;
-        width: 12px;
-    }
+  .register-now {
+    font-size: 10px;
+  }
 
-    .register-now:hover {
-        color: #ffffff;
-        background: forestgreen none repeat scroll 0 0;
-    }
-
-    .register-now:focus {
-        color: #ffffff;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .register-now {
-        font-size: 10px;
-    }
-
-    .overHandle {
-        overflow: scroll;
-    }
+  .overHandle {
+    overflow: scroll;
+  }
 }
 
 .register-now {
-    border: 1px solid limegreen;
+  border: 1px solid limegreen;
 }
 
 /* .mine_proDb {
@@ -225,90 +224,90 @@
 } */
 
 .regn_Pad {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .events-heading {
-    font-family: "League Spartan";
-    text-align: center;
-    color: cornflowerblue;
-    font-size: 24px;
-    padding-bottom: 10px;
+  font-family: 'League Spartan';
+  text-align: center;
+  color: cornflowerblue;
+  font-size: 24px;
+  padding-bottom: 10px;
 }
 
 .events-table {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 @media only screen and (max-width: 767px) {
-    .events-table {
-        font-size: 12px;
-    }
+  .events-table {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 998px) {
-    .events-table {
-        font-size: 14px;
-    }
+  .events-table {
+    font-size: 14px;
+  }
 }
 
 .events-table th.middle-column {
-    max-width: 55vw;
-    min-width: 55vw;
+  max-width: 55vw;
+  min-width: 55vw;
 }
 
 .events-table .left-column {
-    padding-right: 10px;
-    line-height: 1;
+  padding-right: 10px;
+  line-height: 1;
 }
 
 .events-table .right-column {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .events-table .middle-column {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .events-table th,
 td {
-    padding: 10px;
+  padding: 10px;
 }
 
 .events-table tr th {
-    color: white;
+  color: white;
 }
 
 .events-table tr td {
-    font-weight: 500;
-    color: #616f8a;
+  font-weight: 500;
+  color: #616f8a;
 }
 
 .events-table {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .events-table td,
 .events-table th {
-    border: 1px solid #ddd;
-    padding: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 .events-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .events-table tr:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .events-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: darkslategray;
-    color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: darkslategray;
+  color: white;
 }

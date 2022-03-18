@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const EventsDb = () => {
-  return (
-    <div>EventsDb</div>
-  )
-}
+  return <div>EventsDb</div>;
+};
 
-export default EventsDb
+export default EventsDb;
