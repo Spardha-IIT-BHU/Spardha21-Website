@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
 import { FaAlignLeft } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import { Navbar, Button } from 'reactstrap';
 // import { Link } from "react-router-dom";
 import './Topbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';  
+import axios from 'axios';
 
 const Topbar = ({ toggleSidebar }) => {
   const [open, setOpen] = useState(false);
@@ -16,39 +16,45 @@ const Topbar = ({ toggleSidebar }) => {
   };
 
   const token = localStorage.getItem('token');
-  console.log('token',token);
-  const baseUrl = "https://api.spardha.co.in";
+  console.log('token', token);
+  const baseUrl = 'https://api.spardha.co.in';
 
-  const [user,setUser] = useState('');
-  const [numevents,setNumEvents] = useState('10');
+  const [user, setUser] = useState('');
+  const [numevents, setNumEvents] = useState('10');
 
   useEffect(() => {
-    axios.get(`${baseUrl}/auth/update/`,{
-      headers: {
-        'Authorization': `Token ${token}`
-      }
-    }).then(res => {
-      console.log("user data=",res.data);
-      setUser(res.data);
-      console.log('user',user);
-    }).catch(err => {
-      console.log("error=",err);
-    })
-    
-    axios.get(`${baseUrl}/teams/`,{
-      headers: {
-        'Authorization': `Token ${token}`
-      }
-    }).then(res => {
-      // console.log("numevents data=",res.data);
-      setNumEvents(res.data.length);
-      // console.log('numevents',numevents);
-    }).catch(err => {
-      console.log("error=",err);
-    })
+    axios
+      .get(`${baseUrl}/auth/update/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      })
+      .then((res) => {
+        console.log('user data=', res.data);
+        setUser(res.data);
+        console.log('user', user);
+      })
+      .catch((err) => {
+        console.log('error=', err);
+      });
+
+    axios
+      .get(`${baseUrl}/teams/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      })
+      .then((res) => {
+        // console.log("numevents data=",res.data);
+        setNumEvents(res.data.length);
+        // console.log('numevents',numevents);
+      })
+      .catch((err) => {
+        console.log('error=', err);
+      });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  }, []);
 
   return (
     <Navbar
@@ -63,7 +69,10 @@ const Topbar = ({ toggleSidebar }) => {
         </Button>
         <div className="col-xs-7 mine_lefts">
           <span className="events-reg hidden-xs">
-            <h4 className="size_Correct"> &ensp;Events Registered: {numevents} </h4>
+            <h4 className="size_Correct">
+              {' '}
+              &ensp;Events Registered: {numevents}{' '}
+            </h4>
           </span>
         </div>
       </div>
@@ -89,9 +98,7 @@ const Topbar = ({ toggleSidebar }) => {
                     <li>
                       <div className="navbar-content">
                         <span>{user.name}</span>
-                        <p className="text-muted small">
-                          {user.email}
-                        </p>
+                        <p className="text-muted small">{user.email}</p>
                         <div className="divider"></div>
                         <a
                           href="/dashboard/profile"

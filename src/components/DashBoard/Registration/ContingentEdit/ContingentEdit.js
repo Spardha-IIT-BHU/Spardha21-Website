@@ -16,14 +16,11 @@ import './ContingentEdit.css';
 import axios from 'axios';
 
 const ContingentEdit = () => {
-  
-  
-  
   // const [contdetails,setContDetails] = useState('');
   const token = localStorage.getItem('token');
-  const baseUrl = "https://api.spardha.co.in";
+  const baseUrl = 'https://api.spardha.co.in';
 
-  const rep=JSON.stringify(localStorage.getItem('College_Rep'));
+  const rep = JSON.stringify(localStorage.getItem('College_Rep'));
   // console.log('rep=',rep);
   // console.log('type=',typeof rep);
 
@@ -33,27 +30,28 @@ const ContingentEdit = () => {
     officials: '',
     leader_name: '',
     leader_contact_num: '',
-    college_rep: JSON.parse(rep)
+    college_rep: JSON.parse(rep),
   });
-  
+
   useEffect(() => {
-    console.log('input=',input);
-    axios.get(`${baseUrl}/teams/contingent/details/`,{
-      headers: {
-        'Authorization': `Token ${token}`
-      }
-    }).then(res => {
-      console.log("contdetails data=",res.data);
-      setInput(res.data);
-      // console.log('input=',input);
-    }).catch(err => {
-      console.log("error=",err);
-    })
-    
+    console.log('input=', input);
+    axios
+      .get(`${baseUrl}/teams/contingent/details/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      })
+      .then((res) => {
+        console.log('contdetails data=', res.data);
+        setInput(res.data);
+        // console.log('input=',input);
+      })
+      .catch((err) => {
+        console.log('error=', err);
+      });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
-  
-  
+  }, []);
 
   const cancelButton = () => {
     console.log('cancel');
@@ -61,46 +59,52 @@ const ContingentEdit = () => {
     window.location.href = '/dashboard/registration';
   };
 
-
   const submitButton = () => {
-    console.log('submit',input);
-    if(input.num_of_boys==='' || input.num_of_girls==='' || input.leader_name==='' || input.leader_contact_num===''){
-      console.log("wrong input");
-    }
-    else{
-      axios.delete(`${baseUrl}/teams/contingent/details/`,{
+    console.log('submit', input);
+    if (
+      input.num_of_boys === '' ||
+      input.num_of_girls === '' ||
+      input.leader_name === '' ||
+      input.leader_contact_num === ''
+    ) {
+      console.log('wrong input');
+    } else {
+      axios
+        .delete(`${baseUrl}/teams/contingent/details/`, {
           headers: {
-            'Authorization': `Token ${token}`
-          }
-      }).then(res => {
-        console.log("deleted");
-        const passed=input;
+            Authorization: `Token ${token}`,
+          },
+        })
+        .then((res) => {
+          console.log('deleted');
+          const passed = input;
 
-        passed["num_of_boys"]=parseInt(passed["num_of_boys"]);
-        passed["num_of_girls"]=parseInt(passed["num_of_girls"]);
-        passed["officials"]=parseInt(passed["officials"]);
+          passed['num_of_boys'] = parseInt(passed['num_of_boys']);
+          passed['num_of_girls'] = parseInt(passed['num_of_girls']);
+          passed['officials'] = parseInt(passed['officials']);
 
-        console.log("passed",passed);
-        
-        axios.post(`${baseUrl}/teams/contingent/details/`,passed,{
-          headers: {
-            'Authorization': `Token ${token}`
-          }
-        }).then(res => {
-          console.log("successful");
-          window.location.href = '/dashboard/registration';
-        }).catch(err => {
-          console.log("error");
+          console.log('passed', passed);
+
+          axios
+            .post(`${baseUrl}/teams/contingent/details/`, passed, {
+              headers: {
+                Authorization: `Token ${token}`,
+              },
+            })
+            .then((res) => {
+              console.log('successful');
+              window.location.href = '/dashboard/registration';
+            })
+            .catch((err) => {
+              console.log('error');
+            });
+        })
+        .catch((err) => {
+          console.log('error=', err);
         });
-      }).catch(err => {
-        console.log("error=",err);
-      })
-
-
     }
-
   };
-  
+
   const inputChangeHandler = async (e) => {
     // console.log("e in form", e.target.value);
     const newInput = { ...input };

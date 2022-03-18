@@ -1,28 +1,31 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './Profile.css';
 import axios from 'axios';
 
 const Profile = () => {
   const token = localStorage.getItem('token');
-  console.log('token',token);
-  const baseUrl = "https://api.spardha.co.in";
+  console.log('token', token);
+  const baseUrl = 'https://api.spardha.co.in';
 
-  const [user,setUser] = useState('');
+  const [user, setUser] = useState('');
 
   useEffect(() => {
-    axios.get(`${baseUrl}/auth/update/`,{
-      headers: {
-        'Authorization': `Token ${token}`
-      }
-    }).then(res => {
-      console.log("user data=",res.data);
-      setUser(res.data);
-      console.log('user',user);
-    }).catch(err => {
-      console.log("error=",err);
-    })
+    axios
+      .get(`${baseUrl}/auth/update/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      })
+      .then((res) => {
+        console.log('user data=', res.data);
+        setUser(res.data);
+        console.log('user', user);
+      })
+      .catch((err) => {
+        console.log('error=', err);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  }, []);
 
   return (
     <div className="user-dashboard profile_Pad">
@@ -43,9 +46,7 @@ const Profile = () => {
                   </tr>
                   <tr>
                     <td className="left-column">Email: </td>
-                    <td className="right-column overHandle">
-                      {user.email}
-                    </td>
+                    <td className="right-column overHandle">{user.email}</td>
                   </tr>
                   <tr>
                     <td className="left-column">Username: </td>
@@ -53,11 +54,15 @@ const Profile = () => {
                   </tr>
                   <tr>
                     <td className="left-column">Designation: </td>
-                    <td className="right-column overHandle">{user.designation}</td>
+                    <td className="right-column overHandle">
+                      {user.designation}
+                    </td>
                   </tr>
                   <tr>
                     <td className="left-column">Institute Name: </td>
-                    <td className="right-column overHandle">{user.institution}</td>
+                    <td className="right-column overHandle">
+                      {user.institution}
+                    </td>
                   </tr>
                   <tr>
                     <td className="left-column">Phone Number: </td>
