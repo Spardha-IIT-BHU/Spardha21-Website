@@ -25,7 +25,7 @@ function HomeSlider() {
             >
               <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
-                  <img src="images/logo/spardha-white.png" alt="spardha" />
+                  <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>
                 <h1 className="mt-4 mb-1 text-overflow-center spardha-21">
                   Spardha&nbsp;2021
@@ -47,7 +47,7 @@ function HomeSlider() {
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register" className="home-button">
+                      <Link to="/register/signup" className="home-button">
                         REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
@@ -58,7 +58,7 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register" className="home-button">
+                    <Link to="/register/signup" className="home-button">
                       REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
@@ -82,7 +82,7 @@ function HomeSlider() {
             >
               <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
-                  <img src="images/logo/spardha-white.png" alt="spardha" />
+                  <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>
                 <h1 className="mt-4 mb-1 text-overflow-center spardha-21">
                   Spardha&nbsp;2021
@@ -104,7 +104,7 @@ function HomeSlider() {
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register" className="home-button">
+                      <Link to="/register/signup" className="home-button">
                         REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
@@ -115,7 +115,7 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register" className="home-button">
+                    <Link to="/register/signup" className="home-button">
                       REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
@@ -139,7 +139,7 @@ function HomeSlider() {
             >
               <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
-                  <img src="images/logo/spardha-white.png" alt="spardha" />
+                  <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>
                 <h1 className="mt-4 mb-1 text-overflow-center spardha-21">
                   Spardha&nbsp;2021
@@ -161,7 +161,7 @@ function HomeSlider() {
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register" className="home-button">
+                      <Link to="/register/signup" className="home-button">
                         REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
@@ -172,7 +172,7 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register" className="home-button">
+                    <Link to="/register/signup" className="home-button">
                       REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
@@ -196,7 +196,7 @@ function HomeSlider() {
             >
               <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
-                  <img src="images/logo/spardha-white.png" alt="spardha" />
+                  <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>
                 <h1 className="mt-4 mb-1 text-overflow-center spardha-21">
                   Spardha&nbsp;2021
@@ -218,7 +218,7 @@ function HomeSlider() {
                       </Link>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register" className="home-button">
+                      <Link to="/register/signup" className="home-button">
                         REGISTER&nbsp;/&nbsp;LOGIN
                       </Link>
                     </div>
@@ -229,7 +229,7 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register" className="home-button">
+                    <Link to="/register/signup" className="home-button">
                       REGISTER&nbsp;/&nbsp;LOGIN
                     </Link>
                   </div>
