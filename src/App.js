@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
 import DashBoard from './components/DashBoard/MainMenu/DashBoard';
-// import Home from './components/DashBoard/Home/Home';
 
 const LandingPages = React.lazy(() =>
   import('./components/LandingPages/LandingPages')

@@ -3,12 +3,13 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './HomeSlider.css';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 function HomeSlider() {
   return (
     <>
       <OwlCarousel
+        id="home-slider"
         className="owl-theme home-slider active"
         loop
         items={1}
@@ -42,14 +43,17 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca" className="home-button1">
+                      <HashLink to="/ca#ca" className="home-button1">
                         CAMPUS AMBASSADOR
-                      </Link>
+                      </HashLink>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register/signup" className="home-button">
+                      <HashLink
+                        to="/register/signup#register"
+                        className="home-button"
+                      >
                         REGISTER&nbsp;/&nbsp;LOGIN
-                      </Link>
+                      </HashLink>
                     </div>
                   </div>
                 </div>
@@ -58,14 +62,17 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register/signup" className="home-button">
+                    <HashLink
+                      to="/register/signup#register"
+                      className="home-button"
+                    >
                       REGISTER&nbsp;/&nbsp;LOGIN
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="ca">
-                    <Link to="/ca" className="home-button1">
+                    <HashLink to="/ca#ca" className="home-button1">
                       CAMPUS AMBASSADOR
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="container mt-5">&nbsp;</div>
                 </div>
@@ -99,14 +106,17 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca" className="home-button1">
+                      <HashLink to="/ca#ca" className="home-button1">
                         CAMPUS AMBASSADOR
-                      </Link>
+                      </HashLink>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register/signup" className="home-button">
+                      <HashLink
+                        to="/register/signup#register"
+                        className="home-button"
+                      >
                         REGISTER&nbsp;/&nbsp;LOGIN
-                      </Link>
+                      </HashLink>
                     </div>
                   </div>
                 </div>
@@ -115,14 +125,17 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register/signup" className="home-button">
+                    <HashLink
+                      to="/register/signup#register"
+                      className="home-button"
+                    >
                       REGISTER&nbsp;/&nbsp;LOGIN
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="ca">
-                    <Link to="/ca" className="home-button1">
+                    <HashLink to="/ca#ca" className="home-button1">
                       CAMPUS AMBASSADOR
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="container mt-5">&nbsp;</div>
                 </div>
@@ -156,14 +169,17 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca" className="home-button1">
+                      <HashLink to="/ca#ca" className="home-button1">
                         CAMPUS AMBASSADOR
-                      </Link>
+                      </HashLink>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register/signup" className="home-button">
+                      <HashLink
+                        to="/register/signup#register"
+                        className="home-button"
+                      >
                         REGISTER&nbsp;/&nbsp;LOGIN
-                      </Link>
+                      </HashLink>
                     </div>
                   </div>
                 </div>
@@ -172,14 +188,17 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register/signup" className="home-button">
+                    <HashLink
+                      to="/register/signup#register"
+                      className="home-button"
+                    >
                       REGISTER&nbsp;/&nbsp;LOGIN
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="ca">
-                    <Link to="/ca" className="home-button1">
+                    <HashLink to="/ca#ca" className="home-button1">
                       CAMPUS AMBASSADOR
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="container mt-5">&nbsp;</div>
                 </div>
@@ -213,14 +232,17 @@ function HomeSlider() {
                 <div className="container mt-5 pt-3 home-large-screen">
                   <div className="row">
                     <div className="col-6 ca">
-                      <Link to="/ca" className="home-button1">
+                      <HashLink to="/ca#ca" className="home-button1">
                         CAMPUS AMBASSADOR
-                      </Link>
+                      </HashLink>
                     </div>
                     <div className="col-6 reg">
-                      <Link to="/register/signup" className="home-button">
+                      <HashLink
+                        to="/register/signup#register"
+                        className="home-button"
+                      >
                         REGISTER&nbsp;/&nbsp;LOGIN
-                      </Link>
+                      </HashLink>
                     </div>
                   </div>
                 </div>
@@ -229,14 +251,17 @@ function HomeSlider() {
                 </div>
                 <div className="home-small-screen container">
                   <div className="reg">
-                    <Link to="/register/signup" className="home-button">
+                    <HashLink
+                      to="/register/signup#register"
+                      className="home-button"
+                    >
                       REGISTER&nbsp;/&nbsp;LOGIN
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="ca">
-                    <Link to="/ca" className="home-button1">
+                    <HashLink to="/ca#ca" className="home-button1">
                       CAMPUS AMBASSADOR
-                    </Link>
+                    </HashLink>
                   </div>
                   <div className="container mt-5">&nbsp;</div>
                 </div>

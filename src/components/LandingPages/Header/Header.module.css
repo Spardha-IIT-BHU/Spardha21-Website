@@ -16,10 +16,12 @@
   font-weight: 600;
   font-family: 'Barlow Semi Condensed', Arial, sans-serif;
   opacity: 1 !important;
+  transition: color 0.15s ease-in-out;
 }
 
 .nav-links:hover,
-.nav-links:focus {
+.nav-links:focus,
+.nav-links:active {
   color: #6db549;
 }
 
