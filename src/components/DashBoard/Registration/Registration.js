@@ -77,7 +77,9 @@ const Registration = () => {
                         Total Number of officials accompanying the contingent
                       </b>{' '}
                     </td>
-                    <td className="right-column">{contdetails.num_of_officials}</td>
+                    <td className="right-column">
+                      {contdetails.num_of_officials}
+                    </td>
                   </tr>
                   <tr>
                     <td

@@ -51,7 +51,7 @@ const Topbar = ({ toggleSidebar }) => {
       })
       .catch((err) => {
         console.log('error=', err);
-        if(err.response.status === 404){
+        if (err.response.status === 404) {
           setNumEvents(0);
         }
       });
