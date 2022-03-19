@@ -11,7 +11,7 @@ const Registration = () => {
     college_rep: '-',
     leader_name: '-',
     leader_contact_num: '-',
-    officials: '-',
+    num_of_officials: '-',
   });
   const token = localStorage.getItem('token');
   const baseUrl = 'https://api.spardha.co.in';
@@ -77,7 +77,7 @@ const Registration = () => {
                         Total Number of officials accompanying the contingent
                       </b>{' '}
                     </td>
-                    <td className="right-column">12</td>
+                    <td className="right-column">{contdetails.num_of_officials}</td>
                   </tr>
                   <tr>
                     <td

@@ -31,7 +31,7 @@ const ContingentEdit = () => {
   const [input, setInput] = useState({
     num_of_boys: '',
     num_of_girls: '',
-    officials: '',
+    num_of_officials: '',
     leader_name: '',
     leader_contact_num: '',
     college_rep: JSON.parse(rep),
@@ -69,7 +69,8 @@ const ContingentEdit = () => {
       input.num_of_boys === '' ||
       input.num_of_girls === '' ||
       input.leader_name === '' ||
-      input.leader_contact_num === ''
+      input.leader_contact_num === ''||
+      input.num_of_officials === ''
     ) {
       console.log('wrong input');
       toast.error('Please fill all the fields',{
@@ -93,7 +94,7 @@ const ContingentEdit = () => {
       })
     }
     else if(
-      input.officials<0 
+      input.num_of_officials<0 
       ){
       console.log('num officials');
       toast.error('Number of officials in a team should be positive',{
@@ -121,7 +122,7 @@ const ContingentEdit = () => {
 
           passed['num_of_boys'] = parseInt(passed['num_of_boys']);
           passed['num_of_girls'] = parseInt(passed['num_of_girls']);
-          passed['officials'] = parseInt(passed['officials']);
+          passed['num_of_officials'] = parseInt(passed['num_of_officials']);
           passed['college_rep'] = JSON.parse(rep);
 
           console.log('passed', passed);
@@ -137,7 +138,7 @@ const ContingentEdit = () => {
               window.location.href = '/dashboard/registration';
             })
             .catch((err) => {
-              console.log('error');
+              console.log('error',err);
             });
         })
         .catch((err) => {
@@ -221,15 +222,15 @@ const ContingentEdit = () => {
                           <Input
                             type="number"
                             className="form-control_contDb"
-                            id="officials"
-                            name="officials"
+                            id="num_of_officials"
+                            name="num_of_officials"
                             placeholder="Enter total no. of Officials"
-                            value={input.officials}
+                            value={input.num_of_officials}
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
-                            valid={input.officials!=='' && input.officials>=0}
-                            invalid={input.officials!=='' && input.officials<0}
+                            valid={input.num_of_officials!=='' && input.num_of_officials>=0}
+                            invalid={input.num_of_officials!=='' && input.num_of_officials<0}
                           />
                         </FormGroup>
                       </td>
