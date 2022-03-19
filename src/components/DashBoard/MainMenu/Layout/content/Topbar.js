@@ -51,6 +51,9 @@ const Topbar = ({ toggleSidebar }) => {
       })
       .catch((err) => {
         console.log('error=', err);
+        if (err.response.status === 404) {
+          setNumEvents(0);
+        }
       });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

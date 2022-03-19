@@ -14,6 +14,10 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContingentEdit.css';
 import axios from 'axios';
+// import isPhone from 'validator/lib/isMobilePhone';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 
 const ContingentEdit = () => {
   // const [contdetails,setContDetails] = useState('');
@@ -27,7 +31,7 @@ const ContingentEdit = () => {
   const [input, setInput] = useState({
     num_of_boys: '',
     num_of_girls: '',
-    officials: '',
+    num_of_officials: '',
     leader_name: '',
     leader_contact_num: '',
     college_rep: JSON.parse(rep),
@@ -65,9 +69,33 @@ const ContingentEdit = () => {
       input.num_of_boys === '' ||
       input.num_of_girls === '' ||
       input.leader_name === '' ||
-      input.leader_contact_num === ''
+      input.leader_contact_num === '' ||
+      input.num_of_officials === ''
     ) {
       console.log('wrong input');
+      toast.error('Please fill all the fields', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } else if (input.num_of_boys < 0) {
+      console.log('num boys');
+      toast.error('Number of boys in a team should be positive', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } else if (input.num_of_girls < 0) {
+      console.log('num girls');
+      toast.error('Number of girls in a team should be positive', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } else if (input.num_of_officials < 0) {
+      console.log('num officials');
+      toast.error('Number of officials in a team should be positive', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } else if (!input.leader_contact_num.match(/^[0-9]{10}$/)) {
+      console.log('num contact');
+      toast.error('Please enter a valid contact number', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
     } else {
       axios
         .delete(`${baseUrl}/teams/contingent/details/`, {
@@ -81,7 +109,7 @@ const ContingentEdit = () => {
 
           passed['num_of_boys'] = parseInt(passed['num_of_boys']);
           passed['num_of_girls'] = parseInt(passed['num_of_girls']);
-          passed['officials'] = parseInt(passed['officials']);
+          passed['num_of_officials'] = parseInt(passed['num_of_officials']);
           passed['college_rep'] = JSON.parse(rep);
 
           console.log('passed', passed);
@@ -97,7 +125,7 @@ const ContingentEdit = () => {
               window.location.href = '/dashboard/registration';
             })
             .catch((err) => {
-              console.log('error');
+              console.log('error', err);
             });
         })
         .catch((err) => {
@@ -143,6 +171,12 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={
+                              input.num_of_boys !== '' && input.num_of_boys >= 0
+                            }
+                            invalid={
+                              input.num_of_boys !== '' && input.num_of_boys < 0
+                            }
                           />
                         </FormGroup>
                       </td>
@@ -164,6 +198,14 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={
+                              input.num_of_girls !== '' &&
+                              input.num_of_girls >= 0
+                            }
+                            invalid={
+                              input.num_of_girls !== '' &&
+                              input.num_of_girls < 0
+                            }
                           />
                         </FormGroup>
                       </td>
@@ -177,13 +219,21 @@ const ContingentEdit = () => {
                           <Input
                             type="number"
                             className="form-control_contDb"
-                            id="officials"
-                            name="officials"
+                            id="num_of_officials"
+                            name="num_of_officials"
                             placeholder="Enter total no. of Officials"
-                            value={input.officials}
+                            value={input.num_of_officials}
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={
+                              input.num_of_officials !== '' &&
+                              input.num_of_officials >= 0
+                            }
+                            invalid={
+                              input.num_of_officials !== '' &&
+                              input.num_of_officials < 0
+                            }
                           />
                         </FormGroup>
                       </td>
@@ -205,6 +255,8 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={input.leader_name !== ''}
+                            invalid={input.leader_name === ''}
                           />
                         </FormGroup>
                       </td>
@@ -226,6 +278,14 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={
+                              input.leader_contact_num !== '' &&
+                              input.leader_contact_num.length === 10
+                            }
+                            invalid={
+                              input.leader_contact_num !== '' &&
+                              input.leader_contact_num.length !== 10
+                            }
                           />
                         </FormGroup>
                       </td>
