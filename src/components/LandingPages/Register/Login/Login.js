@@ -50,7 +50,7 @@ function Login() {
           message: 'Logged in Successfully! Redirecting...',
         });
         setTimeout(() => {
-          navigate('/dashboard/');
+          navigate('/dashboard/home');
         }, 2000);
       })
       .catch(({ response }) => {
