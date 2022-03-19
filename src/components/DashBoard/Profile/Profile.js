@@ -12,7 +12,7 @@ const Profile = () => {
   const baseUrl = 'https://api.spardha.co.in';
 
   const [user, setUser] = useState('');
-  const [modal,setModal] = useState(false);
+  const [modal, setModal] = useState(false);
   // const [rel,setRel] =useState(true);
 
   const toggle = () => setModal(!modal);
@@ -24,13 +24,13 @@ const Profile = () => {
     //   setRel(false);
     // }
     if (window.localStorage) {
-        if (!localStorage.getItem('reload')) {
-            localStorage['reload'] = true;
-            setTimeout(window.location.reload(),200);
-        } else {
-            localStorage.removeItem('reload');
-        }
+      if (!localStorage.getItem('reload')) {
+        localStorage['reload'] = true;
+        setTimeout(window.location.reload(), 200);
+      } else {
+        localStorage.removeItem('reload');
       }
+    }
 
     axios
       .get(`${baseUrl}/auth/update/`, {
@@ -53,38 +53,40 @@ const Profile = () => {
     console.log('delSucceed');
     localStorage.removeItem('token');
     window.location.href = '/';
-  }
+  };
 
- 
-  const deleteProfile = async () =>{
+  const deleteProfile = async () => {
     console.log('delete');
-    await axios.get(`${baseUrl}/auth/delete/`, {
-      headers: {
-        Authorization: `Token ${token}`,
-      },
-    }).then((res)=>{
-      console.log('delete',res);
-      toggle();
-      toast.success('Profile Deleted Successfully', {
-        position: toast.POSITION.BOTTOM_RIGHT,
+    await axios
+      .get(`${baseUrl}/auth/delete/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
       })
-      setTimeout(delSucceed,2000);
-      // localStorage.removeItem('token');
-      // window.location.href='/';
-    }).catch((err)=>{
-      console.log('error',err);
-      toggle();
-      toast.error('Error in Deleting Profile', {
-        position: toast.POSITION.BOTTOM_RIGHT,
+      .then((res) => {
+        console.log('delete', res);
+        toggle();
+        toast.success('Profile Deleted Successfully', {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+        setTimeout(delSucceed, 2000);
+        // localStorage.removeItem('token');
+        // window.location.href='/';
+      })
+      .catch((err) => {
+        console.log('error', err);
+        toggle();
+        toast.error('Error in Deleting Profile', {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       });
-    })
-    }
+  };
 
-  const changePass = () =>{
+  const changePass = () => {
     console.log('change');
     localStorage.removeItem('token');
-    window.location.href= '/register/forgot';
-  }
+    window.location.href = '/register/forgot';
+  };
 
   return (
     <div className="user-dashboard profile_Pad">
@@ -161,22 +163,28 @@ const Profile = () => {
                     </td>
                   </tr>
                 </table>
-                
-                <Modal
-                  isOpen={modal}
-                  toggle={toggle}
-                  size="lg"
-                >
-                  <ModalHeader toggle={toggle} style={{backgroundColor: 'red',color:'white'}}>Delete Profile</ModalHeader>
+
+                <Modal isOpen={modal} toggle={toggle} size="lg">
+                  <ModalHeader
+                    toggle={toggle}
+                    style={{ backgroundColor: 'red', color: 'white' }}
+                  >
+                    Delete Profile
+                  </ModalHeader>
                   <ModalBody>
-                      <p style={{fontWeight: 'bold'}}>Are you sure u want to delete your profile??</p>
-                      <div className="confirmButtons">
-                        <button className="yes" onClick={deleteProfile}>Yes</button>
-                        <button className="no" onClick={toggle}>No</button>
-                      </div>
+                    <p style={{ fontWeight: 'bold' }}>
+                      Are you sure u want to delete your profile??
+                    </p>
+                    <div className="confirmButtons">
+                      <button className="yes" onClick={deleteProfile}>
+                        Yes
+                      </button>
+                      <button className="no" onClick={toggle}>
+                        No
+                      </button>
+                    </div>
                   </ModalBody>
                 </Modal>
-
               </h2>
             </div>
           </div>

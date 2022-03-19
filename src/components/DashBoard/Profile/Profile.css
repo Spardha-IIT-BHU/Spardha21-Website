@@ -235,10 +235,10 @@ td {
   .overHandle {
     overflow: scroll;
   }
-.profile_Pad .profile-table td {
-  max-width: 35vw;
-  min-width: 26vw;
-}
+  .profile_Pad .profile-table td {
+    max-width: 35vw;
+    min-width: 26vw;
+  }
 }
 
 .register-now {
