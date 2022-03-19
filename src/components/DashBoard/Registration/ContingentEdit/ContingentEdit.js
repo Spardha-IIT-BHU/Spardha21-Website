@@ -14,6 +14,10 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContingentEdit.css';
 import axios from 'axios';
+// import isPhone from 'validator/lib/isMobilePhone';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
 
 const ContingentEdit = () => {
   // const [contdetails,setContDetails] = useState('');
@@ -68,7 +72,43 @@ const ContingentEdit = () => {
       input.leader_contact_num === ''
     ) {
       console.log('wrong input');
-    } else {
+      toast.error('Please fill all the fields',{
+        position: toast.POSITION.BOTTOM_RIGHT
+      })
+    } 
+    else if(
+      input.num_of_boys<0 
+      ){
+      console.log('num boys');
+      toast.error('Number of boys in a team should be positive',{
+        position: toast.POSITION.BOTTOM_RIGHT
+      })
+    }
+    else if(
+      input.num_of_girls<0 
+      ){
+      console.log('num girls');
+      toast.error('Number of girls in a team should be positive',{
+        position: toast.POSITION.BOTTOM_RIGHT
+      })
+    }
+    else if(
+      input.officials<0 
+      ){
+      console.log('num officials');
+      toast.error('Number of officials in a team should be positive',{
+        position: toast.POSITION.BOTTOM_RIGHT
+      })
+    }
+    else if(
+      !input.leader_contact_num.match(/^[0-9]{10}$/)
+      ){
+      console.log('num contact');
+      toast.error('Please enter a valid contact number',{
+        position: toast.POSITION.BOTTOM_RIGHT
+      })
+    }
+    else {
       axios
         .delete(`${baseUrl}/teams/contingent/details/`, {
           headers: {
@@ -143,6 +183,8 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={input.num_of_boys!=='' && input.num_of_boys>=0}
+                            invalid={input.num_of_boys!=='' && input.num_of_boys<0}
                           />
                         </FormGroup>
                       </td>
@@ -164,6 +206,8 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={input.num_of_girls!=='' && input.num_of_girls>=0}
+                            invalid={input.num_of_girls!=='' && input.num_of_girls<0}
                           />
                         </FormGroup>
                       </td>
@@ -184,6 +228,8 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={input.officials!=='' && input.officials>=0}
+                            invalid={input.officials!=='' && input.officials<0}
                           />
                         </FormGroup>
                       </td>
@@ -205,6 +251,8 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={input.leader_name!==''}
+                            invalid={input.leader_name===''}
                           />
                         </FormGroup>
                       </td>
@@ -226,6 +274,14 @@ const ContingentEdit = () => {
                             onChange={(e) => {
                               inputChangeHandler(e);
                             }}
+                            valid={
+                              input.leader_contact_num !== '' &&
+                              input.leader_contact_num.length === 10
+                            }
+                            invalid={
+                                input.leader_contact_num !== '' &&
+                                input.leader_contact_num.length !== 10
+                            }
                           />
                         </FormGroup>
                       </td>
