@@ -82,6 +82,7 @@ const ContingentEdit = () => {
           passed['num_of_boys'] = parseInt(passed['num_of_boys']);
           passed['num_of_girls'] = parseInt(passed['num_of_girls']);
           passed['officials'] = parseInt(passed['officials']);
+          passed['college_rep'] = JSON.parse(rep);
 
           console.log('passed', passed);
 
