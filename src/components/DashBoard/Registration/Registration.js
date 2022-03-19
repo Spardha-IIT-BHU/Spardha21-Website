@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Registration.css';
 import EventsDb from './EventsDb/EventsDb';
+import axios from 'axios';
 
 const Registration = () => {
+  const [contdetails, setContDetails] = useState({
+    num_of_boys: '-',
+    num_of_girls: '-',
+    college_rep: '-',
+    leader_name: '-',
+    leader_contact_num: '-',
+    officials: '-',
+  });
+  const token = localStorage.getItem('token');
+  const baseUrl = 'https://api.spardha.co.in';
+
+  useEffect(() => {
+    axios
+      .get(`${baseUrl}/teams/contingent/details/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      })
+      .then((res) => {
+        console.log('contdetails data=', res.data);
+        setContDetails(res.data);
+        console.log('contdetails', contdetails);
+      })
+      .catch((err) => {
+        console.log('error=', err);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="user-dashboard regn_Pad">
       <div className="row_dbRegistration">
@@ -30,13 +60,13 @@ const Registration = () => {
                     <td className="left-column" style={{ textAlign: 'left' }}>
                       <b>Total Number of Boys</b>{' '}
                     </td>
-                    <td className="right-column">10</td>
+                    <td className="right-column">{contdetails.num_of_boys}</td>
                   </tr>
                   <tr>
                     <td className="left-column" style={{ textAlign: 'left' }}>
                       <b>Total Number of Girls</b>{' '}
                     </td>
-                    <td className="right-column">11</td>
+                    <td className="right-column">{contdetails.num_of_girls}</td>
                   </tr>
                   <tr>
                     <td
@@ -56,7 +86,7 @@ const Registration = () => {
                     >
                       <b>Full Name of Contingent Leader</b>{' '}
                     </td>
-                    <td className="right-column">Ashish Kumar</td>
+                    <td className="right-column">{contdetails.leader_name}</td>
                   </tr>
                   <tr>
                     <td
@@ -65,7 +95,9 @@ const Registration = () => {
                     >
                       <b>Contact Number of Contingent Leader</b>{' '}
                     </td>
-                    <td className="right-column">123456789</td>
+                    <td className="right-column">
+                      {contdetails.leader_contact_num}
+                    </td>
                   </tr>
                 </table>
                 <br></br>

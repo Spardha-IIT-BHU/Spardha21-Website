@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Profile.css';
+import axios from 'axios';
 
 const Profile = () => {
+  const token = localStorage.getItem('token');
+  console.log('token', token);
+  const baseUrl = 'https://api.spardha.co.in';
+
+  const [user, setUser] = useState('');
+
+  useEffect(() => {
+    axios
+      .get(`${baseUrl}/auth/update/`, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      })
+      .then((res) => {
+        console.log('user data=', res.data);
+        setUser(res.data);
+        console.log('user', user);
+      })
+      .catch((err) => {
+        console.log('error=', err);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="user-dashboard profile_Pad">
       <div className="row_dbProfile">
@@ -17,13 +42,11 @@ const Profile = () => {
                 >
                   <tr>
                     <td className="left-column">Name: </td>
-                    <td className="right-column overHandle">Ashish Kumar</td>
+                    <td className="right-column overHandle">{user.name}</td>
                   </tr>
                   <tr>
                     <td className="left-column">Email: </td>
-                    <td className="right-column overHandle">
-                      ashishkumar.cse18@itbhu.ac.in
-                    </td>
+                    <td className="right-column overHandle">{user.email}</td>
                   </tr>
                   <tr>
                     <td className="left-column">Username: </td>
@@ -31,15 +54,19 @@ const Profile = () => {
                   </tr>
                   <tr>
                     <td className="left-column">Designation: </td>
-                    <td className="right-column overHandle">Tech Team</td>
+                    <td className="right-column overHandle">
+                      {user.designation}
+                    </td>
                   </tr>
                   <tr>
                     <td className="left-column">Institute Name: </td>
-                    <td className="right-column overHandle">IIT</td>
+                    <td className="right-column overHandle">
+                      {user.institution}
+                    </td>
                   </tr>
                   <tr>
                     <td className="left-column">Phone Number: </td>
-                    <td className="right-column overHandle"> 6205144592</td>
+                    <td className="right-column overHandle"> {user.phone}</td>
                   </tr>
                   <tr>
                     <td className="left-column"></td>

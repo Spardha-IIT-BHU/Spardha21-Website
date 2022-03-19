@@ -116,7 +116,7 @@ a:focus {
 }
 
 @media only screen and (max-width: 500px) {
-  body {
+  .Db {
     overflow: hidden;
   }
 
