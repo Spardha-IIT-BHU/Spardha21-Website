@@ -32,6 +32,15 @@ const SideBar = ({ isOpen, toggle }) => {
       toggle();
     }
   };
+  const handleClick2 = () => {
+    console.log('handle click');
+    if (mobile) {
+      toggle();
+    }
+
+    localStorage.removeItem('token');
+    // window.location.href = '/';
+  };
 
   return (
     <div
@@ -102,9 +111,9 @@ const SideBar = ({ isOpen, toggle }) => {
           <NavItem className="item_nav">
             <NavLink
               tag={Link}
-              to={'/logout'}
+              to={'/'}
               onClick={() => {
-                handleClick();
+                handleClick2();
               }}
             >
               {/* <FontAwesomeIcon icon={faImage} className="mr-2 icon_bar" /> */}
