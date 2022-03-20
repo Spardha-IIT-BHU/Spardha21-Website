@@ -13,6 +13,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { isMobile } from 'react-device-detect';
+// import {Link } from 'react-router';
 
 // import SubMenu from "./SubMenu";
 
@@ -53,14 +54,14 @@ const SideBar = ({ isOpen, toggle }) => {
         </span>
         {/* <h3>Bootstrap Sidebar</h3> */}
         <div className="logo_db">
-          <a href="/">
+          <Link to="/">
             <img
               src="/images/logo/spardha-small-white.png"
               alt="spardha-logo"
               className="hidden-sm spardha-logo"
             />
             {/* <img src="/images/logo/spardha-small-white.png" alt="spardha-logo" className="visible-xs visible-sm circle-logo"/> */}
-          </a>
+          </Link>
         </div>
       </div>
       <div className="side-menu">
