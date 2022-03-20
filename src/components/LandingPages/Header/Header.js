@@ -50,6 +50,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 Home
               </NavHashLink>
@@ -67,6 +68,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 About us
               </NavHashLink>
@@ -84,6 +86,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 Events
               </NavHashLink>
@@ -101,6 +104,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 RuleBook
               </NavHashLink>
@@ -118,6 +122,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 Guests
               </NavHashLink>
@@ -135,6 +140,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 Sponsors
               </NavHashLink>
@@ -152,6 +158,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 Gallery
               </NavHashLink>
@@ -169,6 +176,7 @@ function Header() {
                     color: isActive ? '#6db549' : 'white',
                   };
                 }}
+                smooth
               >
                 Our Team
               </NavHashLink>
@@ -181,11 +189,7 @@ function Header() {
                 onClick={() => {
                   setOpen(false);
                 }}
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? '#6db549' : 'white',
-                  };
-                }}
+                smooth
               >
                 Contact Us
               </NavHashLink>
