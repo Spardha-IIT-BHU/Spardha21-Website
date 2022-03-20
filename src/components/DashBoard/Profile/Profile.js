@@ -23,14 +23,14 @@ const Profile = () => {
     //   // window.location.reload();
     //   setRel(false);
     // }
-    if (window.localStorage) {
-      if (!localStorage.getItem('reload')) {
-        localStorage['reload'] = true;
-        setTimeout(window.location.reload(), 200);
-      } else {
-        localStorage.removeItem('reload');
-      }
-    }
+    // if (window.localStorage) {
+    //   if (!localStorage.getItem('reload')) {
+    //     localStorage['reload'] = true;
+    //     setTimeout(window.location.reload(), 200);
+    //   } else {
+    //     localStorage.removeItem('reload');
+    //   }
+    // }
 
     axios
       .get(`${baseUrl}/auth/update/`, {

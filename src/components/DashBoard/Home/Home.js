@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const token = localStorage.getItem('token');
@@ -40,6 +41,9 @@ const Home = () => {
       })
       .catch((err) => {
         console.log('error=', err);
+        if (err.response.status === 404) {
+          setNumEvents(0);
+        }
       });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -62,7 +66,7 @@ const Home = () => {
                 someone else to register for your college, you need to first
                 delete your account in{' '}
                 <u>
-                  <a href="/dashboard/profile">User Profile</a>
+                  <Link to="/dashboard/profile">User Profile</Link>
                 </u>{' '}
                 section, before another user can create an account with same
                 college name.
@@ -76,7 +80,7 @@ const Home = () => {
               <h2>
                 You've registered for {numevents} events. Click{' '}
                 <u>
-                  <a href="/dashboard/registration">here</a>
+                  <Link to="/dashboard/registration">here</Link>
                 </u>{' '}
                 to modify or add events.
               </h2>
@@ -89,9 +93,9 @@ const Home = () => {
               <h2>
                 Please read the{' '}
                 <u>
-                  <a href="/pdf/RuleBook.pdf" target="_blank">
+                  <Link to="/pdf/RuleBook.pdf" target="_blank">
                     Rule Book
-                  </a>
+                  </Link>
                 </u>{' '}
                 before registering for events.
               </h2>

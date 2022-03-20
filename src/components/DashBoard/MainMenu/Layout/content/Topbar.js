@@ -7,6 +7,7 @@ import { Navbar, Button } from 'reactstrap';
 import './Topbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Topbar = ({ toggleSidebar }) => {
   const [open, setOpen] = useState(false);
@@ -86,9 +87,9 @@ const Topbar = ({ toggleSidebar }) => {
             <div className="header-rightside">
               <ul className="list-inline header-top pull-right">
                 <li className="hidden-xs">
-                  <a href="/dashboard/registration" className="register-now">
+                  <Link to="/dashboard/registration" className="register-now">
                     Register Now
-                  </a>
+                  </Link>
                 </li>
                 <li className="dropdown">
                   <button className="dropdown-toggle" onClick={toggleOpen}>
@@ -103,12 +104,12 @@ const Topbar = ({ toggleSidebar }) => {
                         <span>{user.name}</span>
                         <p className="text-muted small">{user.email}</p>
                         <div className="divider"></div>
-                        <a
-                          href="/dashboard/profile"
+                        <Link
+                          to="/dashboard/profile"
                           className="view_db btn-sm active profile_db"
                         >
                           View Profile
-                        </a>
+                        </Link>
                       </div>
                     </li>
                   </ul>

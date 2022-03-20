@@ -77,7 +77,7 @@
   width: 100%;
 }
 
-.welcome-text button {
+/* .welcome-text button {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 1px solid #dadee7;
   border-radius: 100px;
@@ -87,13 +87,17 @@
   color: rgb(0, 78, 0);
 }
 
-.welcome-text button::before {
+*/
+
+/* .welcome-text button::before {
   content: '';
   font-family: FontAwesome;
   position: absolute;
   right: 12px;
   top: 11px;
 }
+
+*/
 
 .welcome-text .btn-group {
   float: right;
