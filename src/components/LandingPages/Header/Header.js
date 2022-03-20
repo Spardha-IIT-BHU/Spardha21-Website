@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import {
   Collapse,
   Nav,
@@ -23,13 +23,13 @@ function Header() {
     <>
       <Navbar expand="lg" className={styles['wrap-container']} sticky="top">
         <NavbarBrand>
-          <NavLink to="/">
+          <NavHashLink exact="true" to="/#home-slider" smooth>
             <img
               src="/images/logo/spardha-logo-white.png"
               alt="Sparhda Logo"
               height="60px"
             />
-          </NavLink>
+          </NavHashLink>
         </NavbarBrand>
         <NavbarToggler
           className={styles['navbar-toggler']}
@@ -38,103 +38,161 @@ function Header() {
         <Collapse navbar isOpen={open}>
           <Nav navbar className={`ms-auto ${styles['navbar-nav']}`}>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/"
+              <NavHashLink
+                exact="true"
+                to="/#home-slider"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 Home
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/about"
+              <NavHashLink
+                exact="true"
+                to="/about#about"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 About us
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
+              <NavHashLink
+                exact="true"
                 to="/events"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 Events
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/"
+              <NavHashLink
+                exact="true"
+                to="/rulebook"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 RuleBook
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/guests"
+              <NavHashLink
+                exact="true"
+                to="/guests#guests"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 Guests
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/sponsors"
+              <NavHashLink
+                exact="true"
+                to="/sponsors#sponsors"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 Sponsors
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/gallery"
+              <NavHashLink
+                exact="true"
+                to="/gallery#gallery"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 Gallery
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/team"
+              <NavHashLink
+                exact="true"
+                to="/team#team"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? '#6db549' : 'white',
+                  };
+                }}
+                smooth
               >
                 Our Team
-              </NavLink>
+              </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavLink
-                to="/"
+              <NavHashLink
+                exact="true"
+                to="/#contactus"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
+                smooth
               >
                 Contact Us
-              </NavLink>
+              </NavHashLink>
             </NavItem>
           </Nav>
         </Collapse>

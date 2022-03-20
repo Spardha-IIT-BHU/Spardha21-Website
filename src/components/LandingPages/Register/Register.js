@@ -10,7 +10,7 @@ function Register() {
   }, [navigate]);
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container}`} id="register">
       <div className={`${styles.card}`}>
         <Outlet />
       </div>
