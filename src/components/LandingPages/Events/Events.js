@@ -10,6 +10,7 @@ import handball from './handball.png';
 import hockey from './hockey.png';
 import kabaddi from './kabaddi.png';
 import khokho from './kho-kho.png';
+import cycling from './cycling.png';
 import squash from './squash.png';
 import tabletennis from './table-tennis.png';
 import taekwondo from './taekwondo.png';
@@ -533,7 +534,7 @@ const Events = () => {
           >
             <img
               className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
-              src={cricket}
+              src={cycling}
               alt=""
               onClick={onClick6}
             />
