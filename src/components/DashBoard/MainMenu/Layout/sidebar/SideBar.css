@@ -1,0 +1,112 @@
+.hidden-xs {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 991.98px) {
+  .spardha-logo {
+    width: 40% !important;
+  }
+}
+
+.circle-logo {
+  margin: 0 auto;
+  max-width: 30px !important;
+  text-align: center;
+}
+
+.logo_db {
+  text-align: center;
+}
+
+.logo_db img {
+  max-width: 180px;
+  padding: 16px 0 17px;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .logo_db img {
+    max-width: 100px;
+  }
+}
+
+.navi .item_nav {
+  border-bottom: 1px solid rgb(0, 60, 0);
+  border-top: 1px solid rgb(0, 60, 0);
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 28px 20px;
+  text-decoration: none;
+}
+
+.navi i {
+  margin-right: 15px;
+  color: limegreen;
+}
+
+.navi .active .item_nav {
+  background: darkgreen;
+  border-left: 5px solid limegreen;
+  padding-left: 15px;
+}
+
+.navi .item_nav:hover {
+  background: darkgreen none repeat scroll 0 0;
+  border-left: 5px solid limegreen;
+  display: block;
+  padding-left: 15px;
+}
+
+#navigation {
+  /* position: fixed; */
+  background: rgb(0, 78, 0);
+}
+
+#navigation {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 767px) {
+  #navigation .navi .item_nav {
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #navigation .navi i {
+    margin-right: 0px;
+  }
+
+  #navigation .navi .item_nav:hover,
+  #navigation .navi .active .item_nav {
+    background: darkgreen none repeat scroll 0 0;
+    border-left: none;
+    display: block;
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 998px) and (max-width: 1350px) {
+  #navigation .logo_db img {
+    max-width: 130px;
+    padding: 16px 0 17px;
+    width: 100%;
+  }
+}
+
+#navigation .nav-link {
+  color: white !important;
+}
+
+#navigation svg {
+  color: limegreen;
+  margin-right: 7px;
+}

@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1c16e8ff-b2e2-42d1-bec6-819223db41fc/deploy-status)](https://app.netlify.com/sites/spardha21/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e2c1bb39-5865-4ccb-8ad6-b0f14f648574/deploy-status)](https://app.netlify.com/sites/spardha21/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

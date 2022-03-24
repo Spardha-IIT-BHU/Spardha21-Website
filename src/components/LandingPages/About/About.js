@@ -8,7 +8,7 @@ import Greencounter from '../GreenCounter/Greencounter';
 const About = () => {
   return (
     <>
-      <div>
+      <div id="about">
         <section id={styles['about']} className="ftco-section">
           <div className={styles['container']}>
             <div

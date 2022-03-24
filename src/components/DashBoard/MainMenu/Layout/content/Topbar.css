@@ -1,0 +1,257 @@
+.row_db {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.hidden-xs {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.header-top i {
+  font-size: 18px;
+}
+
+.header-top {
+  margin: 0;
+  padding-top: 2px;
+}
+
+.header-top img {
+  border-radius: 50%;
+  max-width: 48px !important;
+  width: 100%;
+}
+
+.header-top i {
+  color: rgb(0, 78, 0);
+}
+
+.header-top li {
+  display: inline-block;
+  text-align: center;
+}
+
+.header-top .dropdown-toggle {
+  color: rgb(0, 78, 0);
+}
+
+.header-top .dropdown-menu {
+  border: medium none;
+  left: -124px;
+  padding: 17px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  header .header-top img {
+    max-width: 38px !important;
+  }
+
+  .v-align header {
+    padding: 12px 15px;
+  }
+
+  header .header-top li {
+    padding-left: 13px;
+    padding-right: 6px;
+  }
+}
+
+.register-now {
+  background: limegreen none repeat scroll 0 0;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .register-now {
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+.register-now::before {
+  background: rgba(0, 0, 0, 0) no-repeat scroll 0 0;
+  content: '';
+  height: 12px;
+  left: 17px;
+  position: absolute;
+  top: 12px;
+  width: 12px;
+}
+
+.register-now:hover {
+  color: #ffffff;
+  background: forestgreen none repeat scroll 0 0;
+}
+
+.register-now:focus {
+  color: #ffffff;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: '';
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.dropdown-menu[x-placement^='top'],
+.dropdown-menu[x-placement^='right'],
+.dropdown-menu[x-placement^='bottom'],
+.dropdown-menu[x-placement^='left'] {
+  right: auto;
+  bottom: auto;
+}
+
+.navbar-content > span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+.mine_left {
+  float: left;
+}
+
+@media screen and (min-width: 768px) {
+  .left_content {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: space-between;
+  }
+}
+
+.closed_drp {
+  display: none !important;
+}
+
+.view_db {
+  background: limegreen none repeat scroll 0 0;
+  border-radius: 100px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.view_db:hover {
+  color: #ffffff;
+  background: forestgreen none repeat scroll 0 0;
+}
+
+.view_db:focus {
+  color: #ffffff;
+}
+
+.divider {
+  border: 1px solid grey;
+}
+
+.register-now,
+.register-now:hover,
+.register-now:focus {
+  /* color: inherit; */
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.profile_db,
+.profile_db:hover,
+.profile_db:focus {
+  /* color: inherit; */
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .left_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .size_Correct {
+    font-size: 1.2rem !important;
+  }
+}

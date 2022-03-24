@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPages from './components/LandingPages/LandingPages';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import { Suspense } from 'react/cjs/react.production.min';
-import DashBoard from './components/DashBoard/DashBoard';
-import Home from './components/DashBoard/Home/Home';
+import DashBoard from './components/DashBoard/MainMenu/DashBoard';
 
+const LandingPages = React.lazy(() =>
+  import('./components/LandingPages/LandingPages')
+);
 const About = React.lazy(() => import('./components/LandingPages/About/About'));
 const CamAmb = React.lazy(() =>
   import('./components/LandingPages/Camp_Amb/CamAmb')
@@ -23,13 +24,48 @@ const Gallery = React.lazy(() =>
 const Guests = React.lazy(() =>
   import('./components/LandingPages/Guests/Guests')
 );
+const Register = React.lazy(() =>
+  import('./components/LandingPages/Register/Register')
+);
+const Signup = React.lazy(() =>
+  import('./components/LandingPages/Register/Signup/Signup')
+);
+const Login = React.lazy(() =>
+  import('./components/LandingPages/Register/Login/Login')
+);
+const Forgot = React.lazy(() =>
+  import('./components/LandingPages/Register/Forgot/Forgot')
+);
+const Reset = React.lazy(() =>
+  import('./components/LandingPages/Register/Reset/Reset')
+);
+const Verify = React.lazy(() =>
+  import('./components/LandingPages/Register/Verify/Verify')
+);
+const Home = React.lazy(() => import('./components/DashBoard/Home/Home'));
+const Registration = React.lazy(() =>
+  import('./components/DashBoard/Registration/Registration')
+);
+const Profile = React.lazy(() =>
+  import('./components/DashBoard/Profile/Profile')
+);
+const ContingentEdit = React.lazy(() =>
+  import('./components/DashBoard/Registration/ContingentEdit/ContingentEdit')
+);
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPages />}>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <LandingPages />{' '}
+              </Suspense>
+            }
+          >
             <Route
               path=""
               element={
@@ -38,6 +74,60 @@ function App() {
                 </Suspense>
               }
             />
+            <Route
+              path="register"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Register />
+                </Suspense>
+              }
+            >
+              <Route
+                exact
+                path="signup"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Signup />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="login"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Login />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="forgot"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Forgot />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="reset"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Reset />
+                  </Suspense>
+                }
+              />
+              <Route
+                exact
+                path="verify"
+                element={
+                  <Suspense fallback={<Preloader />}>
+                    <Verify />
+                  </Suspense>
+                }
+              />
+            </Route>
             <Route
               path="about"
               element={
@@ -95,8 +185,40 @@ function App() {
               }
             />
           </Route>
-          <Route path="dashboard" element={<DashBoard />}>
-            <Route path="" element={<Home />} />
+
+          <Route path="/dashboard" element={<DashBoard />}>
+            <Route
+              path="home"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="registration"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Registration />
+                </Suspense>
+              }
+            />
+            <Route
+              path="contingentEdit"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <ContingentEdit />
+                </Suspense>
+              }
+            />
+            <Route
+              path="Profile"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <Profile />
+                </Suspense>
+              }
+            />
           </Route>
         </Routes>
       </Router>
