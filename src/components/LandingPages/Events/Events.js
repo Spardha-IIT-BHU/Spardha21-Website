@@ -7,6 +7,7 @@ import chess from './chess.png';
 import cricket from './cricket.png';
 import football from './football.png';
 import handball from './handball.png';
+import question from './question.png';
 import hockey from './hockey.png';
 import kabaddi from './kabaddi.png';
 import khokho from './kho-kho.png';
@@ -18,6 +19,7 @@ import tennis from './tennis.png';
 import volleyball from './volleyball.png';
 import weightlifting from './weightlifting.png';
 import styles from './Events.module.css';
+import { Link } from 'react-router-dom';
 import {
   Athletics,
   Badminton,
@@ -738,6 +740,35 @@ const Events = () => {
               changeState={(showResult1) => setShowResults17(false)}
             />
           ) : null}
+        </div>
+      </div>
+
+      <div className={`${styles.container}`}>
+        <div className={`${styles.row} ${styles.mt_5} ${styles.pt_5}`}>
+          <div className={`${styles.col_md_3}`}></div>
+          <div className={`${styles.col_md_6}`}>
+            <div className={`${styles.block_7}`}>
+              <div className={`${styles.text_justify}`}>
+                <h2 style={{ textAlign: 'center' }}>
+                  <img src={question} alt="" style={{ width: '3rem' }} />
+                  So, What are you thinking?
+                </h2>
+                <h4 style={{ textAlign: 'center' }}>Register Now !!</h4>
+                <div
+                  className={`${styles.text_center}`}
+                  style={{ marginTop: '2em' }}
+                >
+                  <Link
+                    to="/register"
+                    className={`${styles.btn_xlg} ${styles.btn} ${styles.btn_success}`}
+                    style={{ color: 'white' }}
+                  >
+                    Register for Events
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

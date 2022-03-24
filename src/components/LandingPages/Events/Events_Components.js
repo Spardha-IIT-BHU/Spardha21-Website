@@ -8,7 +8,7 @@ import { FaTimes } from 'react-icons/fa';
 const Athletics = (props) => {
   return (
     <div>
-      <div className="row">
+      <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
         <div
           className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
         >
@@ -21,7 +21,7 @@ const Athletics = (props) => {
           </button>
           <div
             className="row"
-            style={{ marginLeft: 'auto', marginRight: 'auto' }}
+            style={{ marginLeft: '15px', marginRight: '15px' }}
           >
             <div className={`${styles.col_md_4} ${styles.col_sm_4}`}>
               <div className={`${styles.event_block}`}>
@@ -117,7 +117,7 @@ const Athletics = (props) => {
 
 const Badminton = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -226,7 +226,7 @@ const Badminton = (props) => {
 
 const Basketball = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -335,7 +335,7 @@ const Basketball = (props) => {
 
 const Boxing = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -444,7 +444,7 @@ const Boxing = (props) => {
 
 const Chess = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -553,7 +553,7 @@ const Chess = (props) => {
 
 const Cricket = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -662,7 +662,7 @@ const Cricket = (props) => {
 
 const Cycling = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -771,7 +771,7 @@ const Cycling = (props) => {
 
 const Football = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -880,7 +880,7 @@ const Football = (props) => {
 
 const Handball = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -989,7 +989,7 @@ const Handball = (props) => {
 
 const Hockey = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1098,7 +1098,7 @@ const Hockey = (props) => {
 
 const Kabbadi = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1207,7 +1207,7 @@ const Kabbadi = (props) => {
 
 const Khokho = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1316,7 +1316,7 @@ const Khokho = (props) => {
 
 const Squash = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1425,7 +1425,7 @@ const Squash = (props) => {
 
 const TableTennis = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1534,7 +1534,7 @@ const TableTennis = (props) => {
 
 const Taekwondo = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1643,7 +1643,7 @@ const Taekwondo = (props) => {
 
 const Tennis = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1752,7 +1752,7 @@ const Tennis = (props) => {
 
 const Volleyball = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
@@ -1861,7 +1861,7 @@ const Volleyball = (props) => {
 
 const WeightLifting = (props) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: '5px', marginRight: '5px' }}>
       <div
         className={`${styles.col_10} ${styles.text_center} ${styles.Main_block}`}
       >
