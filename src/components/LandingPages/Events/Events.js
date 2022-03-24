@@ -62,7 +62,7 @@ const Events = () => {
   const [showResults17, setShowResults17] = useState(false);
 
   const onClick0 = () => {
-    setShowResults0(true);
+    setShowResults0(!showResults0);
     setShowResults1(false);
     setShowResults2(false);
     setShowResults3(false);
@@ -83,7 +83,7 @@ const Events = () => {
   };
   const onClick1 = () => {
     setShowResults0(false);
-    setShowResults1(true);
+    setShowResults1(!showResults1);
     setShowResults2(false);
     setShowResults3(false);
     setShowResults4(false);
@@ -104,7 +104,7 @@ const Events = () => {
   const onClick2 = () => {
     setShowResults0(false);
     setShowResults1(false);
-    setShowResults2(true);
+    setShowResults2(!showResults2);
     setShowResults3(false);
     setShowResults4(false);
     setShowResults5(false);
@@ -125,7 +125,7 @@ const Events = () => {
     setShowResults0(false);
     setShowResults1(false);
     setShowResults2(false);
-    setShowResults3(true);
+    setShowResults3(!showResults3);
     setShowResults4(false);
     setShowResults5(false);
     setShowResults6(false);
@@ -146,7 +146,7 @@ const Events = () => {
     setShowResults1(false);
     setShowResults2(false);
     setShowResults3(false);
-    setShowResults4(true);
+    setShowResults4(!showResults4);
     setShowResults5(false);
     setShowResults6(false);
     setShowResults7(false);
@@ -167,7 +167,7 @@ const Events = () => {
     setShowResults2(false);
     setShowResults3(false);
     setShowResults4(false);
-    setShowResults5(true);
+    setShowResults5(!showResults5);
     setShowResults6(false);
     setShowResults7(false);
     setShowResults8(false);
@@ -188,7 +188,7 @@ const Events = () => {
     setShowResults3(false);
     setShowResults4(false);
     setShowResults5(false);
-    setShowResults6(true);
+    setShowResults6(!showResults6);
     setShowResults7(false);
     setShowResults8(false);
     setShowResults9(false);
@@ -209,7 +209,7 @@ const Events = () => {
     setShowResults4(false);
     setShowResults5(false);
     setShowResults6(false);
-    setShowResults7(true);
+    setShowResults7(!showResults7);
     setShowResults8(false);
     setShowResults9(false);
     setShowResults10(false);
@@ -230,7 +230,7 @@ const Events = () => {
     setShowResults5(false);
     setShowResults6(false);
     setShowResults7(false);
-    setShowResults8(true);
+    setShowResults8(!showResults8);
     setShowResults9(false);
     setShowResults10(false);
     setShowResults11(false);
@@ -251,7 +251,7 @@ const Events = () => {
     setShowResults6(false);
     setShowResults7(false);
     setShowResults8(false);
-    setShowResults9(true);
+    setShowResults9(!showResults9);
     setShowResults10(false);
     setShowResults11(false);
     setShowResults12(false);
@@ -272,7 +272,7 @@ const Events = () => {
     setShowResults7(false);
     setShowResults8(false);
     setShowResults9(false);
-    setShowResults10(true);
+    setShowResults10(!showResults10);
     setShowResults11(false);
     setShowResults12(false);
     setShowResults13(false);
@@ -293,7 +293,7 @@ const Events = () => {
     setShowResults8(false);
     setShowResults9(false);
     setShowResults10(false);
-    setShowResults11(true);
+    setShowResults11(!showResults11);
     setShowResults12(false);
     setShowResults13(false);
     setShowResults14(false);
@@ -314,7 +314,7 @@ const Events = () => {
     setShowResults9(false);
     setShowResults10(false);
     setShowResults11(false);
-    setShowResults12(true);
+    setShowResults12(!showResults12);
     setShowResults13(false);
     setShowResults14(false);
     setShowResults15(false);
@@ -335,7 +335,7 @@ const Events = () => {
     setShowResults10(false);
     setShowResults11(false);
     setShowResults12(false);
-    setShowResults13(true);
+    setShowResults13(!showResults13);
     setShowResults14(false);
     setShowResults15(false);
     setShowResults16(false);
@@ -356,7 +356,7 @@ const Events = () => {
     setShowResults11(false);
     setShowResults12(false);
     setShowResults13(false);
-    setShowResults14(true);
+    setShowResults14(!showResults14);
     setShowResults15(false);
     setShowResults16(false);
     setShowResults17(false);
@@ -377,7 +377,7 @@ const Events = () => {
     setShowResults12(false);
     setShowResults13(false);
     setShowResults14(false);
-    setShowResults15(true);
+    setShowResults15(!showResults15);
     setShowResults16(false);
     setShowResults17(false);
   };
@@ -398,7 +398,7 @@ const Events = () => {
     setShowResults13(false);
     setShowResults14(false);
     setShowResults15(false);
-    setShowResults16(true);
+    setShowResults16(!showResults16);
     setShowResults17(false);
   };
   const onClick17 = () => {
@@ -419,7 +419,7 @@ const Events = () => {
     setShowResults14(false);
     setShowResults15(false);
     setShowResults16(false);
-    setShowResults17(true);
+    setShowResults17(!showResults17);
   };
 
   return (
@@ -749,19 +749,37 @@ const Events = () => {
           <div className={`${styles.col_md_6}`}>
             <div className={`${styles.block_7}`}>
               <div className={`${styles.text_justify}`}>
-                <h2 style={{ textAlign: 'center' }}>
+                <h2
+                  style={{
+                    textAlign: 'center',
+                    fontFamily: 'Open Sans',
+                    fontWeight: '700',
+                  }}
+                >
                   <img src={question} alt="" style={{ width: '3rem' }} />
                   So, What are you thinking?
                 </h2>
-                <h4 style={{ textAlign: 'center' }}>Register Now !!</h4>
+                <h4
+                  style={{
+                    textAlign: 'center',
+                    fontFamily: 'Open Sans',
+                    fontWeight: '700',
+                  }}
+                >
+                  Register Now !!
+                </h4>
                 <div
                   className={`${styles.text_center}`}
                   style={{ marginTop: '2em' }}
                 >
                   <Link
-                    to="/register"
+                    to="/register/signup/"
                     className={`${styles.btn_xlg} ${styles.btn} ${styles.btn_success}`}
-                    style={{ color: 'white' }}
+                    style={{
+                      color: 'white',
+                      fontFamily: 'Open Sans',
+                      fontWeight: '500',
+                    }}
                   >
                     Register for Events
                   </Link>
