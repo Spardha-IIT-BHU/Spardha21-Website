@@ -1,11 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
+import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react/cjs/react.production.min';
-import DashBoard from './components/DashBoard/MainMenu/DashBoard';
 
 const LandingPages = React.lazy(() =>
   import('./components/LandingPages/LandingPages')
+);
+const DashBoard = React.lazy(() =>
+  import('./components/DashBoard/MainMenu/DashBoard')
 );
 const About = React.lazy(() => import('./components/LandingPages/About/About'));
 const CamAmb = React.lazy(() =>
@@ -189,11 +192,18 @@ function App() {
             />
           </Route>
 
-          <Route path="/dashboard" element={<DashBoard />}>
+          <Route
+            path="/dashboard"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <DashBoard />
+              </Suspense>
+            }
+          >
             <Route
               path="home"
               element={
-                <Suspense fallback={<Preloader />}>
+                <Suspense fallback={<Spinner />}>
                   <Home />
                 </Suspense>
               }
@@ -201,7 +211,7 @@ function App() {
             <Route
               path="registration"
               element={
-                <Suspense fallback={<Preloader />}>
+                <Suspense fallback={<Spinner />}>
                   <Registration />
                 </Suspense>
               }
@@ -209,7 +219,7 @@ function App() {
             <Route
               path="contingentEdit"
               element={
-                <Suspense fallback={<Preloader />}>
+                <Suspense fallback={<Spinner />}>
                   <ContingentEdit />
                 </Suspense>
               }
@@ -217,7 +227,7 @@ function App() {
             <Route
               path="events"
               element={
-                <Suspense fallback={<Preloader />}>
+                <Suspense fallback={<Spinner />}>
                   <EventsEdit />
                 </Suspense>
               }
@@ -225,7 +235,7 @@ function App() {
             <Route
               path="Profile"
               element={
-                <Suspense fallback={<Preloader />}>
+                <Suspense fallback={<Spinner />}>
                   <Profile />
                 </Suspense>
               }

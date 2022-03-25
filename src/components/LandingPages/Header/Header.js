@@ -76,7 +76,7 @@ function Header() {
             <NavItem className={styles['nav-items']}>
               <NavHashLink
                 exact="true"
-                to="/events"
+                to="/events#events"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
