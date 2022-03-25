@@ -111,7 +111,6 @@ const EventsDb = () => {
             );
           }, []);
           team.players = rows;
-          console.log(team)
           inputFields[team.game][1](team);
           if (team.game.endsWith('_B')) {
             setBoyTeams((prevState) => {
@@ -151,8 +150,15 @@ const EventsDb = () => {
   const inputChangeHandler = (e) => {
     const game = e.target.attributes['data-game'].value,
       name = e.target.name;
-    console.log(game, name);
-    if (name === 'player') {
+    if (!isNaN(name)) {
+      const row = Math.floor(Number(name) / 2),
+        col = Number(name) % 2;
+      console.log(row, col);
+      inputFields[game][1]((prevState) => {
+        const newState = { ...prevState };
+        newState.players[row][col] = e.target.value;
+        return newState;
+      });
     } else {
       inputFields[game][1]((prevState) => {
         const newState = { ...prevState };
@@ -214,23 +220,36 @@ const EventsDb = () => {
                       <br />
                     </b>
                   )}
-                  {team.players.some((s) => s.length) && (
+                  {team.players.some((row) => row.some(s => s.length)) && (
                     <b>
-                      {team.game.substr(0, team.game.length - 2) ===
+                      {/* {team.game.substr(0, team.game.length - 2) ===
                       'Athletics' ? (
                         <span>Total Number of Boys: </span>
                       ) : (
                         <span>Players Name: </span>
-                      )}
+                      )} */}
+                      <span>Players Name: </span>
                     </b>
                   )}
                   {team.players
                     .slice(0, team.players.length - 1)
-                    .map((player) => {
-                      return player ? <span>{player}, </span> : '';
-                    })}
-                  {team.players[team.players.length - 1] && (
-                    <span>{team.players[team.players.length - 1]}</span>
+                    .map((row) => {
+                      return (
+                        <>
+                        {
+                          row.map(player => {
+                            return (player) ? <span>{player}, </span> : ''
+                          })
+                        }
+                        </>
+                      );
+                    })
+                  }
+                  {team.players[team.players.length - 1][0] && (
+                    <span>{team.players[team.players.length - 1][0]}, </span>
+                  )}
+                  {team.players[team.players.length - 1][1] && (
+                    <span>{team.players[team.players.length - 1][1]} </span>
                   )}
                 </td>
                 <td>
@@ -306,7 +325,7 @@ const EventsDb = () => {
                                       value={
                                         inputFields[`${team.game}`][0][
                                           'players'
-                                        ][2 * rowIndex + colIndex]
+                                        ][rowIndex][colIndex]
                                       }
                                       onChange={inputChangeHandler}
                                     ></input>
@@ -318,6 +337,14 @@ const EventsDb = () => {
                         })}
                       </table>
                     </ModalBody>
+                    <ModalFooter className={`${styles["modal-footer"]}`}>
+                      <Button className={`${styles.cancel}`} onClick={() => clickHandler(team.game)}>
+                          Cancel
+                      </Button> 
+                      <Button className={`${styles["register-now"]}`}>
+                          Submit
+                      </Button>
+                    </ModalFooter>
                   </Modal>
                 </td>
               </tr>
@@ -378,12 +405,13 @@ const EventsDb = () => {
                   )}
                   {team.players.some((s) => s.length) && (
                     <b>
-                      {team.game.substr(0, team.game.length - 2) ===
+                      {/* {team.game.substr(0, team.game.length - 2) ===
                       'Athletics' ? (
                         <span>Total Number of Girls: </span>
                       ) : (
                         <span>Players Name: </span>
-                      )}
+                      )} */}
+                      <span>Players Name: </span>
                     </b>
                   )}
                   {team.players
