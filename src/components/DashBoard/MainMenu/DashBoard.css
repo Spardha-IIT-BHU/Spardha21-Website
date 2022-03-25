@@ -4,6 +4,7 @@
   align-items: stretch;
   font-family: 'Poppins', sans-serif;
   background: #fafafa;
+  overflow-y: scroll;
 }
 
 /* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
@@ -112,13 +113,15 @@ a:focus {
 .content_db {
   padding: 20px;
   margin-left: 0;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
-@media only screen and (max-width: 500px) {
-  .Db {
+@media only screen and (max-width: 820px) {
+  /* .Db {
     overflow: hidden;
   }
+
+  */
 
   .content_db.is-open {
     margin-left: 100%;
