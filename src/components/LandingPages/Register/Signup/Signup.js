@@ -115,7 +115,7 @@ function Signup() {
     let warning = '';
     if (value === '') warning = 'This field is required.';
     else if (value.length < 6 || value.length > 30)
-      warning = 'Username must be of length 6 - 30.';
+      warning = 'Password must be of length 6 - 30.';
     return { value, warning, valid: warning === '' && value !== '' };
   };
 

@@ -52,6 +52,9 @@ const Profile = React.lazy(() =>
 const ContingentEdit = React.lazy(() =>
   import('./components/DashBoard/Registration/ContingentEdit/ContingentEdit')
 );
+const EventsEdit = React.lazy(() =>
+  import('./components/DashBoard/Registration/Events/EventsEdit/EventsEdit')
+);
 
 function App() {
   return (
@@ -208,6 +211,14 @@ function App() {
               element={
                 <Suspense fallback={<Preloader />}>
                   <ContingentEdit />
+                </Suspense>
+              }
+            />
+            <Route
+              path="events"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <EventsEdit />
                 </Suspense>
               }
             />

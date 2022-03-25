@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Registration.css';
-import EventsDb from './EventsDb/EventsDb';
+import Events from './Events/Events';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
   const [contdetails, setContDetails] = useState({
@@ -45,14 +46,14 @@ const Registration = () => {
               <b>
                 <u>NOTE:</u>
               </b>{' '}
-              Enter the <b>number</b> of players in 'Aquatics' and 'Athletics',
+              Enter the <b>number</b> of players in 'Athletics',
               whereas the <b>name</b> of players in other events.
             </div>
             <div className="text-justify">
               <h2>
                 <br></br>
                 <div style={{ textAlign: 'right' }}>
-                  <a href="/dashboard/contingentEdit">Edit</a>
+                  <Link to="/dashboard/contingentEdit" style={{ textDecoration:"none"}}>Edit</Link>
                 </div>
                 <div className="events-heading">CONTINGENT DETAILS</div>
                 <table align="center" cellpadding="20" className="events-table">
@@ -105,7 +106,10 @@ const Registration = () => {
                 <br></br>
                 <br></br>
 
-                <EventsDb />
+                <div style={{ textAlign: 'right' }}>
+                  <Link to="/dashboard/events" style={{ textDecoration:"none"}}>Edit</Link>
+                </div>
+                <Events />
               </h2>
             </div>
           </div>

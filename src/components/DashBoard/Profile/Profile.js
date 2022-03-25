@@ -4,9 +4,11 @@ import axios from 'axios';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router';
 toast.configure();
 
 const Profile = () => {
+  const navigate = useNavigate();
   const token = localStorage.getItem('token');
   console.log('token', token);
   const baseUrl = 'https://api.spardha.co.in';
@@ -52,7 +54,7 @@ const Profile = () => {
   const delSucceed = () => {
     console.log('delSucceed');
     localStorage.removeItem('token');
-    window.location.href = '/';
+    navigate('/');
   };
 
   const deleteProfile = async () => {
@@ -85,7 +87,7 @@ const Profile = () => {
   const changePass = () => {
     console.log('change');
     localStorage.removeItem('token');
-    window.location.href = '/register/forgot';
+    navigate('/register/forgot');
   };
 
   return (

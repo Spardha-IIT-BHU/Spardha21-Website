@@ -6,7 +6,7 @@ function Register() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (localStorage.getItem('token')) navigate('/dashboard/');
+    if (localStorage.getItem('token')) navigate('/dashboard/home');
   }, [navigate]);
 
   return (
