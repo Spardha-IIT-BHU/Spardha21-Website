@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './EventsEdit.module.css';
 import { FaMale, FaFemale } from 'react-icons/fa';
-import { Button, Collapse, FormGroup, Input, Label } from 'reactstrap';
+import { Button, Collapse, FormGroup, Input, Label, Spinner } from 'reactstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 
@@ -40,6 +40,9 @@ function EventsEdit() {
   const [showBoys, setShowBoys] = useState(true);
   const [showGirls, setShowGirls] = useState(true);
   const [showMixed, setShowMixed] = useState(true);
+  const [showBoysSpinner, setShowBoysSpinner] = useState(false);
+  const [showGirlsSpinner, setShowGirlsSpinner] = useState(false);
+  const [showMixedSpinner, setShowMixedSpinner] = useState(false);
   const [games, setGames] = useState(selectedGames);
 
   useEffect(() => {
@@ -64,6 +67,9 @@ function EventsEdit() {
 
   const changeHandler = (e) => {
     const game = e.target.id;
+    if (game.endsWith('_B')) setShowBoysSpinner(true);
+    else if (game.endsWith('_G')) setShowGirlsSpinner(true);
+    else setShowMixedSpinner(true);
     if (games[game]) {
       axios
         .delete(`https://api.spardha.co.in/teams/${game}`, {
@@ -77,9 +83,15 @@ function EventsEdit() {
             newGames[game] = false;
             return newGames;
           });
+          if (game.endsWith('_B')) setShowBoysSpinner(false);
+          else if (game.endsWith('_G')) setShowGirlsSpinner(false);
+          else setShowMixedSpinner(false);
         })
         .catch((err) => {
           console.error(err);
+          if (game.endsWith('_B')) setShowBoysSpinner(false);
+          else if (game.endsWith('_G')) setShowGirlsSpinner(false);
+          else setShowMixedSpinner(false);
         });
     } else {
       axios
@@ -98,9 +110,15 @@ function EventsEdit() {
             newGames[game] = true;
             return newGames;
           });
+          if (game.endsWith('_B')) setShowBoysSpinner(false);
+          else if (game.endsWith('_G')) setShowGirlsSpinner(false);
+          else setShowMixedSpinner(false);
         })
         .catch((err) => {
           console.error(err);
+          if (game.endsWith('_B')) setShowBoysSpinner(false);
+          else if (game.endsWith('_G')) setShowGirlsSpinner(false);
+          else setShowMixedSpinner(false);
         });
     }
   };
@@ -124,7 +142,8 @@ function EventsEdit() {
                     className={`${styles['panel-title']} text-center align-items-center`}
                     style={{ color: '#59ba00' }}
                   >
-                    <FaMale /> <b>Boys</b>
+                    <FaMale /> <b>Boys </b>
+                    {showBoysSpinner && <Spinner size="sm" />}
                   </h4>
                 </div>
                 <Collapse isOpen={showBoys}>
@@ -389,7 +408,8 @@ function EventsEdit() {
                     className={`${styles['panel-title']} text-center align-items-center`}
                     style={{ color: '#59ba00' }}
                   >
-                    <FaFemale /> <b>Girls</b>
+                    <FaFemale /> <b>Girls </b>
+                    {showGirlsSpinner && <Spinner size="sm" />}
                   </h4>
                 </div>
                 <Collapse isOpen={showGirls}>
@@ -565,7 +585,8 @@ function EventsEdit() {
                     className={`${styles['panel-title']} text-center align-items-center`}
                     style={{ color: '#59ba00' }}
                   >
-                    <b>Mixed</b>
+                    <b>Mixed </b>
+                    {showMixedSpinner && <Spinner size="sm" />}
                   </h4>
                 </div>
                 <Collapse isOpen={showMixed}>

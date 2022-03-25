@@ -40,7 +40,7 @@ const Registration = () => {
       <div className="row_dbRegistration">
         <div className="col-xs-12 gutter widthAdjust">
           <div className="welcome-text">
-            <div
+            {/* <div
               style={{ textAlign: 'center', fontSize: '15px', color: 'red' }}
             >
               <b>
@@ -48,7 +48,7 @@ const Registration = () => {
               </b>{' '}
               Enter the <b>number</b> of players in 'Athletics', whereas the{' '}
               <b>name</b> of players in other events.
-            </div>
+            </div> */}
             <div className="text-justify">
               <h2>
                 <br></br>

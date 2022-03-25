@@ -1,6 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  ModalFooter,
+  Alert,
+} from 'reactstrap';
 import styles from './Events.module.css';
 
 const EventsDb = () => {
@@ -94,6 +101,42 @@ const EventsDb = () => {
     Basketball_G: [Basketball_G, setBasketball_G],
     Basketball_B: [Basketball_B, setBasketball_B],
   };
+
+  const labels = {
+    Boxing: [
+      'Leader info:    ',
+      '46kg-49kg:      ',
+      '49kg-52kg:      ',
+      '52kg-56kg:      ',
+      '56kg-60kg:      ',
+      '60kg-64kg:      ',
+      '64kg-69kg:      ',
+      '69kg-75kg:      ',
+      '75kg-81kg:      ',
+      '81kg-91kg:      ',
+      '91kg and above: ',
+    ],
+    Weightlifting: [
+      'Leader info:    ',
+      'Below 56kg:     ',
+      '56kg-62kg:      ',
+      '62kg-69kg:      ',
+      '69kg-77kg:      ',
+      '77kg-85kg:      ',
+    ],
+    Taekwondo: [
+      'Leader info:    ',
+      'Below 52kg:    ',
+      '52kg-57kg:     ',
+      '57kg-62kg:     ',
+      '62kg-67kg:     ',
+      '67kg-72kg:     ',
+      '72kg-78kg:     ',
+      'Above 78kg:    ',
+      'Heavy :        ',
+    ],
+  };
+
   useEffect(() => {
     axios
       .get('https://api.spardha.co.in/teams/', {
@@ -186,16 +229,40 @@ const EventsDb = () => {
         },
       })
       .then((res) => {
-        setBoyTeams((prevState) => {
-          const newState = [...prevState];
-          for (let i = 0; i < newState.length; i++) {
-            if (newState[i].game === game) {
-              newState[i] = obj;
-              break;
+        if (game.endsWith('_B')) {
+          setBoyTeams((prevState) => {
+            const newState = [...prevState];
+            for (let i = 0; i < newState.length; i++) {
+              if (newState[i].game === game) {
+                newState[i] = obj;
+                break;
+              }
             }
-          }
-          return newState;
-        });
+            return newState;
+          });
+        } else if (game.endsWith('_G')) {
+          setGirlTeams((prevState) => {
+            const newState = [...prevState];
+            for (let i = 0; i < newState.length; i++) {
+              if (newState[i].game === game) {
+                newState[i] = obj;
+                break;
+              }
+            }
+            return newState;
+          });
+        } else {
+          setMixedTeams((prevState) => {
+            const newState = [...prevState];
+            for (let i = 0; i < newState.length; i++) {
+              if (newState[i].game === game) {
+                newState[i] = obj;
+                break;
+              }
+            }
+            return newState;
+          });
+        }
         setShowModals((prevState) => {
           const newState = { ...prevState };
           newState[`${game}`] = !prevState[`${game}`];
@@ -264,31 +331,35 @@ const EventsDb = () => {
                       <br />
                     </b>
                   )}
-                  {team.players.some((row) => row.some((s) => s.length)) && (
-                    <b>
-                      {/* {team.game.substr(0, team.game.length - 2) ===
-                      'Athletics' ? (
-                        <span>Total Number of Boys: </span>
-                      ) : (
-                        <span>Players Name: </span>
-                      )} */}
-                      <span>Players Name: </span>
-                    </b>
-                  )}
-                  {team.players.slice(0, team.players.length - 1).map((row) => {
-                    return (
-                      <>
-                        {row.map((player) => {
-                          return player ? <span>{player} </span> : '';
-                        })}
-                      </>
-                    );
-                  })}
-                  {team.players[team.players.length - 1][0] && (
-                    <span>{team.players[team.players.length - 1][0]} </span>
-                  )}
-                  {team.players[team.players.length - 1][1] && (
-                    <span>{team.players[team.players.length - 1][1]} </span>
+                  {team.players
+                    .reduce((prev, cur) => [
+                      ...prev.filter((s) => s.length),
+                      ...cur.filter((s) => s.length),
+                    ])
+                    .slice(
+                      0,
+                      team.players.reduce((prev, cur) => [
+                        ...prev.filter((s) => s.length),
+                        ...cur.filter((s) => s.length),
+                      ]).length - 1
+                    )
+                    .map((player, ind) => {
+                      return <span key={ind}>{player}, </span>;
+                    })}
+                  {team.players.reduce((prev, cur) => [
+                    ...prev.filter((s) => s.length),
+                    ...cur.filter((s) => s.length),
+                  ]).length !== 0 && (
+                    <span>
+                      {
+                        team.players
+                          .reduce((prev, cur) => [
+                            ...prev.filter((s) => s.length),
+                            ...cur.filter((s) => s.length),
+                          ])
+                          .slice(-1)[0]
+                      }
+                    </span>
                   )}
                 </td>
                 <td>
@@ -316,8 +387,72 @@ const EventsDb = () => {
                       {team.game.endsWith('M') && 'MIXED'}]
                     </ModalHeader>
                     <ModalBody className={`${styles['modal-body']}`}>
-                      <table align="center" cellPadding="20">
+                      <Alert
+                        color="warning"
+                        style={{
+                          fontSize: '16px',
+                          paddingTop: '10px',
+                          paddingBottom: '10px',
+                        }}
+                      >
+                        {' '}
+                        Your changes are not saved unless you submit them.
+                      </Alert>
+                      <table
+                        align="center"
+                        cellPadding="20"
+                        className={`${styles['modal-table']}`}
+                      >
+                        {['Taekwondo', 'Boxing'].includes(
+                          team.game.substr(0, team.game.length - 2)
+                        ) && (
+                          <tr>
+                            <td>
+                              <b> </b>
+                            </td>
+                            <td colSpan="2" className="text-danger text-center">
+                              <b>
+                                MAXIMUM PLAYERS:{' '}
+                                {team.game.substr(0, team.game.length - 2) ===
+                                'Boxing' ? (
+                                  <span>10</span>
+                                ) : (
+                                  <span>15</span>
+                                )}
+                              </b>
+                            </td>
+                          </tr>
+                        )}
+                        {['Taekwondo', 'Weightlifting', 'Boxing'].includes(
+                          team.game.substr(0, team.game.length - 2)
+                        ) && (
+                          <tr>
+                            {' '}
+                            <td>
+                              <b> </b>
+                            </td>
+                            <td colSpan="2" className="text-danger text-center">
+                              <b>
+                                Maximum 2 players are allowed in each weight
+                                category
+                              </b>
+                            </td>
+                          </tr>
+                        )}
                         <tr>
+                          {['Taekwondo', 'Weightlifting', 'Boxing'].includes(
+                            team.game.substr(0, team.game.length - 2)
+                          ) && (
+                            <td>
+                              <b>
+                                {
+                                  labels[
+                                    team.game.substr(0, team.game.length - 2)
+                                  ][0]
+                                }
+                              </b>
+                            </td>
+                          )}
                           <td>
                             <input
                               type="text"
@@ -346,10 +481,34 @@ const EventsDb = () => {
                           </td>
                         </tr>
                       </table>
-                      <table align="center" cellpadding="20">
+                      <table
+                        align="center"
+                        cellpadding="20"
+                        className={`${styles['modal-table']}`}
+                      >
                         {team.players.map((row, rowIndex) => {
                           return (
                             <tr>
+                              {[
+                                'Taekwondo',
+                                'Weightlifting',
+                                'Boxing',
+                              ].includes(
+                                team.game.substr(0, team.game.length - 2)
+                              ) && (
+                                <td>
+                                  <b>
+                                    {
+                                      labels[
+                                        team.game.substr(
+                                          0,
+                                          team.game.length - 2
+                                        )
+                                      ][rowIndex + 1]
+                                    }
+                                  </b>
+                                </td>
+                              )}
                               {row.map((col, colIndex) => {
                                 return (
                                   <td>
@@ -461,20 +620,35 @@ const EventsDb = () => {
                       <span>Players Name: </span>
                     </b>
                   )}
-                  {team.players.slice(0, team.players.length - 1).map((row) => {
-                    return (
-                      <>
-                        {row.map((player) => {
-                          return player ? <span>{player}, </span> : '';
-                        })}
-                      </>
-                    );
-                  })}
-                  {team.players[team.players.length - 1][0] && (
-                    <span>{team.players[team.players.length - 1][0]}, </span>
-                  )}
-                  {team.players[team.players.length - 1][1] && (
-                    <span>{team.players[team.players.length - 1][1]} </span>
+                  {team.players
+                    .reduce((prev, cur) => [
+                      ...prev.filter((s) => s.length),
+                      ...cur.filter((s) => s.length),
+                    ])
+                    .slice(
+                      0,
+                      team.players.reduce((prev, cur) => [
+                        ...prev.filter((s) => s.length),
+                        ...cur.filter((s) => s.length),
+                      ]).length - 1
+                    )
+                    .map((player, ind) => {
+                      return <span key={ind}>{player}, </span>;
+                    })}
+                  {team.players.reduce((prev, cur) => [
+                    ...prev.filter((s) => s.length),
+                    ...cur.filter((s) => s.length),
+                  ]).length !== 0 && (
+                    <span>
+                      {
+                        team.players
+                          .reduce((prev, cur) => [
+                            ...prev.filter((s) => s.length),
+                            ...cur.filter((s) => s.length),
+                          ])
+                          .slice(-1)[0]
+                      }
+                    </span>
                   )}
                 </td>
                 <td>
@@ -502,8 +676,73 @@ const EventsDb = () => {
                       {team.game.endsWith('M') && 'MIXED'}]
                     </ModalHeader>
                     <ModalBody className={`${styles['modal-body']}`}>
-                      <table align="center" cellPadding="20">
+                      <Alert
+                        color="warning"
+                        style={{
+                          fontSize: '16px',
+                          paddingTop: '10px',
+                          paddingBottom: '10px',
+                        }}
+                      >
+                        {' '}
+                        Your changes are not saved unless you submit them.
+                      </Alert>
+
+                      <table
+                        align="center"
+                        cellPadding="20"
+                        className={`${styles['modal-table']}`}
+                      >
+                        {['Taekwondo', 'Boxing'].includes(
+                          team.game.substr(0, team.game.length - 2)
+                        ) && (
+                          <tr>
+                            <td>
+                              <b> </b>
+                            </td>
+                            <td colSpan="2" className="text-danger text-center">
+                              <b>
+                                MAXIMUM PLAYERS:{' '}
+                                {team.game.substr(0, team.game.length - 2) ===
+                                'Boxing' ? (
+                                  <span>10</span>
+                                ) : (
+                                  <span>15</span>
+                                )}
+                              </b>
+                            </td>
+                          </tr>
+                        )}
+                        {['Taekwondo', 'Weightlifting', 'Boxing'].includes(
+                          team.game.substr(0, team.game.length - 2)
+                        ) && (
+                          <tr>
+                            {' '}
+                            <td>
+                              <b> </b>
+                            </td>
+                            <td colSpan="2" className="text-danger text-center">
+                              <b>
+                                Maximum 2 players are allowed in each weight
+                                category
+                              </b>
+                            </td>
+                          </tr>
+                        )}
                         <tr>
+                          {['Taekwondo', 'Boxing'].includes(
+                            team.game.substr(0, team.game.length - 2)
+                          ) && (
+                            <td>
+                              <b>
+                                {
+                                  labels[
+                                    team.game.substr(0, team.game.length - 2)
+                                  ][0]
+                                }
+                              </b>
+                            </td>
+                          )}
                           <td>
                             <input
                               type="text"
@@ -532,10 +771,30 @@ const EventsDb = () => {
                           </td>
                         </tr>
                       </table>
-                      <table align="center" cellpadding="20">
+                      <table
+                        align="center"
+                        cellpadding="20"
+                        className={`${styles['modal-table']}`}
+                      >
                         {team.players.map((row, rowIndex) => {
                           return (
                             <tr>
+                              {['Taekwondo', 'Boxing'].includes(
+                                team.game.substr(0, team.game.length - 2)
+                              ) && (
+                                <td>
+                                  <b>
+                                    {
+                                      labels[
+                                        team.game.substr(
+                                          0,
+                                          team.game.length - 2
+                                        )
+                                      ][rowIndex + 1]
+                                    }
+                                  </b>
+                                </td>
+                              )}
                               {row.map((col, colIndex) => {
                                 return (
                                   <td>
@@ -636,31 +895,35 @@ const EventsDb = () => {
                       <br />
                     </b>
                   )}
-                  {team.players.some((row) => row.some((s) => s.length)) && (
-                    <b>
-                      {/* {team.game.substr(0, team.game.length - 2) ===
-                      'Athletics' ? (
-                        <span>Total Number of Boys: </span>
-                      ) : (
-                        <span>Players Name: </span>
-                      )} */}
-                      <span>Players Name: </span>
-                    </b>
-                  )}
-                  {team.players.slice(0, team.players.length - 1).map((row) => {
-                    return (
-                      <>
-                        {row.map((player) => {
-                          return player ? <span>{player}, </span> : '';
-                        })}
-                      </>
-                    );
-                  })}
-                  {team.players[team.players.length - 1][0] && (
-                    <span>{team.players[team.players.length - 1][0]}, </span>
-                  )}
-                  {team.players[team.players.length - 1][1] && (
-                    <span>{team.players[team.players.length - 1][1]} </span>
+                  {team.players
+                    .reduce((prev, cur) => [
+                      ...prev.filter((s) => s.length),
+                      ...cur.filter((s) => s.length),
+                    ])
+                    .slice(
+                      0,
+                      team.players.reduce((prev, cur) => [
+                        ...prev.filter((s) => s.length),
+                        ...cur.filter((s) => s.length),
+                      ]).length - 1
+                    )
+                    .map((player, ind) => {
+                      return <span key={ind}>{player}, </span>;
+                    })}
+                  {team.players.reduce((prev, cur) => [
+                    ...prev.filter((s) => s.length),
+                    ...cur.filter((s) => s.length),
+                  ]).length !== 0 && (
+                    <span>
+                      {
+                        team.players
+                          .reduce((prev, cur) => [
+                            ...prev.filter((s) => s.length),
+                            ...cur.filter((s) => s.length),
+                          ])
+                          .slice(-1)[0]
+                      }
+                    </span>
                   )}
                 </td>
                 <td>
@@ -688,6 +951,17 @@ const EventsDb = () => {
                       {team.game.endsWith('M') && 'MIXED'}]
                     </ModalHeader>
                     <ModalBody className={`${styles['modal-body']}`}>
+                      <Alert
+                        color="warning"
+                        style={{
+                          fontSize: '16px',
+                          paddingTop: '10px',
+                          paddingBottom: '10px',
+                        }}
+                      >
+                        {' '}
+                        Your changes are not saved unless you submit them.
+                      </Alert>
                       <table align="center" cellPadding="20">
                         <tr>
                           <td>
