@@ -150,9 +150,9 @@ const Footer = () => {
                           wordSpacing: '0.4em',
                           textDecoration: 'none',
                         }}
-                        href="tel:+919782524351"
+                        href="tel:+919130170259"
                       >
-                        &emsp;&emsp;+91&#8209;9782524351
+                        &emsp;&emsp;+91&#8209;9130170259
                       </a>
                     </span>
                     <br />
