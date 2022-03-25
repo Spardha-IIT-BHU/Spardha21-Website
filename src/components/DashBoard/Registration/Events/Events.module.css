@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.events-heading {
+  font-family: 'League Spartan';
+  text-align: center;
+  color: cornflowerblue;
+  font-size: 30px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.events-table {
+  font-size: 17px;
+}
+
+.events-table th.middle-column {
+  max-width: 55vw;
+  min-width: 55vw;
+}
+
+.events-table .left-column {
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.events-table .right-column {
+  padding-left: 10px;
+}
+
+.events-table .middle-column {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.events-table th,
+td {
+  padding: 10px;
+}
+
+.events-table tr th {
+  color: white;
+}
+
+.events-table tr td {
+  font-weight: 500;
+  color: #616f8a;
+}
+
+.events-table {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.events-table td,
+.events-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.events-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.events-table tr:hover {
+  background-color: #ddd;
+}
+
+.modal-table td {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.events-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: darkslategray;
+  color: white;
+}
+
+.register-now {
+  background: limegreen none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.register-now:hover {
+  color: #ffffff;
+  background: forestgreen none repeat scroll 0 0;
+}
+
+.register-now:focus {
+  color: #ffffff;
+}
+
+.modal-body textarea {
+  border: 1px solid #d4d9e3;
+  font-size: 14px;
+  font-weight: 300;
+  height: 200px;
+  margin-top: 5px;
+  padding: 9px 10px;
+  width: 100%;
+  color: #8492af;
+}
+
+.modal-header.login-header h4 {
+  color: #ffffff;
+}
+
+.login-header {
+  display: inline-block;
+  width: 100%;
+  background: rgb(0, 78, 0);
+}
+
+.login-header .navbar-right {
+  margin-right: 0px;
+}
+
+.login-header .nav-tabs > li.active > a,
+.login-header .nav-tabs > li.active > a:focus,
+.login-header .nav-tabs > li.active > a:hover {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.login-header .nav-tabs > li > a {
+  border: medium none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 48px;
+  padding: 15px 30px;
+  color: #fff;
+}
+
+.login-header .nav-tabs {
+  border-bottom: none;
+}
+
+.login-header .nav-tabs > li {
+  margin-bottom: 0px;
+}
+
+.login-header .nav > li > a:focus,
+.login-header .nav > li > a:hover {
+  background: none;
+  text-decoration: none;
+}
+
+.login-header .nav-tabs > li.active {
+  border-bottom: 6px solid limegreen;
+}
+
+.modal-header.login-header h4 {
+  color: #ffffff;
+}
+
+.modal-footer .register-now {
+  background: limegreen none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 30px;
+  position: relative;
+}
+
+.modal-footer .register-now::before {
+  display: none;
+}
+
+.modal-footer .register-now:hover {
+  background: forestgreen none repeat scroll 0 0;
+}
+
+.modal-footer {
+  border: 0 none;
+  padding: 10px 15px 26px;
+  text-align: right;
+}
+
+.cancel {
+  background: limegreen;
+  border: medium none;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 30px;
+  position: relative;
+}
+
+.cancel:hover {
+  background: forestgreen;
+}
+
+.modal {
+  top: 20%;
+}
+
+.modal-header .close {
+  margin-top: 2px;
+}
+
+.search input:focus {
+  border-bottom: 1px solid #bdc4d4;
+  line-height: 22px;
+  transition: 0.1s all;
+}
+
+.modal-header.login-header {
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*Main CSS*/
+}
+
+@media only screen and (max-width: 767px) {
+  .events-table {
+    font-size: 12px;
+  }
+  .register-now {
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 998px) {
+  .events-table {
+    font-size: 14px;
+  }
+}

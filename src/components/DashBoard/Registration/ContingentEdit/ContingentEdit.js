@@ -17,10 +17,12 @@ import axios from 'axios';
 // import isPhone from 'validator/lib/isMobilePhone';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router';
 toast.configure();
 
 const ContingentEdit = () => {
   // const [contdetails,setContDetails] = useState('');
+  const navigate = useNavigate();
   const token = localStorage.getItem('token');
   const baseUrl = 'https://api.spardha.co.in';
 
@@ -60,7 +62,7 @@ const ContingentEdit = () => {
   const cancelButton = () => {
     console.log('cancel');
     // redirect to registration page
-    window.location.href = '/dashboard/registration';
+    navigate('/dashboard/registration');
   };
 
   const submitButton = () => {
@@ -122,7 +124,7 @@ const ContingentEdit = () => {
             })
             .then((res) => {
               console.log('successful');
-              window.location.href = '/dashboard/registration';
+              navigate('/dashboard/registration');
             })
             .catch((err) => {
               console.log('error', err);

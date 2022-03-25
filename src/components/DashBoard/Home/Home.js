@@ -65,8 +65,13 @@ const Home = () => {
                 supposed to register for {user.institution}. In case you want
                 someone else to register for your college, you need to first
                 delete your account in{' '}
-                <u>
-                  <Link to="/dashboard/profile">User Profile</Link>
+                <u style={{ textDecoration: 'none' }}>
+                  <Link
+                    to="/dashboard/profile"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    User Profile
+                  </Link>
                 </u>{' '}
                 section, before another user can create an account with same
                 college name.
@@ -79,8 +84,13 @@ const Home = () => {
             <div className="text-justify">
               <h2>
                 You've registered for {numevents} events. Click{' '}
-                <u>
-                  <Link to="/dashboard/registration">here</Link>
+                <u style={{ textDecoration: 'none' }}>
+                  <Link
+                    to="/dashboard/registration"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    here
+                  </Link>
                 </u>{' '}
                 to modify or add events.
               </h2>
@@ -92,8 +102,12 @@ const Home = () => {
             <div className="text-justify">
               <h2>
                 Please read the{' '}
-                <u>
-                  <Link to="/pdf/RuleBook.pdf" target="_blank">
+                <u style={{ textDecoration: 'none' }}>
+                  <Link
+                    to="/pdf/RuleBook.pdf"
+                    target="_blank"
+                    style={{ textDecoration: 'none' }}
+                  >
                     Rule Book
                   </Link>
                 </u>{' '}

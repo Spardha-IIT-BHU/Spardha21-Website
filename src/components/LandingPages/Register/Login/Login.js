@@ -79,7 +79,7 @@ function Login() {
     let warning = '';
     if (value === '') warning = 'This field is required.';
     else if (value.length < 6 || value.length > 30)
-      warning = 'Username must be of length 6 - 30.';
+      warning = 'Password must be of length 6 - 30.';
     return { value, warning, valid: warning === '' && value !== '' };
   };
 
@@ -105,7 +105,7 @@ function Login() {
   });
 
   return (
-    <>
+    <div>
       <h3 className={`${styles.heading}`}> LOGIN </h3>
       <hr />
 
@@ -276,7 +276,7 @@ function Login() {
           </Button>
         </div>
       </Form>
-    </>
+    </div>
   );
 }
 
