@@ -106,8 +106,8 @@ function EventsEdit() {
   };
 
   const submitHandler = () => {
-    navigate('/dashboard/registration')
-  }
+    navigate('/dashboard/registration');
+  };
 
   return (
     <div className={`${styles['user-dashboard']}`}>
@@ -595,9 +595,14 @@ function EventsEdit() {
             </div>
           </div>
         </div>
-        <Button color='success' style={{ fontWeight:"bold", width:"fit-content"}} className="mt-4" onClick={submitHandler}>
-            Submit
-        </Button> 
+        <Button
+          color="success"
+          style={{ fontWeight: 'bold', width: 'fit-content' }}
+          className="mt-4"
+          onClick={submitHandler}
+        >
+          Submit
+        </Button>
       </div>
     </div>
   );

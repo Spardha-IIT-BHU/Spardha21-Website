@@ -46,14 +46,19 @@ const Registration = () => {
               <b>
                 <u>NOTE:</u>
               </b>{' '}
-              Enter the <b>number</b> of players in 'Athletics',
-              whereas the <b>name</b> of players in other events.
+              Enter the <b>number</b> of players in 'Athletics', whereas the{' '}
+              <b>name</b> of players in other events.
             </div>
             <div className="text-justify">
               <h2>
                 <br></br>
                 <div style={{ textAlign: 'right' }}>
-                  <Link to="/dashboard/contingentEdit" style={{ textDecoration:"none"}}>Edit</Link>
+                  <Link
+                    to="/dashboard/contingentEdit"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    Edit
+                  </Link>
                 </div>
                 <div className="events-heading">CONTINGENT DETAILS</div>
                 <table align="center" cellpadding="20" className="events-table">
@@ -107,7 +112,12 @@ const Registration = () => {
                 <br></br>
 
                 <div style={{ textAlign: 'right' }}>
-                  <Link to="/dashboard/events" style={{ textDecoration:"none"}}>Edit</Link>
+                  <Link
+                    to="/dashboard/events"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    Edit
+                  </Link>
                 </div>
                 <Events />
               </h2>

@@ -51,9 +51,8 @@
   padding: 10px 15px;
 }
 
-.input-wrapper
-{
-    margin-bottom: 0 !important;
+.input-wrapper {
+  margin-bottom: 0 !important;
 }
 
 .sports-label {
@@ -64,13 +63,11 @@
   font-weight: 400;
   cursor: pointer;
   margin-bottom: 0 !important;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-@media only screen and (min-width:992px)
-{
-    .sports-label
-    {
-        font-size: 21px !important;
-    }
+@media only screen and (min-width: 992px) {
+  .sports-label {
+    font-size: 21px !important;
+  }
 }

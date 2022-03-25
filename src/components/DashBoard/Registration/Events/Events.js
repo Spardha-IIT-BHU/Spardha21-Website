@@ -168,6 +168,50 @@ const EventsDb = () => {
     }
   };
 
+  const submitHandler = (game) => {
+    const obj = inputFields[game][0];
+    const data = {};
+    data['captain_name'] = obj['captain_name'];
+    data['captain_phone'] = obj['captain_phone'];
+    data['players'] = [];
+    for (const row of obj.players) {
+      for (const col of row) {
+        data['players'].push(col);
+      }
+    }
+    axios
+      .put(`https://api.spardha.co.in/teams/${game}/`, data, {
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      })
+      .then((res) => {
+        setBoyTeams((prevState) => {
+          const newState = [...prevState];
+          for (let i = 0; i < newState.length; i++) {
+            if (newState[i].game === game) {
+              newState[i] = obj;
+              break;
+            }
+          }
+          return newState;
+        });
+        setShowModals((prevState) => {
+          const newState = { ...prevState };
+          newState[`${game}`] = !prevState[`${game}`];
+          return newState;
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+        setShowModals((prevState) => {
+          const newState = { ...prevState };
+          newState[`${game}`] = !prevState[`${game}`];
+          return newState;
+        });
+      });
+  };
+
   return (
     <>
       <div className={`${styles['events-heading']}`}>Boys</div>
@@ -220,7 +264,7 @@ const EventsDb = () => {
                       <br />
                     </b>
                   )}
-                  {team.players.some((row) => row.some(s => s.length)) && (
+                  {team.players.some((row) => row.some((s) => s.length)) && (
                     <b>
                       {/* {team.game.substr(0, team.game.length - 2) ===
                       'Athletics' ? (
@@ -231,20 +275,201 @@ const EventsDb = () => {
                       <span>Players Name: </span>
                     </b>
                   )}
-                  {team.players
-                    .slice(0, team.players.length - 1)
-                    .map((row) => {
-                      return (
-                        <>
-                        {
-                          row.map(player => {
-                            return (player) ? <span>{player}, </span> : ''
-                          })
-                        }
-                        </>
-                      );
-                    })
-                  }
+                  {team.players.slice(0, team.players.length - 1).map((row) => {
+                    return (
+                      <>
+                        {row.map((player) => {
+                          return player ? <span>{player} </span> : '';
+                        })}
+                      </>
+                    );
+                  })}
+                  {team.players[team.players.length - 1][0] && (
+                    <span>{team.players[team.players.length - 1][0]} </span>
+                  )}
+                  {team.players[team.players.length - 1][1] && (
+                    <span>{team.players[team.players.length - 1][1]} </span>
+                  )}
+                </td>
+                <td>
+                  <Button
+                    className={`${styles['register-now']}`}
+                    data-toggle={team.game}
+                    onClick={() => clickHandler(team.game)}
+                  >
+                    Add&nbsp;/&nbsp;Edit
+                  </Button>
+                  <Modal
+                    isOpen={showModals[`${team.game}`]}
+                    toggle={() => clickHandler(team.game)}
+                    centered
+                    scrollable
+                    keyboard
+                    size="lg"
+                  >
+                    <ModalHeader
+                      className={`${styles['modal-header']} ${styles['login-header']}`}
+                    >
+                      Players - {team.game.substr(0, team.game.length - 2)} [
+                      {team.game.endsWith('B') && 'BOYS'}
+                      {team.game.endsWith('G') && 'GIRLS'}
+                      {team.game.endsWith('M') && 'MIXED'}]
+                    </ModalHeader>
+                    <ModalBody className={`${styles['modal-body']}`}>
+                      <table align="center" cellPadding="20">
+                        <tr>
+                          <td>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Captain / Leader Name"
+                              data-game={team.game}
+                              name="captain_name"
+                              value={
+                                inputFields[`${team.game}`][0]['captain_name']
+                              }
+                              onChange={inputChangeHandler}
+                            ></input>
+                          </td>
+                          <td>
+                            <input
+                              type="tel"
+                              className="form-control"
+                              data-game={team.game}
+                              name="captain_phone"
+                              placeholder="Captain / Leader Phone No."
+                              value={
+                                inputFields[`${team.game}`][0]['captain_phone']
+                              }
+                              onChange={inputChangeHandler}
+                            ></input>
+                          </td>
+                        </tr>
+                      </table>
+                      <table align="center" cellpadding="20">
+                        {team.players.map((row, rowIndex) => {
+                          return (
+                            <tr>
+                              {row.map((col, colIndex) => {
+                                return (
+                                  <td>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder={`Player ${
+                                        2 * rowIndex + colIndex + 1
+                                      }`}
+                                      data-game={team.game}
+                                      name={`${2 * rowIndex + colIndex}`}
+                                      value={
+                                        inputFields[`${team.game}`][0][
+                                          'players'
+                                        ][rowIndex][colIndex]
+                                      }
+                                      onChange={inputChangeHandler}
+                                    ></input>
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          );
+                        })}
+                      </table>
+                    </ModalBody>
+                    <ModalFooter className={`${styles['modal-footer']}`}>
+                      <Button
+                        className={`${styles.cancel}`}
+                        onClick={() => clickHandler(team.game)}
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        className={`${styles['register-now']}`}
+                        onClick={() => {
+                          submitHandler(team.game);
+                        }}
+                      >
+                        Submit
+                      </Button>
+                    </ModalFooter>
+                  </Modal>
+                </td>
+              </tr>
+            );
+          })
+        )}
+      </table>
+      <br />
+      <div className={`${styles['events-heading']}`}>Girls</div>
+      <table
+        className={`${styles['events-table']}`}
+        align="center"
+        cellpadding="20"
+        border="1"
+      >
+        <tr>
+          <th
+            className={`${styles['left-column']}`}
+            style={{ textAlign: 'center' }}
+          >
+            Event Name
+          </th>
+          <th
+            className={`${styles['middle-column']}`}
+            style={{ textAlign: 'center' }}
+          >
+            Players Name / Count
+          </th>
+          <th
+            className={`${styles['right-column']}`}
+            style={{ textAlign: 'center' }}
+          >
+            Edit Players
+          </th>
+        </tr>
+        {girlTeams.length === 0 ? (
+          <tr style={{ textAlign: 'center' }}>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        ) : (
+          girlTeams.map((team, ind) => {
+            return (
+              <tr key={ind}>
+                <td>
+                  <b>{team.game.substr(0, team.game.length - 2)}</b>
+                </td>
+                <td style={{ textAlign: 'left' }}>
+                  {team.captain_name && (
+                    <b>
+                      Captain / Leader: {team.captain_name}{' '}
+                      {team.captain_phone && (
+                        <span>({team.captain_phone})</span>
+                      )}
+                      <br />
+                    </b>
+                  )}
+                  {team.players.some((row) => row.some((s) => s.length)) && (
+                    <b>
+                      {/* {team.game.substr(0, team.game.length - 2) ===
+                      'Athletics' ? (
+                        <span>Total Number of Boys: </span>
+                      ) : (
+                        <span>Players Name: </span>
+                      )} */}
+                      <span>Players Name: </span>
+                    </b>
+                  )}
+                  {team.players.slice(0, team.players.length - 1).map((row) => {
+                    return (
+                      <>
+                        {row.map((player) => {
+                          return player ? <span>{player}, </span> : '';
+                        })}
+                      </>
+                    );
+                  })}
                   {team.players[team.players.length - 1][0] && (
                     <span>{team.players[team.players.length - 1][0]}, </span>
                   )}
@@ -337,100 +562,23 @@ const EventsDb = () => {
                         })}
                       </table>
                     </ModalBody>
-                    <ModalFooter className={`${styles["modal-footer"]}`}>
-                      <Button className={`${styles.cancel}`} onClick={() => clickHandler(team.game)}>
-                          Cancel
-                      </Button> 
-                      <Button className={`${styles["register-now"]}`}>
-                          Submit
+                    <ModalFooter className={`${styles['modal-footer']}`}>
+                      <Button
+                        className={`${styles.cancel}`}
+                        onClick={() => clickHandler(team.game)}
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        className={`${styles['register-now']}`}
+                        onClick={() => {
+                          submitHandler(team.game);
+                        }}
+                      >
+                        Submit
                       </Button>
                     </ModalFooter>
                   </Modal>
-                </td>
-              </tr>
-            );
-          })
-        )}
-      </table>
-      <br />
-      <div className={`${styles['events-heading']}`}>Girls</div>
-      <table
-        className={`${styles['events-table']}`}
-        align="center"
-        cellpadding="20"
-        border="1"
-      >
-        <tr>
-          <th
-            className={`${styles['left-column']}`}
-            style={{ textAlign: 'center' }}
-          >
-            Event Name
-          </th>
-          <th
-            className={`${styles['middle-column']}`}
-            style={{ textAlign: 'center' }}
-          >
-            Players Name / Count
-          </th>
-          <th
-            className={`${styles['right-column']}`}
-            style={{ textAlign: 'center' }}
-          >
-            Edit Players
-          </th>
-        </tr>
-        {girlTeams.length === 0 ? (
-          <tr style={{ textAlign: 'center' }}>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        ) : (
-          girlTeams.map((team) => {
-            return (
-              <tr>
-                <td>
-                  <b>{team.game.substr(0, team.game.length - 2)}</b>
-                </td>
-                <td style={{ textAlign: 'left' }}>
-                  {team.captain_name && (
-                    <b>
-                      Captain / Leader: {team.captain_name}{' '}
-                      {team.captain_phone && (
-                        <span>({team.captain_phone})</span>
-                      )}
-                      <br />
-                    </b>
-                  )}
-                  {team.players.some((s) => s.length) && (
-                    <b>
-                      {/* {team.game.substr(0, team.game.length - 2) ===
-                      'Athletics' ? (
-                        <span>Total Number of Girls: </span>
-                      ) : (
-                        <span>Players Name: </span>
-                      )} */}
-                      <span>Players Name: </span>
-                    </b>
-                  )}
-                  {team.players
-                    .slice(0, team.players.length - 1)
-                    .map((player) => {
-                      return player ? <span>{player}, </span> : '';
-                    })}
-                  {team.players[team.players.length - 1] && (
-                    <span>{team.players[team.players.length - 1]}</span>
-                  )}
-                </td>
-                <td>
-                  <Button
-                    className={`${styles['register-now']}`}
-                    data-toggle={team.game}
-                    onClick={() => clickHandler(team.game)}
-                  >
-                    Add&nbsp;/&nbsp;Edit
-                  </Button>
                 </td>
               </tr>
             );
@@ -472,9 +620,9 @@ const EventsDb = () => {
             <td>-</td>
           </tr>
         ) : (
-          mixedTeams.map((team) => {
+          mixedTeams.map((team, ind) => {
             return (
-              <tr>
+              <tr key={ind}>
                 <td>
                   <b>{team.game.substr(0, team.game.length - 2)}</b>
                 </td>
@@ -488,16 +636,31 @@ const EventsDb = () => {
                       <br />
                     </b>
                   )}
-                  {team.players.some((s) => s.length) && (
-                    <b>{<span>Players Name: </span>}</b>
+                  {team.players.some((row) => row.some((s) => s.length)) && (
+                    <b>
+                      {/* {team.game.substr(0, team.game.length - 2) ===
+                      'Athletics' ? (
+                        <span>Total Number of Boys: </span>
+                      ) : (
+                        <span>Players Name: </span>
+                      )} */}
+                      <span>Players Name: </span>
+                    </b>
                   )}
-                  {team.players
-                    .slice(0, team.players.length - 1)
-                    .map((player) => {
-                      return player ? <span>{player}, </span> : '';
-                    })}
-                  {team.players[team.players.length - 1] && (
-                    <span>{team.players[team.players.length - 1]}</span>
+                  {team.players.slice(0, team.players.length - 1).map((row) => {
+                    return (
+                      <>
+                        {row.map((player) => {
+                          return player ? <span>{player}, </span> : '';
+                        })}
+                      </>
+                    );
+                  })}
+                  {team.players[team.players.length - 1][0] && (
+                    <span>{team.players[team.players.length - 1][0]}, </span>
+                  )}
+                  {team.players[team.players.length - 1][1] && (
+                    <span>{team.players[team.players.length - 1][1]} </span>
                   )}
                 </td>
                 <td>
@@ -508,6 +671,100 @@ const EventsDb = () => {
                   >
                     Add&nbsp;/&nbsp;Edit
                   </Button>
+                  <Modal
+                    isOpen={showModals[`${team.game}`]}
+                    toggle={() => clickHandler(team.game)}
+                    centered
+                    scrollable
+                    keyboard
+                    size="lg"
+                  >
+                    <ModalHeader
+                      className={`${styles['modal-header']} ${styles['login-header']}`}
+                    >
+                      Players - {team.game.substr(0, team.game.length - 2)} [
+                      {team.game.endsWith('B') && 'BOYS'}
+                      {team.game.endsWith('G') && 'GIRLS'}
+                      {team.game.endsWith('M') && 'MIXED'}]
+                    </ModalHeader>
+                    <ModalBody className={`${styles['modal-body']}`}>
+                      <table align="center" cellPadding="20">
+                        <tr>
+                          <td>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Captain / Leader Name"
+                              data-game={team.game}
+                              name="captain_name"
+                              value={
+                                inputFields[`${team.game}`][0]['captain_name']
+                              }
+                              onChange={inputChangeHandler}
+                            ></input>
+                          </td>
+                          <td>
+                            <input
+                              type="tel"
+                              className="form-control"
+                              data-game={team.game}
+                              name="captain_phone"
+                              placeholder="Captain / Leader Phone No."
+                              value={
+                                inputFields[`${team.game}`][0]['captain_phone']
+                              }
+                              onChange={inputChangeHandler}
+                            ></input>
+                          </td>
+                        </tr>
+                      </table>
+                      <table align="center" cellpadding="20">
+                        {team.players.map((row, rowIndex) => {
+                          return (
+                            <tr>
+                              {row.map((col, colIndex) => {
+                                return (
+                                  <td>
+                                    <input
+                                      type="text"
+                                      className="form-control"
+                                      placeholder={`Player ${
+                                        2 * rowIndex + colIndex + 1
+                                      }`}
+                                      data-game={team.game}
+                                      name={`${2 * rowIndex + colIndex}`}
+                                      value={
+                                        inputFields[`${team.game}`][0][
+                                          'players'
+                                        ][rowIndex][colIndex]
+                                      }
+                                      onChange={inputChangeHandler}
+                                    ></input>
+                                  </td>
+                                );
+                              })}
+                            </tr>
+                          );
+                        })}
+                      </table>
+                    </ModalBody>
+                    <ModalFooter className={`${styles['modal-footer']}`}>
+                      <Button
+                        className={`${styles.cancel}`}
+                        onClick={() => clickHandler(team.game)}
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        className={`${styles['register-now']}`}
+                        onClick={() => {
+                          submitHandler(team.game);
+                        }}
+                      >
+                        Submit
+                      </Button>
+                    </ModalFooter>
+                  </Modal>
                 </td>
               </tr>
             );

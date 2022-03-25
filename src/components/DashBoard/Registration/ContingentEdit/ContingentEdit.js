@@ -64,7 +64,7 @@ const ContingentEdit = () => {
     // redirect to registration page
     navigate('/dashboard/registration');
   };
-  
+
   const submitButton = () => {
     console.log('submit', input);
     if (
