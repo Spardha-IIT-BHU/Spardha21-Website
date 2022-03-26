@@ -72,7 +72,7 @@ function EventsEdit() {
     else setShowMixedSpinner(true);
     if (games[game]) {
       axios
-        .delete(`https://api.spardha.co.in/teams/${game}`, {
+        .delete(`https://api.spardha.co.in/teams/${game}/`, {
           headers: {
             Authorization: `Token ${token}`,
           },
