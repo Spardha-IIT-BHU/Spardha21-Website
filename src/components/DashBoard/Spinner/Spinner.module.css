@@ -10,24 +10,24 @@
 }
 
 @-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        display: none;
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        display: block;
-    }
+  from {
+    -webkit-transform: rotate(0deg);
+    display: none;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    display: block;
+  }
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-        display: none;
+  from {
+    transform: rotate(0deg);
+    display: none;
   }
   to {
-      transform: rotate(360deg);
-      display: block;
+    transform: rotate(360deg);
+    display: block;
   }
 }
 

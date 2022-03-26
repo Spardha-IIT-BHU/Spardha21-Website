@@ -41,7 +41,9 @@ function Header() {
         expand="lg"
         className={styles['wrap-container']}
         fixed="top"
-        style={{ background: navbar ? 'white' : ((isMobile) ? 'black' : 'transparent') }}
+        style={{
+          background: navbar ? 'white' : isMobile ? 'black' : 'transparent',
+        }}
       >
         <NavbarBrand>
           <NavHashLink exact="true" to="/#home-slider" smooth>
@@ -55,7 +57,9 @@ function Header() {
           </NavHashLink>
         </NavbarBrand>
         <NavbarToggler
-          className={`${styles[`navbar-toggler${(navbar ? "-active" : "")}`]} mx-2`}
+          className={`${
+            styles[`navbar-toggler${navbar ? '-active' : ''}`]
+          } mx-2`}
           onClick={toggle}
         ></NavbarToggler>
         <Collapse navbar isOpen={open}>
