@@ -6,7 +6,7 @@ declare global {
   
   function InitializeReactGA(ReactGA: any) {
     if (!window.GA_INITIALIZED) {
-      ReactGA.initialize("G-TXSD7QC19C");
+      ReactGA.initialize("UA-223966303-1");
       window.GA_INITIALIZED = true;
     }
   }
