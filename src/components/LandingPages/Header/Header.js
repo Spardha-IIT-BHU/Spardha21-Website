@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavHashLink } from 'react-router-hash-link';
 import {
   Collapse,
@@ -9,9 +9,25 @@ import {
   NavItem,
 } from 'reactstrap';
 import styles from './Header.module.css';
+import { isMobile } from 'react-device-detect';
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  useEffect(() => {
+    const scrollListener = document.addEventListener('scroll', () => {
+      const pos = document.scrollingElement.scrollTop;
+      if (pos >= 100) {
+        if (!navbar) setNavbar(true);
+      } else {
+        if (navbar) setNavbar(false);
+      }
+    });
+    return () => {
+      document.removeEventListener('scroll', scrollListener);
+    };
+  }, [navbar]);
 
   const toggle = () => {
     setOpen((prevState) => {
@@ -21,18 +37,25 @@ function Header() {
 
   return (
     <>
-      <Navbar expand="lg" className={styles['wrap-container']} sticky="top">
+      <Navbar
+        expand="lg"
+        className={styles['wrap-container']}
+        fixed="top"
+        style={{ background: navbar ? 'white' : ((isMobile) ? 'black' : 'transparent') }}
+      >
         <NavbarBrand>
           <NavHashLink exact="true" to="/#home-slider" smooth>
             <img
-              src="/images/logo/spardha-logo-white.png"
+              src={`/images/logo/spardha-logo-${
+                navbar ? 'black' : 'white'
+              }.png`}
               alt="Sparhda Logo"
               height="60px"
             />
           </NavHashLink>
         </NavbarBrand>
         <NavbarToggler
-          className={styles['navbar-toggler']}
+          className={`${styles[`navbar-toggler${(navbar ? "-active" : "")}`]} mx-2`}
           onClick={toggle}
         ></NavbarToggler>
         <Collapse navbar isOpen={open}>
@@ -47,7 +70,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -65,7 +92,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -83,7 +114,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -101,7 +136,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -119,7 +158,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -137,7 +180,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -155,7 +202,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -173,7 +224,11 @@ function Header() {
                 }}
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? '#6db549' : 'white',
+                    color: isActive
+                      ? '#6db549'
+                      : navbar
+                      ? '#000'
+                      : 'rgba(255, 255, 255, 0.9)',
                   };
                 }}
                 smooth
@@ -189,6 +244,7 @@ function Header() {
                 onClick={() => {
                   setOpen(false);
                 }}
+                style={{ color: navbar ? '#000' : 'rgba(255, 255, 255, 0.9)' }}
                 smooth
               >
                 Contact Us
