@@ -24,7 +24,7 @@ function HomeSlider() {
               className="row home-slider-text js-fullheight justify-content-center align-items-center home-spardha-mainlogo"
               data-scrollax-parent="true"
             >
-              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
+              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center mt-5">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
                   <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>
@@ -87,7 +87,7 @@ function HomeSlider() {
               className="row home-slider-text js-fullheight justify-content-center align-items-center home-spardha-mainlogo"
               data-scrollax-parent="true"
             >
-              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
+              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center mt-5">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
                   <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>
@@ -150,7 +150,7 @@ function HomeSlider() {
               className="row home-slider-text js-fullheight justify-content-center align-items-center home-spardha-mainlogo"
               data-scrollax-parent="true"
             >
-              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
+              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center mt-5">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
                   <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>
@@ -213,7 +213,7 @@ function HomeSlider() {
               className="row home-slider-text js-fullheight justify-content-center align-items-center home-spardha-mainlogo"
               data-scrollax-parent="true"
             >
-              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center">
+              <div className="col-md-12 col-sm-12 col-12 ftco-animate text-center mt-5">
                 <div className="container col-lg-4 col-md-5 col-sm-9 col-9">
                   <img src="/images/logo/spardha-white.png" alt="spardha" />
                 </div>

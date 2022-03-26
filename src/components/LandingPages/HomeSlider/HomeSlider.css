@@ -86,7 +86,7 @@
 
 .owl-carousel.home-slider {
   position: relative;
-  height: 91.5vh; /*change me to 100 once done */
+  height: 100vh; 
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.9);
 }
@@ -95,7 +95,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 91.5vh; /*change me to 100 once done */
+  height: 100vh; 
   position: relative;
   z-index: 0;
 }
@@ -542,6 +542,9 @@ a.home-button1:hover {
   .img2 {
     margin-left: 0;
   } */
+  .home-spardha-mainlogo {
+    padding-top: 200px !important;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
