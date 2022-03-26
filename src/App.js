@@ -1,8 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React,{useEffect} from 'react';
+import {  Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react/cjs/react.production.min';
+
+import ReactGA from "react-ga";
+import InitializeReactGA from "./helper/googleAnalytics.ts";
 
 const LandingPages = React.lazy(() =>
   import('./components/LandingPages/LandingPages')
@@ -59,10 +62,20 @@ const EventsEdit = React.lazy(() =>
   import('./components/DashBoard/Registration/Events/EventsEdit/EventsEdit')
 );
 
+function usePageViews() {
+	let location = useLocation();
+	useEffect(() => {
+		InitializeReactGA(ReactGA);
+		ReactGA.set({ page: location.pathname });
+		ReactGA.pageview(location.pathname);
+	}, [location]);
+}
+
 function App() {
+  usePageViews();
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Routes>
           <Route
             path="/"
@@ -242,7 +255,7 @@ function App() {
             />
           </Route>
         </Routes>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
