@@ -331,6 +331,17 @@ const EventsDb = () => {
                       <br />
                     </b>
                   )}
+                  {team.players.some((row) => row.some((s) => s.length)) && (
+                    <b>
+                      {/* {team.game.substr(0, team.game.length - 2) ===
+                      'Athletics' ? (
+                        <span>Total Number of Boys: </span>
+                      ) : (
+                        <span>Players Name: </span>
+                      )} */}
+                      <span>Players Name: </span>
+                    </b>
+                  )}
                   {team.players
                     .reduce((prev, cur) => [
                       ...prev.filter((s) => s.length),
@@ -893,6 +904,17 @@ const EventsDb = () => {
                         <span>({team.captain_phone})</span>
                       )}
                       <br />
+                    </b>
+                  )}
+                  {team.players.some((row) => row.some((s) => s.length)) && (
+                    <b>
+                      {/* {team.game.substr(0, team.game.length - 2) ===
+                      'Athletics' ? (
+                        <span>Total Number of Boys: </span>
+                      ) : (
+                        <span>Players Name: </span>
+                      )} */}
+                      <span>Players Name: </span>
                     </b>
                   )}
                   {team.players

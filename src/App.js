@@ -1,11 +1,11 @@
-import React,{useEffect} from 'react';
-import {  Routes, Route, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react/cjs/react.production.min';
 
-import ReactGA from "react-ga";
-import InitializeReactGA from "./helper/googleAnalytics.ts";
+import ReactGA from 'react-ga';
+import InitializeReactGA from './helper/googleAnalytics.ts';
 
 const LandingPages = React.lazy(() =>
   import('./components/LandingPages/LandingPages')
@@ -63,12 +63,12 @@ const EventsEdit = React.lazy(() =>
 );
 
 function usePageViews() {
-	let location = useLocation();
-	useEffect(() => {
-		InitializeReactGA(ReactGA);
-		ReactGA.set({ page: location.pathname });
-		ReactGA.pageview(location.pathname);
-	}, [location]);
+  let location = useLocation();
+  useEffect(() => {
+    InitializeReactGA(ReactGA);
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  }, [location]);
 }
 
 function App() {
@@ -76,185 +76,185 @@ function App() {
   return (
     <>
       {/* <Router> */}
-        <Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Preloader />}>
+              <LandingPages />{' '}
+            </Suspense>
+          }
+        >
           <Route
-            path="/"
+            path=""
             element={
               <Suspense fallback={<Preloader />}>
-                <LandingPages />{' '}
+                <About />
+              </Suspense>
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Register />
               </Suspense>
             }
           >
             <Route
-              path=""
+              exact
+              path="signup"
               element={
                 <Suspense fallback={<Preloader />}>
-                  <About />
+                  <Signup />
                 </Suspense>
               }
             />
             <Route
-              path="register"
+              exact
+              path="login"
               element={
                 <Suspense fallback={<Preloader />}>
-                  <Register />
-                </Suspense>
-              }
-            >
-              <Route
-                exact
-                path="signup"
-                element={
-                  <Suspense fallback={<Preloader />}>
-                    <Signup />
-                  </Suspense>
-                }
-              />
-              <Route
-                exact
-                path="login"
-                element={
-                  <Suspense fallback={<Preloader />}>
-                    <Login />
-                  </Suspense>
-                }
-              />
-              <Route
-                exact
-                path="forgot"
-                element={
-                  <Suspense fallback={<Preloader />}>
-                    <Forgot />
-                  </Suspense>
-                }
-              />
-              <Route
-                exact
-                path="reset"
-                element={
-                  <Suspense fallback={<Preloader />}>
-                    <Reset />
-                  </Suspense>
-                }
-              />
-              <Route
-                exact
-                path="verify"
-                element={
-                  <Suspense fallback={<Preloader />}>
-                    <Verify />
-                  </Suspense>
-                }
-              />
-            </Route>
-            <Route
-              path="about"
-              element={
-                <Suspense fallback={<Preloader />}>
-                  <About />
+                  <Login />
                 </Suspense>
               }
             />
             <Route
-              path="events"
+              exact
+              path="forgot"
               element={
                 <Suspense fallback={<Preloader />}>
-                  <Events />
+                  <Forgot />
                 </Suspense>
               }
             />
             <Route
-              path="team"
+              exact
+              path="reset"
               element={
                 <Suspense fallback={<Preloader />}>
-                  <Team />
+                  <Reset />
                 </Suspense>
               }
             />
             <Route
-              path="guests"
+              exact
+              path="verify"
               element={
                 <Suspense fallback={<Preloader />}>
-                  <Guests />
-                </Suspense>
-              }
-            />
-            <Route
-              path="sponsors"
-              element={
-                <Suspense fallback={<Preloader />}>
-                  <Sponsors />
-                </Suspense>
-              }
-            />
-            <Route
-              path="ca"
-              element={
-                <Suspense fallback={<Preloader />}>
-                  <CamAmb />
-                </Suspense>
-              }
-            />
-            <Route
-              path="gallery"
-              element={
-                <Suspense fallback={<Preloader />}>
-                  <Gallery />
+                  <Verify />
                 </Suspense>
               }
             />
           </Route>
+          <Route
+            path="about"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <About />
+              </Suspense>
+            }
+          />
+          <Route
+            path="events"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Events />
+              </Suspense>
+            }
+          />
+          <Route
+            path="team"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Team />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guests"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Guests />
+              </Suspense>
+            }
+          />
+          <Route
+            path="sponsors"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Sponsors />
+              </Suspense>
+            }
+          />
+          <Route
+            path="ca"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <CamAmb />
+              </Suspense>
+            }
+          />
+          <Route
+            path="gallery"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Gallery />
+              </Suspense>
+            }
+          />
+        </Route>
 
+        <Route
+          path="/dashboard"
+          element={
+            <Suspense fallback={<Preloader />}>
+              <DashBoard />
+            </Suspense>
+          }
+        >
           <Route
-            path="/dashboard"
+            path="home"
             element={
-              <Suspense fallback={<Preloader />}>
-                <DashBoard />
+              <Suspense fallback={<Spinner />}>
+                <Home />
               </Suspense>
             }
-          >
-            <Route
-              path="home"
-              element={
-                <Suspense fallback={<Spinner />}>
-                  <Home />
-                </Suspense>
-              }
-            />
-            <Route
-              path="registration"
-              element={
-                <Suspense fallback={<Spinner />}>
-                  <Registration />
-                </Suspense>
-              }
-            />
-            <Route
-              path="contingentEdit"
-              element={
-                <Suspense fallback={<Spinner />}>
-                  <ContingentEdit />
-                </Suspense>
-              }
-            />
-            <Route
-              path="events"
-              element={
-                <Suspense fallback={<Spinner />}>
-                  <EventsEdit />
-                </Suspense>
-              }
-            />
-            <Route
-              path="Profile"
-              element={
-                <Suspense fallback={<Spinner />}>
-                  <Profile />
-                </Suspense>
-              }
-            />
-          </Route>
-        </Routes>
+          />
+          <Route
+            path="registration"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Registration />
+              </Suspense>
+            }
+          />
+          <Route
+            path="contingentEdit"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <ContingentEdit />
+              </Suspense>
+            }
+          />
+          <Route
+            path="events"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <EventsEdit />
+              </Suspense>
+            }
+          />
+          <Route
+            path="Profile"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Profile />
+              </Suspense>
+            }
+          />
+        </Route>
+      </Routes>
       {/* </Router> */}
     </>
   );
