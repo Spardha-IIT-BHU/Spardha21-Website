@@ -24,7 +24,9 @@ function Team() {
                 phone={member.phone}
                 id={member.id}
                 mail={member.mail}
-                key={ind}
+                image={member.image}
+                linkedin={member.linkedin}
+                key={member.name}
               ></Member>
             );
           })}
@@ -42,13 +44,15 @@ function Team() {
                 phone={member.phone}
                 id={member.id}
                 mail={member.mail}
-                key={ind}
+                image={member.image}
+                linkedin={member.linkedin}
+                key={member.name}
               ></Member>
             );
           })}
         </Row>
 
-        <p className={`text-center ${styles['team-heading']}`}>
+        {/* <p className={`text-center ${styles['team-heading']}`}>
           PUBLICITY TEAM
         </p>
         <Row className="justify-content-center px-1">
@@ -226,7 +230,7 @@ function Team() {
               ></Member>
             );
           })}
-        </Row>
+        </Row> */}
       </Container>
     </section>
   );
