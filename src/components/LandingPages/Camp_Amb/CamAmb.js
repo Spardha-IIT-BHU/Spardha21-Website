@@ -72,7 +72,7 @@ const CamAmb = () => {
                     }}
                   >
                     We at Spardha are looking for enthusiastic people to be an
-                    integral part of the organizing team of Spardha'19. We
+                    integral part of the organizing team of Spardha'21. We
                     extend our welcome to all passionate individuals who would
                     be working together with us and leading the contingents
                     taking part in the festival from their respective colleges.
@@ -104,7 +104,7 @@ const CamAmb = () => {
                     connection circles by interacting with people from diverse
                     fields of various colleges across the country. It would be a
                     test of your managerial and leadership skills by being a
-                    face of Spardha '19 in your college.&nbsp;
+                    face of Spardha '21 in your college.&nbsp;
                     <br />
                     <br />
                   </p>
@@ -141,7 +141,7 @@ const CamAmb = () => {
                     <ol>
                       <li>
                         PUBLICIZE - The CA would be expected to publicize
-                        Spardha'19 on all platforms, and means available.
+                        Spardha'21 on all platforms, and means available.
                       </li>
                       <li>
                         COORDINATE - The applicant would be working in hand with
@@ -176,7 +176,7 @@ const CamAmb = () => {
                     }}
                   >
                     <ol>
-                      <li>Goodies and Prizes worth &#8377;&nbsp;15,000.</li>
+                      <li>Exciting Goodies and &#8377;&nbsp;Prizes.</li>
                       <li>Certificate of Recognition.</li>
                       <li>
                         Indelible opportunity to meet the esteemed guests.
@@ -208,7 +208,7 @@ const CamAmb = () => {
                   >
                     Applicants from all streams are welcome. Academic year is
                     not a restriction, anyone who possess the zeal and
-                    dedication for Spardha'19 are eligible to apply.
+                    dedication for Spardha'21 are eligible to apply.
                     <br />
                     <br />
                   </p>
