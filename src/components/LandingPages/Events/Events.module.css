@@ -582,3 +582,27 @@
   background-color: #218838;
   border-color: #1e7e34;
 }
+
+.paragraph {
+  font-size: 12px !important;
+  display: inline-block;
+  font-family: Open Sans;
+}
+
+@media (max-width: 360px) {
+  .paragraph {
+    font-size: 6px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: 14px !important;
+  }
+}
+
+.rulebook {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}

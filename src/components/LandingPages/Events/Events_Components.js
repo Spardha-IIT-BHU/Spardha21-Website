@@ -4,6 +4,24 @@ import rules from './rules.jpg';
 import trophy from './trophy.jpg';
 import contacts from './contacts.jpg';
 import { FaTimes } from 'react-icons/fa';
+import AthleticsPDF from './AthleticsPDF.pdf';
+import BadmintonPDF from './BadmintonPDF.pdf';
+import BasketballPDF from './BasketballPDF.pdf';
+import BoxingPDF from './BoxingPDF.pdf';
+import CricketPDF from './CricketPDF.pdf';
+import ChessPDF from './ChessPDF.pdf';
+import CyclingPDF from './CyclingPDF.pdf';
+import FootballPDF from './FootballPDF.pdf';
+import HandballPDF from './HandBallPDF.pdf';
+import HockeyPDF from './HockeyPDF.pdf';
+import KabbadiPDF from './KabbadiPDF.pdf';
+import KhoKhoPDF from './KhoKhoPDF.pdf';
+import SquashPDF from './SquashPDF.pdf';
+import TableTennisPDF from './TableTennisPDF.pdf';
+import TennisPDF from './TennisPDF.pdf';
+import VolleyballPDF from './VolleyBallPDF.pdf';
+import WeightliftingPDF from './WeightliftingPDF.pdf';
+import TaekwondoPDF from './TaekwondoPDF.pdf';
 
 const Athletics = (props) => {
   return (
@@ -36,7 +54,21 @@ const Athletics = (props) => {
                     </div>
                     <div className={`${styles.info} ${styles.rule}`}>
                       <h4> Rules </h4>
-                      <p>Coming Soon</p>
+                      <a
+                        href={AthleticsPDF}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`${styles.rulebook}`}
+                      >
+                        CLICK HERE FOR RULES
+                      </a>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                       <br />
                       <br />
                       <br />
@@ -74,6 +106,12 @@ const Athletics = (props) => {
                       <br />
                       <br />
                       <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                     </p>
                   </div>
                 </div>
@@ -92,16 +130,40 @@ const Athletics = (props) => {
                   </div>
                   <div className={`${styles.info}`}>
                     <h4>Contacts</h4>
-                    <p>
-                      Coming Soon
+                    <p
+                      className={`${styles.paragraph}`}
+                      style={{ paddingBottom: '10px' }}
+                    >
+                      <b>CAPTAIN</b>
+                      <br />
+                      Rohit Diwakar
+                      <br />
+                      8827687934
+                      <br />
+                      rohit.diwakar.ece19@itbhu.ac.in
                       <br />
                       <br />
+                      Anshika Singh <b>(W)</b>
+                      <br />
+                      7985967630
+                      <br />
+                      anshika.singh.phy19@itbhu.ac.in
                       <br />
                       <br />
+                      <b>VICE-CAPTAIN</b>
+                      <br />
+                      Gurjot
+                      <br />
+                      7528980380
+                      <br />
+                      gurjot.student.ece19@itbhu.ac.in
                       <br />
                       <br />
+                      Shivanjali Verma <b>(W)</b>
                       <br />
+                      8869038250
                       <br />
+                      shivanjali.verma.mec19@itbhu.ac.in
                       <br />
                     </p>
                   </div>
@@ -146,7 +208,18 @@ const Badminton = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={BadmintonPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -184,6 +257,9 @@ const Badminton = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
+                    <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -202,16 +278,32 @@ const Badminton = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '20px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Sayan Ghosh <br />
+                    7602961003
+                    <br />
+                    sayan.ghosh.cd.mat19@itbhu.ac.in
                     <br />
                     <br />
+                    Anshul Sahai <b>(W)</b>
+                    <br />
+                    91668498500
+                    <br />
+                    anshul.sahai.che19@itbhu.ac.in
                     <br />
                     <br />
+                    <b>VICE-CAPTAIN</b>
                     <br />
+                    Kushagra Yadav
                     <br />
+                    8285600365
                     <br />
-                    <br />
+                    kushagra.yadav.ece19@itbhu.ac.in
                     <br />
                   </p>
                 </div>
@@ -255,7 +347,18 @@ const Basketball = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={BasketballPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -293,6 +396,9 @@ const Basketball = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
+                    <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -311,16 +417,32 @@ const Basketball = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '20px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Aryan Shukla <br />
+                    8171354203
+                    <br />
+                    aryanshukla.mat18@itbhu.ac.in
                     <br />
                     <br />
+                    Arya Kumari <b>(W)</b>
+                    <br />
+                    8409372829
+                    <br />
+                    aryakumari.mst18@itbhu.ac.in
                     <br />
                     <br />
+                    <b>VICE-CAPTAIN</b>
                     <br />
+                    Kinshuk Dwivedi
                     <br />
+                    9425183369
                     <br />
-                    <br />
+                    kinshuk.dwivedi.phy19@itbhu.ac.in
                     <br />
                   </p>
                 </div>
@@ -364,7 +486,15 @@ const Boxing = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={BoxingPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -420,14 +550,23 @@ const Boxing = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '12px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Ankur Minj <br />
+                    9171946273
+                    <br />
+                    ankur.minj.min19@itbhu.ac.in
                     <br />
                     <br />
+                    Smriti Sharma <b>(W)</b>
                     <br />
+                    8303077445
                     <br />
-                    <br />
-                    <br />
+                    smriti.sharma.ece19@itbhu.ac.in
                     <br />
                     <br />
                     <br />
@@ -473,7 +612,16 @@ const Chess = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={ChessPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -511,6 +659,7 @@ const Chess = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -529,17 +678,28 @@ const Chess = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '12px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Mack Mohan Verma <br />
+                    9548338599
+                    <br />
+                    mack.mohanverma.mec19@itbhu.ac.in
+                    <br />
+                    <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Shaurya Panpalia <br />
+                    7877860896
+                    <br />
+                    shaurya.panpalia.mst19@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -582,7 +742,16 @@ const Cricket = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={CricketPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -620,6 +789,7 @@ const Cricket = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -638,17 +808,28 @@ const Cricket = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '15px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Shashank S Prakash <br />
+                    8368920987
+                    <br />
+                    shashanksp.met18@iitbhu.ac.in
+                    <br />
+                    <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Satyendra Kumar Satyarthi <br />
+                    9877437762
+                    <br />
+                    satyendraks.rs.cer17@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -691,7 +872,15 @@ const Cycling = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={CyclingPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -800,7 +989,16 @@ const Football = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={FootballPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -838,6 +1036,7 @@ const Football = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -856,17 +1055,28 @@ const Football = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '15px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Ritwik Singh <br />
+                    9549847995
+                    <br />
+                    ritviksingh.phy18@itbhu.ac.in
+                    <br />
+                    <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Sachin Kumar <br />
+                    6205237836
+                    <br />
+                    sachin.kumar.met19@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -909,7 +1119,16 @@ const Handball = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={HandballPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -947,6 +1166,7 @@ const Handball = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -965,17 +1185,28 @@ const Handball = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph} ${styles.paragraph1}`}
+                    style={{ paddingBottom: '15px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Sharath Ram <br />
+                    8072714518
+                    <br />
+                    sharath.ramsb.mst19@itbhu.ac.in
+                    <br />
+                    <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Tarun Khandelwal <br />
+                    8102029500
+                    <br />
+                    tarun.khandelwal.eee19@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -1018,7 +1249,17 @@ const Hockey = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={HockeyPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1056,6 +1297,8 @@ const Hockey = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -1074,13 +1317,24 @@ const Hockey = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '20px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Raghubir <br />
+                    6265573271
+                    <br />
+                    raghubir.student.phe19@itbhu.ac.in
                     <br />
                     <br />
+                    <b>VICE-CAPTAIN</b>
                     <br />
+                    Ashish Kumar <br />
+                    9370766492
                     <br />
-                    <br />
+                    ashish.kumar.min19@itbhu.ac.in
                     <br />
                     <br />
                     <br />
@@ -1127,7 +1381,15 @@ const Kabbadi = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={KabbadiPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1183,17 +1445,27 @@ const Kabbadi = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '12px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Sateesh Kumar <br />
+                    7354388062
+                    <br />
+                    sateesh.kumar.bme19@itbhu.ac.in
+                    <br />
+                    <br />
+                    Keloth Tejaswini <b>(W)</b>
+                    <br />
+                    9177574613
+                    <br />
+                    keloth.tejaswini.min20@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -1236,7 +1508,21 @@ const Khokho = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={KhoKhoPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1274,6 +1560,12 @@ const Khokho = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -1292,16 +1584,40 @@ const Khokho = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '10px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Rahul Lakra
+                    <br />
+                    8877441658
+                    <br />
+                    rahul.lakra.min19@itbhu.ac.in
                     <br />
                     <br />
+                    Tejswinee Karwar <b>(W)</b>
+                    <br />
+                    7770880674
+                    <br />
+                    tejswinee.karwar.met19@itbhu.ac.in
                     <br />
                     <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Munavath Prashanth
+                    <br />
+                    6301984558
+                    <br />
+                    munavath.prashanth.min19@itbhu.ac.in
                     <br />
                     <br />
+                    Jayshree Das <b>(W)</b>
                     <br />
+                    6000805732
                     <br />
+                    jayshree.das.min19@itbhu.ac.in
                     <br />
                   </p>
                 </div>
@@ -1345,7 +1661,16 @@ const Squash = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={SquashPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1383,6 +1708,7 @@ const Squash = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -1401,17 +1727,28 @@ const Squash = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph} ${styles.paragraph1}`}
+                    style={{ paddingBottom: '15px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    B Rohith Netha <br />
+                    8331891203
+                    <br />
+                    brohith.netha.mec19@itbhu.ac.in
+                    <br />
+                    <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Harsh B Parmar <br />
+                    9381444955
+                    <br />
+                    harshbparmar.cse18@iitbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -1454,7 +1791,15 @@ const TableTennis = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={TableTennisPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1510,17 +1855,27 @@ const TableTennis = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '12px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Sachin Arya <br />
+                    7073524926
+                    <br />
+                    sachinarya.mec18@iitbhu.ac.in
+                    <br />
+                    <br />
+                    Kajal Pathriyal <b>(W)</b>
+                    <br />
+                    8127141299
+                    <br />
+                    kajal.pathriyal.eee19@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -1563,7 +1918,15 @@ const Taekwondo = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={TaekwondoPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1619,17 +1982,27 @@ const Taekwondo = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '12px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Suraj Gupta <br />
+                    7737877228
+                    <br />
+                    suraj.gupta.che19@itbhu.ac.in
+                    <br />
+                    <br />
+                    Anjali. C <b>(W)</b>
+                    <br />
+                    9207970160
+                    <br />
+                    anjalic.civ18@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -1672,7 +2045,15 @@ const Tennis = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={TennisPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1728,17 +2109,27 @@ const Tennis = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '12px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Baidhar Soren <br />
+                    6372843510
+                    <br />
+                    baidhar.srn@gmail.com
+                    <br />
+                    <br />
+                    Charmitha <b>(W)</b>
+                    <br />
+                    9666165321
+                    <br />
+                    charmithakrishna2002@gmail.com
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
@@ -1781,7 +2172,21 @@ const Volleyball = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={VolleyballPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1819,6 +2224,12 @@ const Volleyball = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -1837,16 +2248,37 @@ const Volleyball = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph}`}
+                    style={{ paddingBottom: '10px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Shivkaran Singh Ranawat <br />
+                    8824018065
+                    <br />
+                    shivkarans.ranawat.phe19@itbhu.ac.in <br />
+                    <br />
+                    Yashika lamba <b>(W)</b>
+                    <br />
+                    8076365550
+                    <br />
+                    yashika.lamba.phe19@itbhu.ac.in
                     <br />
                     <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Mukul jaiman <br />
+                    8302122511
+                    <br />
+                    mukul.jaiman.civ19@itbhu.ac.in
                     <br />
                     <br />
+                    Priya Rathore <b>(W)</b>
                     <br />
+                    8225934951
                     <br />
-                    <br />
-                    <br />
+                    priya.rathore.cer19@itbhu.ac.in
                     <br />
                   </p>
                 </div>
@@ -1890,7 +2322,16 @@ const WeightLifting = (props) => {
                   </div>
                   <div className={`${styles.info} ${styles.rule}`}>
                     <h4> Rules </h4>
-                    <p>Coming Soon</p>
+                    <a
+                      href={WeightliftingPDF}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`${styles.rulebook}`}
+                    >
+                      CLICK HERE FOR RULES
+                    </a>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -1928,6 +2369,7 @@ const WeightLifting = (props) => {
                     <br />
                     <br />
                     <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -1946,17 +2388,28 @@ const WeightLifting = (props) => {
                 </div>
                 <div className={`${styles.info}`}>
                   <h4>Contacts</h4>
-                  <p>
-                    Coming Soon
+                  <p
+                    className={`${styles.paragraph} ${styles.paragraph1}`}
+                    style={{ paddingBottom: '15px' }}
+                  >
+                    <b>CAPTAIN</b>
+                    <br />
+                    Pulkit Khandelwal <br />
+                    6350078788
+                    <br />
+                    pkhandelwal.civ18@itbhu.ac.in
+                    <br />
+                    <br />
+                    <b>VICE-CAPTAIN</b>
+                    <br />
+                    Uday Kiran <br />
+                    78976 10891
+                    <br />
+                    moningi.udaykiran.mst19@itbhu.ac.in
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    {/* <br /> */}
                   </p>
                 </div>
               </div>
