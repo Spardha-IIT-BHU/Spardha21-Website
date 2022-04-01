@@ -3,8 +3,17 @@ import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 
 const Home = () => {
+  const Function1 = () => {
+    console.log('helllo');
+    toast.success('Rulebook Coming Soon!!', {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
+  };
   const token = localStorage.getItem('token');
   console.log('token', token);
   const baseUrl = 'https://api.spardha.co.in';
@@ -103,13 +112,15 @@ const Home = () => {
               <h2>
                 Please read the{' '}
                 <u style={{ textDecoration: 'none' }}>
-                  <Link
-                    to="/pdf/RuleBook.pdf"
-                    target="_blank"
+                  <button
+                    // to="/pdf/RuleBook.pdf"
+                    // target="_blank"
                     style={{ textDecoration: 'none' }}
+                    onClick={Function1}
+                    className="linkbutton_db"
                   >
                     Rule Book
-                  </Link>
+                  </button>
                 </u>{' '}
                 before registering for events.
               </h2>
