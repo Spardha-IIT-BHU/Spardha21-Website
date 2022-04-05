@@ -480,7 +480,7 @@ const Events = () => {
             />
           </div>
 
-          <div
+          {/* <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="3"
           >
@@ -490,22 +490,8 @@ const Events = () => {
               alt=""
               onClick={onClick3}
             />
-          </div>
-          {showResults0 ? (
-            <Athletics changeState={(showResult0) => setShowResults0(false)} />
-          ) : null}
-          {showResults1 ? (
-            <Badminton changeState={(showResult1) => setShowResults1(false)} />
-          ) : null}
-          {showResults2 ? (
-            <Basketball changeState={(showResult2) => setShowResults2(false)} />
-          ) : null}
-          {showResults3 ? (
-            <Boxing changeState={(showResult3) => setShowResults3(false)} />
-          ) : null}
-        </div>
+          </div> */}
 
-        <div className={`${styles.row}`}>
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="0"
@@ -517,6 +503,36 @@ const Events = () => {
               onClick={onClick4}
             />
           </div>
+
+          {showResults0 ? (
+            <Athletics changeState={(showResult0) => setShowResults0(false)} />
+          ) : null}
+          {showResults1 ? (
+            <Badminton changeState={(showResult1) => setShowResults1(false)} />
+          ) : null}
+          {showResults2 ? (
+            <Basketball changeState={(showResult2) => setShowResults2(false)} />
+          ) : null}
+          {/* {showResults3 ? (
+            <Boxing changeState={(showResult3) => setShowResults3(false)} />
+          ) : null} */}
+          {showResults4 ? (
+            <Chess changeState={(showResult4) => setShowResults4(false)} />
+          ) : null}
+        </div>
+
+        <div className={`${styles.row}`}>
+          {/* <div
+            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
+            id="0"
+          >
+            <img
+              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
+              src={chess}
+              alt=""
+              onClick={onClick4}
+            />
+          </div> */}
 
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
@@ -553,21 +569,6 @@ const Events = () => {
               onClick={onClick7}
             />
           </div>
-          {showResults4 ? (
-            <Chess changeState={(showResult4) => setShowResults4(false)} />
-          ) : null}
-          {showResults5 ? (
-            <Cricket changeState={(showResult5) => setShowResults5(false)} />
-          ) : null}
-          {showResults6 ? (
-            <Cycling changeState={(showResult6) => setShowResults6(false)} />
-          ) : null}
-          {showResults7 ? (
-            <Football changeState={(showResult7) => setShowResults7(false)} />
-          ) : null}
-        </div>
-
-        <div className={`${styles.row}`}>
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="0"
@@ -579,6 +580,35 @@ const Events = () => {
               onClick={onClick8}
             />
           </div>
+          {/* {showResults4 ? (
+            <Chess changeState={(showResult4) => setShowResults4(false)} />
+          ) : null} */}
+          {showResults5 ? (
+            <Cricket changeState={(showResult5) => setShowResults5(false)} />
+          ) : null}
+          {showResults6 ? (
+            <Cycling changeState={(showResult6) => setShowResults6(false)} />
+          ) : null}
+          {showResults7 ? (
+            <Football changeState={(showResult7) => setShowResults7(false)} />
+          ) : null}
+          {showResults8 ? (
+            <Handball changeState={(showResult8) => setShowResults8(false)} />
+          ) : null}
+        </div>
+
+        <div className={`${styles.row}`}>
+          {/* <div
+            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
+            id="0"
+          >
+            <img
+              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
+              src={handball}
+              alt=""
+              onClick={onClick8}
+            />
+          </div> */}
 
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
@@ -592,7 +622,7 @@ const Events = () => {
             />
           </div>
 
-          <div
+          {/* <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="2"
           >
@@ -602,7 +632,7 @@ const Events = () => {
               alt=""
               onClick={onClick10}
             />
-          </div>
+          </div> */}
 
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
@@ -615,33 +645,6 @@ const Events = () => {
               onClick={onClick11}
             />
           </div>
-          {showResults8 ? (
-            <Handball changeState={(showResult8) => setShowResults8(false)} />
-          ) : null}
-          {showResults9 ? (
-            <Hockey changeState={(showResult9) => setShowResults9(false)} />
-          ) : null}
-          {showResults10 ? (
-            <Kabbadi changeState={(showResult10) => setShowResults10(false)} />
-          ) : null}
-          {showResults11 ? (
-            <Khokho changeState={(showResult11) => setShowResults11(false)} />
-          ) : null}
-        </div>
-
-        <div className={`${styles.row}`}>
-          <div
-            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
-            id="0"
-          >
-            <img
-              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
-              src={squash}
-              alt=""
-              onClick={onClick12}
-            />
-          </div>
-
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="1"
@@ -653,19 +656,6 @@ const Events = () => {
               onClick={onClick13}
             />
           </div>
-
-          <div
-            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
-            id="2"
-          >
-            <img
-              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
-              src={taekwondo}
-              alt=""
-              onClick={onClick14}
-            />
-          </div>
-
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="3"
@@ -677,17 +667,21 @@ const Events = () => {
               onClick={onClick15}
             />
           </div>
-          {showResults12 ? (
-            <Squash changeState={(showResult12) => setShowResults12(false)} />
+          {/* {showResults8 ? (
+            <Handball changeState={(showResult8) => setShowResults8(false)} />
+          ) : null} */}
+          {showResults9 ? (
+            <Hockey changeState={(showResult9) => setShowResults9(false)} />
+          ) : null}
+          {/* {showResults10 ? (
+            <Kabbadi changeState={(showResult10) => setShowResults10(false)} />
+          ) : null} */}
+          {showResults11 ? (
+            <Khokho changeState={(showResult11) => setShowResults11(false)} />
           ) : null}
           {showResults13 ? (
             <TableTennis
               changeState={(showResult13) => setShowResults13(false)}
-            />
-          ) : null}
-          {showResults14 ? (
-            <Taekwondo
-              changeState={(showResult14) => setShowResults14(false)}
             />
           ) : null}
           {showResults15 ? (
@@ -696,14 +690,81 @@ const Events = () => {
         </div>
 
         <div className={`${styles.row}`}>
-          <div
+          {/* <div
+            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
+            id="0"
+          >
+            <img
+              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
+              src={squash}
+              alt=""
+              onClick={onClick12}
+            />
+          </div> */}
+
+          {/* <div
+            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
+            id="1"
+          >
+            <img
+              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
+              src={tabletennis}
+              alt=""
+              onClick={onClick13}
+            />
+          </div> */}
+
+          {/* <div
+            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
+            id="2"
+          >
+            <img
+              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
+              src={taekwondo}
+              alt=""
+              onClick={onClick14}
+            />
+          </div> */}
+
+          {/* <div
+            className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
+            id="3"
+          >
+            <img
+              className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
+              src={tennis}
+              alt=""
+              onClick={onClick15}
+            />
+          </div> */}
+          {/* {showResults12 ? (
+            <Squash changeState={(showResult12) => setShowResults12(false)} />
+          ) : null} */}
+          {/* {showResults13 ? (
+            <TableTennis
+              changeState={(showResult13) => setShowResults13(false)}
+            />
+          ) : null} */}
+          {/* {showResults14 ? (
+            <Taekwondo
+              changeState={(showResult14) => setShowResults14(false)}
+            />
+          ) : null} */}
+          {/* {showResults15 ? (
+            <Tennis changeState={(showResult15) => setShowResults15(false)} />
+          ) : null} */}
+        </div>
+
+        <div className={`${styles.row}`}>
+          {/* <div
             className={`${styles.col_2} ${styles.padding1} ${styles.shake}`}
             id="0"
-          ></div>
+          ></div> */}
 
           <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="1"
+            style={{ marginLeft: 'auto', marginRight: 'auto' }}
           >
             <img
               className={`${styles.img_responsive} ${styles.hvr_buzz_out} ${styles.grayscale}`}
@@ -713,7 +774,7 @@ const Events = () => {
             />
           </div>
 
-          <div
+          {/* <div
             className={`${styles.col_2} ${styles.padding} ${styles.shake}`}
             id="2"
           >
@@ -723,23 +784,23 @@ const Events = () => {
               alt=""
               onClick={onClick17}
             />
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             className={`${styles.col_2} ${styles.padding1} ${styles.shake}`}
             id="3"
-          ></div>
+          ></div> */}
 
           {showResults16 ? (
             <Volleyball
               changeState={(showResult0) => setShowResults16(false)}
             />
           ) : null}
-          {showResults17 ? (
+          {/* {showResults17 ? (
             <WeightLifting
               changeState={(showResult1) => setShowResults17(false)}
             />
-          ) : null}
+          ) : null} */}
         </div>
       </div>
 
