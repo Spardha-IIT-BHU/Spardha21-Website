@@ -131,26 +131,19 @@ function Header() {
               </NavHashLink>
             </NavItem>
             <NavItem className={styles['nav-items']}>
-              <NavHashLink
-                exact="true"
-                to="/rulebook"
+              <a
+                href="/pdf/RuleBook.pdf"
+                target="_blank"
                 className={styles['nav-links']}
                 onClick={() => {
                   setOpen(false);
                 }}
-                style={({ isActive }) => {
-                  return {
-                    color: isActive
-                      ? '#6db549'
-                      : navbar
-                      ? '#000'
-                      : 'rgba(255, 255, 255, 0.9)',
-                  };
+                style={{
+                  color: navbar ? '#000' : 'rgba(255, 255, 255, 0.9)',
                 }}
-                smooth
               >
                 RuleBook
-              </NavHashLink>
+              </a>
             </NavItem>
             <NavItem className={styles['nav-items']}>
               <NavHashLink
