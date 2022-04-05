@@ -664,9 +664,13 @@ function Signup() {
               >
                 <span style={{ color: 'red' }}>*</span>By submitting this form,
                 you agree to abide by the{' '}
-                <Link to="/rulebook" style={{ textDecoration: 'none' }}>
+                <a
+                  href="/pdf/RuleBook.pdf"
+                  target="_blank"
+                  style={{ textDecoration: 'none' }}
+                >
                   "Rules of Spardha 2021."{' '}
-                </Link>
+                </a>
               </Label>
             </FormGroup>
           </div>
